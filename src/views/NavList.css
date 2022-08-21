@@ -1,0 +1,12 @@
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  margin-right: 20px;
+}
+
+nav {
+  position: absolute;
+}
