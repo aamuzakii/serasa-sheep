@@ -24,6 +24,11 @@
   color: black !important;
 }
 
+.container.about {
+  align-items: flex-start;
+  padding: 100px;
+}
+
 .about .right {
   margin: 100px;
 }

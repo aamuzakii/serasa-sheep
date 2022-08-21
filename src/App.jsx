@@ -11,11 +11,10 @@ import NavList from './views/NavList'
 export default function App() {
   return (
       <>
-        
         <NavList/>
         <Routes>
-          <Route index element={<Home />} />
-          <Route path="Hall" element={<Hall />} />
+          <Route index element={<Hall />} />
+          <Route path="home" element={<Home />} />
           <Route path="contact" element={<Contact />} />
           <Route path="journal" element={<Journal />} />
           <Route path="about" element={<About />} />

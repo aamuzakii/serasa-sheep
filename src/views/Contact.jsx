@@ -1,9 +1,15 @@
 import React from 'react'
 import './Contact.css'
+import { motion } from "framer-motion";
 
 function Contact() {
   return (
-    <div className='container contact' >
+    <motion.div
+      className="container contact"
+      initial={{ opacity: 0.5, scale: 1 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.7 }}
+    >
       <div className='address' >
         <p>Jl. Manyar III Blok O-3 Kav. 29-30 No. 4-6</p>
         <p>Bintaro Jaya sektor I</p>
@@ -24,7 +30,7 @@ function Contact() {
           <button>Send</button>
         </form>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

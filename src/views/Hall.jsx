@@ -2,7 +2,9 @@ import React from 'react'
 
 function Hall() {
   return (
-    <div>Hall</div>
+    <div className='container hall' >
+      HOF
+    </div>
   )
 }
 
