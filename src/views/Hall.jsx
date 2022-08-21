@@ -18,16 +18,15 @@ export default function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       setSeconds((seconds) => seconds + 1);
-    }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
-
 
   return (
     <AnimatePresence exitBeforeEnter className="container hall scrollbar-hide" >
       <motion.div
         initial={{opacity:0}}
-        animate = {{opacity: 1, transition:{duration: 1}}}
+        animate = {{opacity: 1, transition:{duration: 0.5}}}
         exit={{opacity: 0 }}
         style={{ fontSize: 100,   backgroundImage: "url(" + list[seconds] + ")",
         backgroundPosition: 'center',
@@ -37,9 +36,7 @@ export default function App() {
         width: '100vw'
       }}
         key={seconds}
-        className='scrollbar-hide'
       >
-        {/* <img src={list[seconds]} alt="" className='foo scrollbar-hide' /> */}
       </motion.div>
     </AnimatePresence>
   );

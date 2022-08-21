@@ -1,8 +1,31 @@
 import React from 'react'
 import './Contact.css'
 import { motion } from "framer-motion";
+import emailjs from '@emailjs/browser'
 
 function Contact() {
+
+  const adminEmail = "aamuzakii@gmail.com"
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let templateParams = {
+      admin_email: adminEmail,
+      customer_name: "Budi ini dr obj",
+      customer_subject: "Test Email Inquiry",
+      customer_email: "real-customer@gmail.com",
+      customer_message: "Apakah email ini diterima?"
+    }
+
+    emailjs.send( process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE, templateParams, process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+    .then((result) => {
+      alert("Message Sent. ", result.text);
+    }, (error) => {
+      alert("An error occurred: ", error.text); 
+    });
+  };
+  
+
   return (
     <motion.div
       className="container contact"
@@ -22,7 +45,7 @@ function Contact() {
       </div>
       <div className='form' >
         <h3>get in touch</h3>
-        <form action="" style={{  }} >
+        <form action="" style={{  }} onSubmit={handleSubmit} >
           <input type="text" placeholder="Name"/>
           <input type="text" placeholder="Email"/>
           <input type="text" placeholder="Subject"/>
