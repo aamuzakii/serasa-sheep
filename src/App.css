@@ -32,3 +32,13 @@
 .about .right {
   margin: 100px;
 }
+
+.foo {
+  width: 100%;
+  min-height: 100%;
+  object-fit: contain;
+}
+
+.scrollbar-hide {
+  overflow: hidden
+}
