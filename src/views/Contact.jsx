@@ -3,7 +3,7 @@ import './Contact.css'
 
 function Contact() {
   return (
-    <div className='container' >
+    <div className='container contact' >
       <div className='address' >
         <p>Jl. Manyar III Blok O-3 Kav. 29-30 No. 4-6</p>
         <p>Bintaro Jaya sektor I</p>
@@ -13,13 +13,6 @@ function Contact() {
         <p>fax. +62 21 735 6521</p>
         <p>email. admin@andramatin.com</p>
         <p>opportunities. intern@andramatin.com</p>
-        
-      
-      
-      
-      
-      
-      
       </div>
       <div className='form' >
         <h3>get in touch</h3>

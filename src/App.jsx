@@ -4,6 +4,8 @@ import './App.css';
 import Home from './views/Home'
 import Hall from './views/Hall'
 import Contact from './views/Contact'
+import Journal from './views/Journal'
+import About from './views/About'
 import NavList from './views/NavList'
 
 export default function App() {
@@ -15,6 +17,8 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="Hall" element={<Hall />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="journal" element={<Journal />} />
+          <Route path="about" element={<About />} />
         </Routes>
       </>
   );
