@@ -42,3 +42,31 @@
 .scrollbar-hide {
   overflow: hidden
 }
+
+.box {
+  height: 50px;
+  width: 50px;
+  transition: transform 0.7s;
+  position: absolute;
+}
+
+.container.projects {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.playground-container {
+  padding: 50px;
+  width: 90%;
+  height: 80%;
+}
+
+.sorting-btn {
+  margin: 90px;
+  cursor: pointer;
+}

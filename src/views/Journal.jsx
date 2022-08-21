@@ -64,7 +64,7 @@ function Journal() {
         <div style={{ margin: 50, display: 'table' }} >
           {
             left.map(({name, date})=>(
-              <div className='cursor-pointer bubble' style={{ display: 'cell' }} >
+              <div key={name} className='cursor-pointer bubble' style={{ display: 'cell' }} >
                 <p style={{ margin: '0 0 10px 0' }}>{name}<br/><span className='text-sm' >{date}</span></p>
               </div>
             ))  
@@ -73,7 +73,7 @@ function Journal() {
         <div style={{ margin: 50, display: 'table' }} >
           {
             right.map(({name, date})=>(
-              <div className='cursor-pointer bubble' style={{ display: 'cell' }} >
+              <div key={name} className='cursor-pointer bubble' style={{ display: 'cell' }} >
                 <p style={{ margin: '0 0 10px 0' }}>{name}<br/><span className='text-sm' >{date}</span></p>
               </div>
             ))  

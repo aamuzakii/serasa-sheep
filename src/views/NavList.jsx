@@ -35,7 +35,7 @@ function NavList() {
       <ul style={{ display: 'flex', textDecoration: 'none', listStyleType: 'none' }} >
         {
           arr.map(({ name}) => (
-            <li>
+            <li key={name} >
               <NavLink
                 to={name}
                 style={({ isActive }) =>
