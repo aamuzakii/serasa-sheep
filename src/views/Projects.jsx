@@ -74,10 +74,10 @@ function Projects() {
         addAttr(housing, rd, 0, null)
         break;
       case 'year':
-        const Y2021 = (document.querySelectorAll(".y2021"))
-        const Y2022 = (document.querySelectorAll(".y2022"))
-        addAttr(Y2021, st, 0, null)
-        addAttr(Y2022, rd, 0, null)
+        let arrOfYear = ["2021", "2022"]
+        arrOfYear.forEach((el, i) => {
+          addAttr(document.querySelectorAll(`.y${el}`), i * 500, 0, null)
+        });
         break;
       case 'status':
         const idea = (document.querySelectorAll(".idea"))

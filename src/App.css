@@ -26,7 +26,7 @@
 
 .container.about {
   align-items: flex-start;
-  padding: 100px;
+  padding: 0px;
 }
 
 .about .right {
@@ -69,4 +69,29 @@
 .sorting-btn {
   margin: 90px;
   cursor: pointer;
+}
+
+button.learn-more {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  background: #97be6b;
+  cursor: pointer;
+  width: 150px;
+  height: 30px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container.contact {
+  padding: 0;
+}
+
+.bar {
+  display: flex;
+  padding: 50px;
 }
