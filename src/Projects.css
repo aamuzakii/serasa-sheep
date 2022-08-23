@@ -1,12 +1,16 @@
 .box {
-  height: 80px;
-  width: 80px;
-  border-radius: 15px;
+  height: 250px;
+  width: 250px;
+  /* border-radius: 15px; */
   text-align: center;
   padding: 5px;
   font-weight: 500;
   margin: 5px;
 }
+
+div.image::before {
+  /* content:url(https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661134662/residence-g332670919_1920_jnlps6.jpg); */
+}​
 
 .box:hover {
   box-shadow: 3px 3px 5px rgb(0 0 0 / 20%);
@@ -17,7 +21,8 @@
   display: flex;
   flex-direction: column;
   align-items:flex-start;
-  padding: 50px;
+  padding: 50px 240px;
+  align-items: center;
 }
 
 .flex-row {
@@ -42,24 +47,48 @@
   /* margin-right: 20px; */
   /* width: 80%; */
   padding :0 10px;
+  font-weight: bold;
+  /* font-weight: 100; */
+  font-size: 16px;
 
 }
 
 .sorting-btn-container {
   margin-top: 100px;
-  border-bottom: 1.8px solid #d0dadd;
+  /* border-bottom: 1.8px solid #d0dadd; */
   color: #666;
+  width: 350px;
+  justify-content: center;
   
 }
 
 .sorting-btn:hover {
+  /* ganti focus */
   color: #666;
-  border-bottom: 2.5px solid #888888;
+  border-bottom: 3.5px solid #97be6b;
   margin-bottom: -1px; /* kalau gapake ini, border bakal take space  */
 
 }
 
 .inner-container-button {
   margin: 0.5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 50px;
+  
+}
+
+.font-gede-banget {
+  font-size: 60px;
+}
+
+.font-anu {
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.tulisn-kecil-corner {
   
 }

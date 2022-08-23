@@ -68,9 +68,6 @@ function Projects() {
       el.style.transform = `translate(${x}px, ${a}px)`
     });
   }
-  
-
-
 
   return (
     <div className='container projects' >

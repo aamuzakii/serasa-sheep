@@ -72,15 +72,17 @@ function Projects() {
 
   return (
     <div className='container projects' >
+      <h1 className='font-gede-banget' style={{ textAlign: 'center' }} >Our Clients</h1>
       <div className='flex-row sorting-btn-container' >
         <div className=' flex-row inner-container-button'>
-          <div className='sorting-btn' onClick={changeDasar('status')} >status</div>
-          <div className='sorting-btn' onClick={changeDasar('location')} >location</div>
+          <div className='sorting-btn' onClick={changeDasar('status')} >Status</div>
+          <div className='sorting-btn' onClick={changeDasar('location')} >Location</div>
           {/* <div className='sorting-btn' onClick={changeDasar('program')} >program</div> */}
-          <div className='sorting-btn' onClick={changeDasar('year')} >year</div>
+          <div className='sorting-btn' onClick={changeDasar('year')} >Year</div>
         </div>
       </div>
       <div className='playground-container' >
+        
         <Section dasar={dasar} dasarDict={dasarDict0} code={'b'} ></Section>
         <Section dasar={dasar} dasarDict={dasarDict1} code={'a'} ></Section>
       </div>
