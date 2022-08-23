@@ -1,7 +1,5 @@
 import React from 'react'
-import Isotope from 'isotope-layout'
 import Section from './Section'
-// import SectionB from './SectionB'
 
 function Projects() {
 
@@ -87,6 +85,7 @@ function Projects() {
           <div className='sorting-btn' onClick={changeDasar('year')} >Year</div>
         </div>
       </div>
+      
       <div className='playground-container' >
         
         <Section dasar={dasar} dasarDict={dasarDict0} code={'b'} ></Section>

@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react'
 
 function Projects() {
 
-
-
   const [sort, setSort] = useState('year')
 
   const handleClick = (e) => {

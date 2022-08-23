@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Isotope from 'isotope-layout'
+import { Link } from "react-router-dom";
 
 function Section({dasar, dasarDict, code}) {
 
@@ -163,11 +164,11 @@ function Section({dasar, dasarDict, code}) {
           let kelas = `${item} ${program} ${status} y${year} ${location}`
           return (
             <div key={i} className={kelas} >
-              <div className='box image' style={{ background: color, color: colorDict[color] }} >
+              <Link to={i.toString()} className='box image' style={{ background: color, color: colorDict[color] }} >
                 <p className='tulisan-kecil-corner small-text' >{name}</p>
                 <div className='box-gradient-layer' ></div>
                 <img className='inner-img' src={image_link} alt="" />
-              </div>
+              </Link>
             </div>
           )
         })
