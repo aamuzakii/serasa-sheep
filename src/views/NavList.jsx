@@ -1,6 +1,5 @@
 import * as React from "react";
 import { NavLink } from "react-router-dom";
-import './NavList.css';
 
 function NavList() {
   // This styling will be applied to a <NavLink> when the

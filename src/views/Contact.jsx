@@ -1,5 +1,4 @@
 import React from 'react'
-import './Contact.css'
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser'
 

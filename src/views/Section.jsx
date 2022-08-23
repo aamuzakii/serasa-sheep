@@ -164,8 +164,9 @@ function Section({dasar, dasarDict, code}) {
           return (
             <div key={name} className={kelas} >
               <div className='box image' style={{ background: color, color: colorDict[color] }} >
-                <p className='tulisn-kecil-corner' style={{ fontSize : 10 }} >{status} {year} {location} </p>
-                {/* <img src="https://cdn.sstatic.net/Sites/serverfault/Img/apple-touch-icon.png" width="30" alt="" /> */}
+                <p className='tulisan-kecil-corner webinar-status-container' style={{ fontSize : 10 }} >{status} {year} {location} </p>
+                <div className='box-gradient-layer' ></div>
+                <img className='inner-img' src="https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661134662/residence-g332670919_1920_jnlps6.jpg" alt="" />
               </div>
             </div>
           )

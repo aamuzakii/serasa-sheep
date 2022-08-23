@@ -3,7 +3,6 @@
   width: 250px;
   /* border-radius: 15px; */
   text-align: center;
-  padding: 5px;
   font-weight: 500;
   margin: 5px;
 }
@@ -91,4 +90,32 @@ div.image::before {
 
 .tulisn-kecil-corner {
   
+}
+
+.inner-img {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.webinar-status-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 8px;
+  border-radius: 12px 0 0 0;
+  min-width: 140px;
+  font-size: 14px;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  opacity: 0.9;
+  line-height: 20px;
+  z-index: 50;
+}
+
+.box-gradient-layer {
+  background: linear-gradient(180deg, rgba(0,0,0,0.2945553221288515) 67%, rgba(0,0,0,0.7231267507002801) 100%);  height: 250px;
+  width: 250px;
+  position: absolute;
 }
