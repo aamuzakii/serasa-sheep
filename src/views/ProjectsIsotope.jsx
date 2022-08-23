@@ -54,33 +54,36 @@ function Projects() {
 
   const changeDasar = key => () => setDasar(key)
 
-  let dasarDict1 = {
-    year: 'y2021',
-    location: 'Bogor',
-    status: 'idea'
-  }
+  let year = ['y2021', 'y2022']
+  let location = ['Bogor', 'Jakarta']
+  let status = ['idea', 'completed']
 
-  let dasarDict2 = {
-    year: 'y2022',
-    location: 'Jakarta',
-    status: 'completed'
+  let dasarDict0
+  let dasarDict1
+
+  for (let i = 0; i < location.length; i++) {
+    let content = {
+      year: year[i],
+      location: location[i],
+      status: status[i]
+    }
+    eval("dasarDict" + i + " = " + JSON.stringify(content));
   }
 
   return (
     <div className='container projects' >
-      <div className='flex-row' >
-        <div className='sorting-btn' onClick={changeDasar('*')}>Show Both</div>
-        <div className='sorting-btn' onClick={changeDasar('status')} >status</div>
-        <div className='sorting-btn' onClick={changeDasar('location')} >location</div>
-        {/* <div className='sorting-btn' onClick={changeDasar('program')} >program</div> */}
-        <div className='sorting-btn' onClick={changeDasar('year')} >year</div>
+      <div className='flex-row sorting-btn-container' >
+        <div className=' flex-row inner-container-button'>
+          <div className='sorting-btn' onClick={changeDasar('status')} >status</div>
+          <div className='sorting-btn' onClick={changeDasar('location')} >location</div>
+          {/* <div className='sorting-btn' onClick={changeDasar('program')} >program</div> */}
+          <div className='sorting-btn' onClick={changeDasar('year')} >year</div>
+        </div>
       </div>
       <div className='playground-container' >
+        <Section dasar={dasar} dasarDict={dasarDict0} code={'b'} ></Section>
         <Section dasar={dasar} dasarDict={dasarDict1} code={'a'} ></Section>
-        <Section dasar={dasar} dasarDict={dasarDict2} code={'b'} ></Section>
       </div>
-
-      
     </div>
   )
 }

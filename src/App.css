@@ -1,3 +1,5 @@
+@import "Projects.css";
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -43,52 +45,6 @@
   overflow: hidden
 }
 
-.box {
-  height: 80px;
-  width: 80px;
-  border-radius: 15px;
-  text-align: center;
-  padding: 5px;
-  font-weight: 500;
-}
-
-/* .box:before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 48px;
-  border-top: 15px solid transparent;
-  border-left: 0 solid transparent;
-  border-right: 15px solid transparent;
-  border-left-color: inherit;
-  border-top-color: inherit;
-} */
-
-.box:hover {
-  box-shadow: 3px 3px 5px rgb(0 0 0 / 20%);
-  -webkit-box-shadow: 3px 3px 5px rgb(0 0 0 / 20%);
-}
-
-.container.projects {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.playground-container {
-  padding: 50px;
-  width: 90%;
-  height: 80%;
-}
-
-.sorting-btn {
-  margin: 90px;
-  cursor: pointer;
-}
 
 button.learn-more {
   margin: 0px;
@@ -120,5 +76,5 @@ button.learn-more {
 }
 
 .section {
-  border: 15px solid red;
+  border-bottom: 3px solid #d0dadd;
 }

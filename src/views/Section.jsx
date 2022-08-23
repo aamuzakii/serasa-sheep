@@ -68,11 +68,9 @@ function Section({dasar, dasarDict, code}) {
   }, [filterKey])
 
   const handleFilterKeyChange = key => () => {
-    console.log("sdsd")
     return setFilterKey(key)
   }
   
-
   const colorDict = {
     '#84D8F6': 'white',
     '#EE4B4B': 'white'
@@ -83,7 +81,6 @@ function Section({dasar, dasarDict, code}) {
   }, [dasar])
 
   let c = `playground-container ${container}`
-  console.log(c)
 
   return (
     <div className='section' >

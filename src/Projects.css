@@ -1,0 +1,65 @@
+.box {
+  height: 80px;
+  width: 80px;
+  border-radius: 15px;
+  text-align: center;
+  padding: 5px;
+  font-weight: 500;
+  margin: 5px;
+}
+
+.box:hover {
+  box-shadow: 3px 3px 5px rgb(0 0 0 / 20%);
+  -webkit-box-shadow: 3px 3px 5px rgb(0 0 0 / 20%);
+}
+
+.container.projects {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  padding: 50px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.playground-container {
+  
+  width: 90%;
+  height: 80%;
+}
+
+.sorting-btn {
+  /* margin: 0px 10px 0px 0; */
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 100;
+  /* padding-bottom: 9px; */
+  height: 100%;
+  margin-bottom: 2px;
+  /* margin-right: 20px; */
+  /* width: 80%; */
+  padding :0 10px;
+
+}
+
+.sorting-btn-container {
+  margin-top: 100px;
+  border-bottom: 1.8px solid #d0dadd;
+  color: #666;
+  
+}
+
+.sorting-btn:hover {
+  color: #666;
+  border-bottom: 2.5px solid #888888;
+  margin-bottom: -1px; /* kalau gapake ini, border bakal take space  */
+
+}
+
+.inner-container-button {
+  margin: 0.5px;
+  
+}
