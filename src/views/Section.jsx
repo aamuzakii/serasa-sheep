@@ -26,7 +26,7 @@ function Section({dasar, dasarDict, code}) {
       color: '#EE4B4B',
       x: 1000,
       y: 20,
-      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661134662/residence-g332670919_1920_jnlps6.jpg'
+      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264988/qq_dqzcjl.webp'
     },
     {
       name: 'Central Park',
@@ -38,7 +38,7 @@ function Section({dasar, dasarDict, code}) {
       color: '#84D8F6',
       x: 100,
       y: 0,
-      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661134662/residence-g332670919_1920_jnlps6.jpg'
+      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
     },
   ]
 
@@ -92,7 +92,7 @@ function Section({dasar, dasarDict, code}) {
           return (
             <div key={name} className={kelas} >
               <div className='box image' style={{ background: color, color: colorDict[color] }} >
-                <p className='tulisan-kecil-corner webinar-status-container' >{name}</p>
+                <p className='tulisan-kecil-corner small-text' >{name}</p>
                 <div className='box-gradient-layer' ></div>
                 <img className='inner-img' src={image_link} alt="" />
               </div>

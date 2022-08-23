@@ -99,7 +99,7 @@
   object-fit: cover;
 }
 
-.webinar-status-container {
+.small-text {
   position: absolute;
   bottom: 0;
   padding: 8px;
@@ -111,7 +111,7 @@
   text-align: center;
   opacity: 0.9;
   line-height: 20px;
-  z-index: 50;
+  z-index: 5;
 }
 
 .box-gradient-layer {
