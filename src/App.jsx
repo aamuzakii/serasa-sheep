@@ -6,7 +6,7 @@ import Hall from './views/Hall'
 import Contact from './views/Contact'
 import Journal from './views/Journal'
 import About from './views/About'
-import Projects from './views/ProjectsIsotope'
+import Projects from './views/Projects'
 import NavList from './views/NavList'
 
 export default function App() {
