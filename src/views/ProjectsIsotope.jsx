@@ -46,31 +46,11 @@ function Projects() {
 
   const isotope = React.useRef()
   // store the filter keyword in a state
-  const [filterKey, setFilterKey] = React.useState('*')
   const [dasar, setDasar] = React.useState('location')
 
-  // initialize an Isotope object with configs
-  // React.useEffect(() => {
-  //   isotope.current = new Isotope('.filter-container', {
-  //     itemSelector: '.filter-item',
-  //     layoutMode: 'fitRows',
-  //   })
-  //   return () => isotope.current.destroy()
-  // }, [])
 
   // handling filter key change
-  React.useEffect(() => {
-    filterKey === '*'
-      ? isotope.current.arrange({filter: `*`})
-      : isotope.current.arrange({filter: `.${filterKey}`})
-  }, [filterKey])
 
-  const handleFilterKeyChange = key => () => setFilterKey(key)
-
-  const colorDict = {
-    '#84D8F6': 'white',
-    '#EE4B4B': 'white'
-  }
 
   const changeDasar = key => () => setDasar(key)
 
@@ -96,8 +76,8 @@ function Projects() {
         <div className='sorting-btn' onClick={changeDasar('year')} >year</div>
       </div>
       <div className='playground-container' >
-        {/* <Section dasar={dasar} dasarDict={dasarDict1} code={'a'} ></Section> */}
-        {/* <Section dasar={dasar} dasarDict={dasarDict2} code={'b'} ></Section> */}
+        <Section dasar={dasar} dasarDict={dasarDict1} code={'a'} ></Section>
+        <Section dasar={dasar} dasarDict={dasarDict2} code={'b'} ></Section>
       </div>
 
       

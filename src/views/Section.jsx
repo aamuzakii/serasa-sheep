@@ -47,13 +47,6 @@ function Section({dasar, dasarDict, code}) {
   let item = 'filter-item' + code
   let dotItem = '.filter-item' + code
 
-  console.log(container)
-  console.log(dotContainer)
-  console.log(item)
-  console.log(dasar)
-
-  
-
   const isotope = React.useRef()
   // store the filter keyword in a state
   const [filterKey, setFilterKey] = React.useState('*')
@@ -95,7 +88,7 @@ function Section({dasar, dasarDict, code}) {
   return (
     <div className='section' >
       <p>{dasarDict[dasar]}</p>
-    <div className='playground-container filter-containera' >
+    <div className={c} >
       {
         data.map(({color, year,  program, status, location, name})=> {
           let kelas = `${item} ${program} ${status} y${year} ${location}`
