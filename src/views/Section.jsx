@@ -40,6 +40,78 @@ function Section({dasar, dasarDict, code}) {
       y: 0,
       image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
     },
+    {
+      name: 'Bank Syariah Indonesia',
+      year: 2021,
+      program: 'urban',
+      scale: '>1000',
+      status: 'idea',
+      location: 'Jakarta',
+      color: 'blue',
+      x: 100,
+      y: 20,
+      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264579/297174769_1263499707745193_2731266844231810095_n_jv61rp.jpg'
+    },
+    {
+      name: 'Jembatan UI',
+      year: 2022,
+      program: 'housing',
+      scale: '>1000',
+      status: 'idea',
+      location: 'Bogor',
+      color: '#EE4B4B',
+      x: 1000,
+      y: 20,
+      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264988/qq_dqzcjl.webp'
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: '#84D8F6',
+      x: 100,
+      y: 0,
+      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
+    },
+    {
+      name: 'Bank Syariah Indonesia',
+      year: 2021,
+      program: 'urban',
+      scale: '>1000',
+      status: 'idea',
+      location: 'Jakarta',
+      color: 'blue',
+      x: 100,
+      y: 20,
+      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264579/297174769_1263499707745193_2731266844231810095_n_jv61rp.jpg'
+    },
+    {
+      name: 'Jembatan UI',
+      year: 2022,
+      program: 'housing',
+      scale: '>1000',
+      status: 'idea',
+      location: 'Bogor',
+      color: '#EE4B4B',
+      x: 1000,
+      y: 20,
+      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264988/qq_dqzcjl.webp'
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: '#84D8F6',
+      x: 100,
+      y: 0,
+      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
+    },
   ]
 
   let container = 'filter-container' + code
@@ -87,10 +159,10 @@ function Section({dasar, dasarDict, code}) {
       <h1 className='font-anu' style={{ textAlign: 'center' }} >{dasarDict[dasar]}</h1>
     <div className={c} >
       {
-        data.map(({color, year,  program, status, location, name, image_link})=> {
+        data.map(({color, year,  program, status, location, name, image_link}, i)=> {
           let kelas = `${item} ${program} ${status} y${year} ${location}`
           return (
-            <div key={name} className={kelas} >
+            <div key={i} className={kelas} >
               <div className='box image' style={{ background: color, color: colorDict[color] }} >
                 <p className='tulisan-kecil-corner small-text' >{name}</p>
                 <div className='box-gradient-layer' ></div>

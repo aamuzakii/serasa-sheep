@@ -51,8 +51,14 @@ function Projects() {
 
   // handling filter key change
 
+  const changeDasar = key => (e) => {
+    document.querySelectorAll(".sorting-btn").forEach(element => {
+      element.classList.remove('actived');
+    });
 
-  const changeDasar = key => () => setDasar(key)
+    e.target.classList.add('actived');
+    return setDasar(key)
+  }
 
   let year = ['y2021', 'y2022']
   let location = ['Bogor', 'Jakarta']
