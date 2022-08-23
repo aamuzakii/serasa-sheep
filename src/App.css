@@ -44,10 +44,29 @@
 }
 
 .box {
-  height: 50px;
-  width: 50px;
-  transition: transform 0.7s;
+  height: 80px;
+  width: 80px;
+  border-radius: 15px;
+  text-align: center;
+  padding: 5px;
+  font-weight: 500;
+}
+
+/* .box:before {
+  content: "";
   position: absolute;
+  top: 100%;
+  left: 48px;
+  border-top: 15px solid transparent;
+  border-left: 0 solid transparent;
+  border-right: 15px solid transparent;
+  border-left-color: inherit;
+  border-top-color: inherit;
+} */
+
+.box:hover {
+  box-shadow: 3px 3px 5px rgb(0 0 0 / 20%);
+  -webkit-box-shadow: 3px 3px 5px rgb(0 0 0 / 20%);
 }
 
 .container.projects {
@@ -94,4 +113,12 @@ button.learn-more {
 .bar {
   display: flex;
   padding: 50px;
+}
+
+.filter-item {
+  margin-right: 15px;
+}
+
+.section {
+  border: 15px solid red;
 }

@@ -2,44 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 function Projects() {
 
-  let data = [
-    {
-      name: 'Bank Syariah Indonesia',
-      year: 2021,
-      program: 'urban',
-      scale: '>1000',
-      status: 'idea',
-      location: 'Jakarta',
-      color: 'blue',
-      x: 100,
-      y: 20,
-      kelas: 'box fooo'
-    },
-    {
-      name: 'Jembatan UI',
-      year: 2022,
-      program: 'housing',
-      scale: '>1000',
-      status: 'idea',
-      location: 'Bogor',
-      color: 'red',
-      x: 1000,
-      y: 20,
-      kelas: 'box fooo'
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'pink',
-      x: 100,
-      y: 0,
-      kelas: 'box sdsd'
-    },
-  ]
+
 
   const [sort, setSort] = useState('year')
 
