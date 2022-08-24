@@ -1,9 +1,21 @@
-contact p {
-  color: white;
+.contact .right-img {
+  float: right;
+  object-fit: cover;
+}
+
+.contact .img-container {
+  float: right;
+  height: 100%;
 }
 
 .container.contact {
   padding: 0;
+  font-weight: 100;
+}
+
+.container.contact h3{
+  font-weight: 100;
+  font-size: 40px;
 }
 
 .text-container {

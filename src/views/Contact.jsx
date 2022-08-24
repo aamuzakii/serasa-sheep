@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser'
+import logo from './architecture.jpg';
 
 function Contact() {
 
@@ -23,20 +24,20 @@ function Contact() {
       alert("An error occurred: ", error.text); 
     });
   };
-  
+
+  const address = `Jl. Manyar III Blok O-3 Kav. 29-30 No. 4-6 Bintaro Jaya sektor I Jakarta Selatan 12330 Indonesia`
+  const telp = "telp. +62 21 735 3338"
+  const email = "email. admin@andramatin.com"
+  const opp = "opportunities. intern@andramatin.com"
 
   return (
     <div className="container contact">
       <div className='text-container' >
         <div className='address' >
-          <p>Jl. Manyar III Blok O-3 Kav. 29-30 No. 4-6</p>
-          <p>Bintaro Jaya sektor I</p>
-          <p>Jakarta Selatan 12330</p>
-          <p>Indonesia</p>
-          <p>telp. +62 21 735 3338</p>
-          <p>fax. +62 21 735 6521</p>
-          <p>email. admin@andramatin.com</p>
-          <p>opportunities. intern@andramatin.com</p>
+          <p>{address}</p>
+          <p>{telp}</p>
+          <p>{email}</p>
+          <p>{opp}</p>
         </div>
         <div className='form' >
           <h3>get in touch</h3>
@@ -50,10 +51,10 @@ function Contact() {
         </div>
       </div>
 
-      <div>
-        <img width="800" height="940" src="https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661134662/residence-g332670919_1920_jnlps6.jpg" alt="about" />
+      <div className='img-container'>
+        <img className='right-img' width="800" height="940" src={logo} alt="about" />
       </div>
-      
+    
     </div>
   )
 }
