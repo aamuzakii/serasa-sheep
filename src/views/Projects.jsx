@@ -1,5 +1,6 @@
 import React from 'react'
 import Section from './Section'
+import { Link, Outlet } from "react-router-dom";
 
 function Projects() {
 
@@ -91,6 +92,7 @@ function Projects() {
         <Section dasar={dasar} dasarDict={dasarDict0} code={'b'} ></Section>
         <Section dasar={dasar} dasarDict={dasarDict1} code={'a'} ></Section>
       </div>
+      <Outlet />
     </div>
   )
 }

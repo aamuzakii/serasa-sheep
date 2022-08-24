@@ -3,7 +3,6 @@ contact p {
 }
 
 .container {
-  /* big container with left and right side */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -19,7 +18,6 @@ contact p {
   width: 30vw;
 }
 
-/* transparent form */
 form {
   display: flex;
   flex-direction: column;
@@ -31,7 +29,6 @@ form {
   box-sizing: border-box;
 }
 
-/* transparent input */
 input {
   width: 100%;
   height: 40px;

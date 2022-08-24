@@ -12,7 +12,7 @@ function About() {
       <div className='right' >
         <h1 style={{ fontSize: 60 }} >About Us</h1>
         <p  style={{ fontWeight: 100 }}>{text}</p>
-        <button className='learn-more'>       Learn More</button>
+        <button className='learn-more'>Learn More</button>
       </div>
     </div>
   )
