@@ -92,3 +92,18 @@ button {
 .p_y_20 {
   padding: 0 60px !important;
 }
+
+.sss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mt100 {
+  margin-top: 100px;
+}
+
+.socmed-logo {
+  margin-right: 20px;
+  cursor: pointer;
+}

@@ -2,6 +2,9 @@ import React from 'react'
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser'
 import logo from './architecture.jpg';
+import wa from './whatsapp.png';
+import linkedin from './linkedin.png';
+import instagram from './instagram.png';
 
 function Contact() {
 
@@ -38,15 +41,20 @@ function Contact() {
           <p>{telp}</p>
           <p>{email}</p>
           <p>{opp}</p>
+          <div className='mt100' >
+            <img className='socmed-logo' src={wa} alt="wa" width={40} />
+            <img className='socmed-logo' src={linkedin} alt="wa" width={40} />
+            <img className='socmed-logo' src={instagram} alt="wa" width={40} />
+          </div>
         </div>
         <div className='form p_y_20' >
           <h3>Get in Touch</h3>
-          <div action="" style={{  }}  >
+          <div action="" style={{  }} className="sss" >
             <input type="text" placeholder="Name"/>
             <input type="text" placeholder="Email"/>
             <input type="text" placeholder="Subject"/>
             <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-            <button onClick={handleSubmit} >Send</button>
+            <button className='learn-more' onClick={handleSubmit} >Send</button>
           </div>
         </div>
       </div>
