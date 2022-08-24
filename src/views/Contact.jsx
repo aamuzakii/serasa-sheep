@@ -33,20 +33,20 @@ function Contact() {
   return (
     <div className="container contact">
       <div className='text-container' >
-        <div className='address' >
+        <div className='address p_y_20' >
           <p>{address}</p>
           <p>{telp}</p>
           <p>{email}</p>
           <p>{opp}</p>
         </div>
-        <div className='form' >
-          <h3>get in touch</h3>
-          <div action="" style={{  }} onClick={handleSubmit} >
+        <div className='form p_y_20' >
+          <h3>Get in Touch</h3>
+          <div action="" style={{  }}  >
             <input type="text" placeholder="Name"/>
             <input type="text" placeholder="Email"/>
             <input type="text" placeholder="Subject"/>
             <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-            <button>Send</button>
+            <button onClick={handleSubmit} >Send</button>
           </div>
         </div>
       </div>

@@ -10,3 +10,7 @@ li {
 nav {
   position: absolute;
 }
+
+.nav-container a{
+  font-weight: 100;
+}

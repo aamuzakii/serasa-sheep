@@ -14,8 +14,8 @@
 }
 
 .container.contact h3{
-  font-weight: 100;
-  font-size: 40px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .text-container {
@@ -24,7 +24,8 @@
 }
 
 .form {
-  width: 30vw;
+  width: 50%;
+  padding: 0 20px;
 }
 
 form {
@@ -86,4 +87,8 @@ button {
 
 .contact-us {
   margin-left: 20px;
+}
+
+.p_y_20 {
+  padding: 0 60px !important;
 }

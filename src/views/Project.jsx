@@ -12,7 +12,7 @@ function Project() {
 
 
   useEffect(() => {
-    let a = document.querySelector(".main-nav").style
+    let a = document.querySelector(".nav-container").style
     a.position = "sticky"
     a.top = "20px"
   }, [])
