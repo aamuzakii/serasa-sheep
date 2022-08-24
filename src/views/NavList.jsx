@@ -30,7 +30,7 @@ function NavList() {
   ]
 
   return (
-    <nav style={{  }} >
+    <nav className="main-nav" style={{  }} >
       <ul style={{ display: 'flex', textDecoration: 'none', listStyleType: 'none' }} >
         {
           arr.map(({ name}) => (

@@ -1,0 +1,46 @@
+.single-img {
+  float: right;
+}
+
+.container.project-single {
+  height: unset;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* .container.project-single .inner-container {
+  position: relative;
+} */
+
+.project-single .img-container{
+  color: red;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-end;
+}
+
+.project-single .img-container img{
+  margin: 30px;
+}
+
+.project-single .left{
+  width: 100%;
+  padding: 50px;
+}
+
+.floating-par {
+  position: fixed;
+  max-width: 50%;
+  left: 0;
+  padding-left: 150px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  /* float: right; */
+  width: 50%;
+}
