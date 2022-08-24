@@ -26,10 +26,8 @@ function Contact() {
   
 
   return (
-    <div
-      className="container contact"
-    >
-      <div className='bar' >
+    <div className="container contact">
+      <div className='text-container' >
         <div className='address' >
           <p>Jl. Manyar III Blok O-3 Kav. 29-30 No. 4-6</p>
           <p>Bintaro Jaya sektor I</p>
