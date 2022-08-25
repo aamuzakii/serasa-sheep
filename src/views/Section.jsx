@@ -140,10 +140,6 @@ function Section({dasar, dasarDict, code}) {
       : isotope.current.arrange({filter: `.${filterKey}`})
   }, [filterKey])
 
-  const handleFilterKeyChange = key => () => {
-    return setFilterKey(key)
-  }
-  
   const colorDict = {
     '#84D8F6': 'white',
     '#EE4B4B': 'white'
