@@ -43,9 +43,12 @@ function Journal() {
   }, [filterKey])
 
   const handleClick = id => {
-    console.log(id)
     setFilterKey(()=> id)
   }
+
+  React.useEffect(() => {
+    setFilterKey(()=> 'foo')
+  }, [])
 
   return (
     <div className='container journal' style={{ background: 'white', alignItems: 'flex-start' }} >

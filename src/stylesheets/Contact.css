@@ -6,6 +6,8 @@
 .contact .img-container {
   float: right;
   height: 100%;
+  width: 30vw;
+  overflow: hidden;
 }
 
 .container.contact {
@@ -20,7 +22,6 @@
 
 .text-container {
   display: flex;
-  padding: 50px;
 }
 
 .form {
@@ -90,7 +91,7 @@ button {
 }
 
 .p_y_20 {
-  padding: 0 60px !important;
+  padding: 0 3vw !important;
 }
 
 .sss {

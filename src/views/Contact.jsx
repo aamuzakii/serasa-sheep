@@ -41,7 +41,7 @@ function Contact() {
           <p>{telp}</p>
           <p>{email}</p>
           <p>{opp}</p>
-          <div className='mt100' >
+          <div className='mt100 socmed-logo-container' >
             <img className='socmed-logo' src={wa} alt="wa" width={40} />
             <img className='socmed-logo' src={linkedin} alt="wa" width={40} />
             <img className='socmed-logo' src={instagram} alt="wa" width={40} />

@@ -12,9 +12,14 @@
 }
 
 .container.about img {
-  /* width: 1200px; */
-  /* height: 80vh; */
-  width: 60vw;
+  width: 105vw;
+  object-fit: contain;
+}
+
+.container.about .img-container {
+  height: 100%;
+  overflow: hidden;
+  width: 90%;
 }
 
 @media only screen and (max-width: 425px){

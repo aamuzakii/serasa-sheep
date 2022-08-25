@@ -13,4 +13,9 @@
     width: 100%;
     margin-bottom: 100px;
   }
+
+  .socmed-logo-container {
+    display: flex;
+    justify-content: center;
+  }
 }
