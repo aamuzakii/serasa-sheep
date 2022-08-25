@@ -6,16 +6,43 @@
 .container.journal .big-table {
   display: flex;
   margin-top: 100px;
-  margin-right: 180px;
+  width: 100%;
+  justify-content: center;
+}
+
+.container.journal .bemper-kiri {
+  border: 1px solid red;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container.journal .bemper-kiri img {
+  width: 50%;
+  border: 1px solid green;
+}
+
+.container.journal .bemper-kiri p {
+  width: 90%;
+  border: 1px solid green;
+  text-align: justify;
 }
 
 .container.journal .right, .container.journal .left{
-  margin: 50px;
+  margin: 1%;
   display: table;
   width: 200px;
+  border: 1px solid blue;
 }
 
 @media only screen and (max-width: 425px){
+
+  .container.journal {
+    flex-direction: column;
+  }
 
   .container.journal .right, .container.journal .left {
     color: black;
@@ -24,12 +51,11 @@
   }
 
   .container.journal .bemper-kiri {
-    display: none;
+    margin-top: 10vh;
   }
 
   .container.journal .big-table {
-    /* display: none; */
-    margin: 100px 0px 0px 0px;
+    margin: 0;
   }
 
 }
