@@ -1,5 +1,6 @@
 import * as React from "react";
 import { NavLink } from "react-router-dom";
+import logo from '../assets/logoweb_black.png'
 
 function NavList() {
   // This styling will be applied to a <NavLink> when the
@@ -32,20 +33,31 @@ function NavList() {
   return (
     <nav className="nav-container" style={{  }} >
       <ul style={{ display: 'flex', textDecoration: 'none', listStyleType: 'none' }} >
-        {
-          arr.map(({ name}) => (
-            <li key={name} >
-              <NavLink
-                to={name}
-                style={({ isActive }) =>
-                  isActive ? activeStyle : normalStyle
-                }
-              >
-                {name}
-              </NavLink>
-            </li>
-          ))
-        }
+        <>
+          {
+            arr.map(({ name}) => (
+              <li key={name} >
+                <NavLink
+                  to={name}
+                  style={({ isActive }) =>
+                    isActive ? activeStyle : normalStyle
+                  }
+                >
+                  {name}
+                </NavLink>
+              </li>
+            ))
+          }
+        </>
+        <>
+          <li>
+            <NavLink
+              to={'name'}
+            >
+              <img src={logo} alt="" width={100} />
+            </NavLink>
+          </li>
+        </>
       </ul>
     </nav>
   );

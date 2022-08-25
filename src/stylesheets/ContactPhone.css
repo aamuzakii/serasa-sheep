@@ -3,6 +3,10 @@
     display: none;
   }
 
+  .img-container {
+    display: none;
+  }
+
   .text-container {
     flex-direction: column;
     margin: 500px 0px 0px 0px;
@@ -18,4 +22,13 @@
     display: flex;
     justify-content: center;
   }
+
+  .container.contact {
+    padding: 0px 15px;
+  }
+
+  .container.contact h3{
+    text-align: center;
+  }
+  
 }
