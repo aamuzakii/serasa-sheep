@@ -12,6 +12,19 @@ nav {
   position: absolute;
 }
 
+.nav-container {
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
 .nav-container a{
   font-weight: 100;
+}
+
+.nav-logo {
+  /* border: 1px solid purple; */
+}
+
+.inner-nav-container {
+  justify-content: space-between;
 }

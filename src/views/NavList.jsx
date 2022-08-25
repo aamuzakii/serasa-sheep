@@ -32,8 +32,14 @@ function NavList() {
 
   return (
     <nav className="nav-container" style={{  }} >
-      <ul style={{ display: 'flex', textDecoration: 'none', listStyleType: 'none' }} >
-        <>
+      <div style={{ display: 'flex', width: '100%' }}  className="inner-nav-container" >
+        <NavLink
+          to={'name'}
+          className="nav-logo"
+        >
+          <img src={logo} alt="" height={30} />
+        </NavLink>
+        <ul style={{ display: 'flex', textDecoration: 'none', listStyleType: 'none' }} >
           {
             arr.map(({ name}) => (
               <li key={name} >
@@ -48,17 +54,8 @@ function NavList() {
               </li>
             ))
           }
-        </>
-        <>
-          <li>
-            <NavLink
-              to={'name'}
-            >
-              <img src={logo} alt="" width={100} />
-            </NavLink>
-          </li>
-        </>
-      </ul>
+        </ul>
+      </div>
     </nav>
   );
 }
