@@ -8,17 +8,14 @@ li {
   /* display: flex; */
 }
 
-nav {
-  position: absolute;
-}
-
 .nav-container {
   width: 100%;
-  /* border: 1px solid red; */
-}
+  position: absolute;
+  border: 1px solid red;
 
-.nav-container a{
-  font-weight: 100;
+  a {
+    font-weight: 100;
+  }
 }
 
 .nav-logo {
@@ -27,4 +24,5 @@ nav {
 
 .inner-nav-container {
   justify-content: space-between;
+  align-items: center;
 }

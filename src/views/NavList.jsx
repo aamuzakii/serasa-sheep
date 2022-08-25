@@ -34,7 +34,7 @@ function NavList() {
     <nav className="nav-container" style={{  }} >
       <div style={{ display: 'flex', width: '100%' }}  className="inner-nav-container" >
         <NavLink
-          to={'name'}
+          to={''}
           className="nav-logo"
         >
           <img src={logo} alt="" height={30} />

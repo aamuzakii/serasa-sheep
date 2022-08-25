@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser'
 import logo from './architecture.jpg';
@@ -7,6 +7,12 @@ import linkedin from './linkedin.png';
 import instagram from './instagram.png';
 
 function Contact() {
+
+  useEffect(() => {
+    let a = document.querySelector(".nav-container").style
+    a.position = "static"
+    a.top = "20px"
+  }, [])
 
   const adminEmail = "aamuzakii@gmail.com"
 
