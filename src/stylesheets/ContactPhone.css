@@ -1,0 +1,16 @@
+@media only screen and (max-width: 425px){
+  .contact .right-img {
+    display: none;
+  }
+
+  .text-container {
+    flex-direction: column;
+    margin: 500px 0px 0px 0px;
+    padding: 0px;
+  }
+
+  .address, .form {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+}

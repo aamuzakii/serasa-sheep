@@ -1,0 +1,29 @@
+.container.about p{
+  text-align: justify;
+}
+
+.container.about {
+  align-items: flex-start;
+  padding: 0px;
+}
+
+.about .right {
+  margin: 5%;
+}
+
+.container.about img {
+  /* width: 1200px; */
+  /* height: 80vh; */
+  width: 60vw;
+}
+
+@media only screen and (max-width: 425px){
+  .container.about img{
+    display: none;
+  }
+
+  .about .right {
+    margin: 20px !important;
+  }
+  
+}

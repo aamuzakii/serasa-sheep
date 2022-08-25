@@ -1,8 +1,17 @@
 @import "stylesheets/Projects.css";
+@import "stylesheets/ProjectsPhone.css";
 @import "stylesheets/Project.css";
+@import "stylesheets/Section.css";
 @import "stylesheets/NavList.css";
-@import "stylesheets/Contact.css";
 
+@import "stylesheets/Journal.css";
+@import "stylesheets/JournalPhone.css";
+
+
+@import "stylesheets/Contact.css";
+@import "stylesheets/ContactPhone.css";
+
+@import "stylesheets/About.css";
 
 .container {
   display: flex;
@@ -31,15 +40,6 @@
 
 .journal .bubble p:hover {
   color: black !important;
-}
-
-.container.about {
-  align-items: flex-start;
-  padding: 0px;
-}
-
-.about .right {
-  margin: 100px;
 }
 
 .foo {

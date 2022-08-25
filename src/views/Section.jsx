@@ -153,7 +153,7 @@ function Section({dasar, dasarDict, code}) {
     setFilterKey(()=> dasarDict[dasar])
   }, [dasar])
 
-  let c = `playground-container ${container}`
+  let c = `satu-row ${container}`
 
   return (
     <div className='section' >

@@ -1,5 +1,6 @@
 .single-img {
   float: right;
+  margin-bottom: 20px;
 }
 
 .container.project-single {
@@ -8,9 +9,11 @@
   align-items: flex-end;
 }
 
-/* .container.project-single .inner-container {
-  position: relative;
-} */
+.container.project-single p {
+  font-weight: 100;
+  font-size: 16px;
+  text-align: justify;
+}
 
 .project-single .img-container{
   color: red;
