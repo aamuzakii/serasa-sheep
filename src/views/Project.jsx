@@ -24,6 +24,9 @@ function Project() {
           <p>
             {lorem}
           </p>
+          <p>
+            {lorem}
+          </p>
         </div>
       </div>
       <div className='right' >

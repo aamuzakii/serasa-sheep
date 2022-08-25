@@ -8,6 +8,10 @@
     padding: 0px 60px;
   }
 
+  .container.projects .inner-container-button {
+    width: unset;
+  }
+
   .box {
     display: block;
     height: 60vw;

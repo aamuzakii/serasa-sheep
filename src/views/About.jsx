@@ -6,8 +6,8 @@ function About() {
   
   return (
     <div className='container about' >
-      <div>
-        <img  src="https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661134662/residence-g332670919_1920_jnlps6.jpg" alt="about" />
+      <div className='img-container' >
+        <img src="https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661134662/residence-g332670919_1920_jnlps6.jpg" alt="about" />
       </div>
       <div className='right' >
         <h1 style={{ fontSize: 60 }} >About Us</h1>

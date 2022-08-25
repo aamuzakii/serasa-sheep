@@ -3,13 +3,9 @@ import React from 'react'
 
 function Journal() {
 
-  const little = {
-    
-  }
-
   const data = [
     {
-      name: 'GA House Exhibitionxxxxx',
+      name: 'GA House Exhibition',
       date: 'March - May 2014'
     },
     {
@@ -59,9 +55,9 @@ function Journal() {
 
   return (
     <div className='container journal' style={{ background: 'white', alignItems: 'flex-start' }} >
-      <div style={{ width: '30%' }} ></div>
-      <div className='big-table' style={{ display: 'flex', margin: '100px 180px 0 0' }}>
-        <div style={{ margin: 50, display: 'table' }} >
+      <div style={{ width: '30%' }} className="bemper-kiri" ></div>
+      <div className='big-table' >
+        <div className="left" >
           {
             left.map(({name, date}, i)=>(
               <div key={i} className='cursor-pointer bubble' style={{ display: 'cell' }} >
@@ -70,7 +66,7 @@ function Journal() {
             ))  
           }
         </div>
-        <div style={{ margin: 50, display: 'table' }} >
+        <div className="right" >
           {
             right.map(({name, date}, i)=>(
               <div key={i} className='cursor-pointer bubble' style={{ display: 'cell' }} >
