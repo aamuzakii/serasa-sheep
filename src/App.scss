@@ -1,20 +1,20 @@
-@import "stylesheets/Projects.css";
-@import "stylesheets/ProjectsPhone.css";
+@import "stylesheets/Projects.scss";
+@import "stylesheets/ProjectsPhone.scss";
 
-@import "stylesheets/Project.css";
-@import "stylesheets/ProjectPhone.css";
+@import "stylesheets/Project.scss";
+@import "stylesheets/ProjectPhone.scss";
 
-@import "stylesheets/Section.css";
-@import "stylesheets/NavList.css";
+@import "stylesheets/Section.scss";
+@import "stylesheets/NavList.scss";
 
-@import "stylesheets/Journal.css";
-@import "stylesheets/JournalPhone.css";
+@import "stylesheets/Journal.scss";
+@import "stylesheets/JournalPhone.scss";
 
 
-@import "stylesheets/Contact.css";
-@import "stylesheets/ContactPhone.css";
+@import "stylesheets/Contact.scss";
+@import "stylesheets/ContactPhone.scss";
 
-@import "stylesheets/About.css";
+@import "stylesheets/About.scss";
 
 .container {
   display: flex;
