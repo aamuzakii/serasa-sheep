@@ -11,14 +11,18 @@ export default function App() {
     "https://res.cloudinary.com/dk0z4ums3/image/upload/v1660653697/webinar/WhatsApp%20Image%202022-08-16%20at%2010.12.34.jpeg_e2d1c4b1-6ff5-4be7-9c5a-703da96d24e6.jpg",
   ]
 
+  useEffect(() => {
+    let a = document.querySelector(".nav-container").style
+    a.position = "absolute"
+  }, [])
+
   const [seconds, setSeconds] = useState(0);
   if (seconds >= list.length) setSeconds((seconds) => 0);
-  console.log(seconds )
 
   useEffect(() => {
     const interval = setInterval(() => {
       setSeconds((seconds) => seconds + 1);
-    }, 3000);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 

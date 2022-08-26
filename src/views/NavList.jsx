@@ -37,7 +37,7 @@ function NavList() {
           to={''}
           className="nav-logo"
         >
-          <img src={logo} alt="" height={30} />
+          <img src={logo} alt="" height={40} />
         </NavLink>
         <ul style={{ display: 'flex', textDecoration: 'none', listStyleType: 'none' }} >
           {
