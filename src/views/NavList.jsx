@@ -17,16 +17,16 @@ function NavList() {
 
   let arr = [
     {
-      name: "projects"
+      name: "Projects"
     },
     {
-      name: "journal"
+      name: "Journal"
     },
     {
-      name: "about"
+      name: "About"
     },
     {
-      name: "contact"
+      name: "Contact"
     },
   ]
 
@@ -39,7 +39,7 @@ function NavList() {
         >
           <img src={logo} alt="" height={40} />
         </NavLink>
-        <ul style={{ display: 'flex', textDecoration: 'none', listStyleType: 'none' }} >
+        <ul className="right"  >
           {
             arr.map(({ name}) => (
               <li key={name} >
