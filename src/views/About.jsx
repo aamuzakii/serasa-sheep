@@ -5,7 +5,7 @@ function About() {
   useEffect(() => {
     let a = document.querySelector(".nav-container").style
     a.position = "absolute"
-    a.top = "20px"
+    a.top = "0px"
   }, [])
 
   const text = 'Andra Matin both the man and the firm, andramatin, are known for their clean and modern approach to architecture. The works of andramatin has been a constant reflection of contemporary take on traditional values, that are based on its context and its sensitivity to the environment. Aside from his architectural projects, Andra Matin is also one of the founders of Arsitek Muda Indonesia (AMI – eng: Young Architects of Indonesia), and has been.'

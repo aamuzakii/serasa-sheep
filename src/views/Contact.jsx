@@ -10,8 +10,8 @@ function Contact() {
 
   useEffect(() => {
     let a = document.querySelector(".nav-container").style
-    a.position = "static"
-    a.top = "20px"
+    a.position = "absolute"
+    a.top = "0px"
   }, [])
 
   const adminEmail = "aamuzakii@gmail.com"

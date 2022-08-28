@@ -14,14 +14,14 @@ function Project() {
 
   const { height, width } = useWindowDimensions();
   useEffect(() => {
-    console.log(height)
-    if (width < 425) {
-      // mobile device
-      
-    }
     let a = document.querySelector(".nav-container").style
-    a.position = "sticky"
-    a.top = "20px"
+    // if (width < 425) {
+    //   // mobile device
+    //   a.position = "static"
+    // } else {
+    //   a.position = "sticky"
+    //   // a.top = "20px"
+    // }
     window.scrollTo(0, 0); // solve bug
 
   }, [])
