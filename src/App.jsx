@@ -2,7 +2,7 @@ import * as React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import './App.scss';
 import Home from './views/Home'
-import Hall from './views/Hall'
+import Hall from './views/HallVideo'
 import Contact from './views/Contact'
 import Journal from './views/Journal'
 import About from './views/About'

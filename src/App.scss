@@ -81,3 +81,26 @@ button.learn-more {
 .section {
   /* border-bottom: 3px solid #d0dadd; */
 }
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
