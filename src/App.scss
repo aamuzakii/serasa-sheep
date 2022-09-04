@@ -103,4 +103,6 @@ video {
   position: absolute;
   width: 100%;
   bottom: 0;
+  object-fit: cover;
+  min-height: 100%;
 }

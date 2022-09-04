@@ -22,12 +22,14 @@ function Projects() {
   }
 
   let year = ['y2021', 'y2022']
-  let location = ['Bogor', 'Depok', 'Jakarta']
+  let location = ['bogor', 'depok', 'cilegon', 'madiun', 'serang']
   let status = ['idea', 'completed']
 
   let dasarDict0
   let dasarDict1
   let dasarDict2
+  let dasarDict3
+  let dasarDict4
 
   for (let i = 0; i < location.length; i++) {
     let content = {
@@ -54,6 +56,8 @@ function Projects() {
         <Section dasar={dasar} dasarDict={dasarDict0} code={'b'} ></Section>
         <Section dasar={dasar} dasarDict={dasarDict1} code={'a'} ></Section>
         <Section dasar={dasar} dasarDict={dasarDict2} code={'c'} ></Section>
+        <Section dasar={dasar} dasarDict={dasarDict3} code={'d'} ></Section>
+        <Section dasar={dasar} dasarDict={dasarDict4} code={'e'} ></Section>
       </div>
       <Outlet />
     </div>
