@@ -107,6 +107,160 @@ function Section({ dasar, dasarDict, code }) {
       x: 100,
       y: 0,
     },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
+    {
+      name: 'Central Park',
+      year: 2022,
+      program: 'urban',
+      scale: '>1000',
+      status: 'completed',
+      location: 'Jakarta',
+      color: 'white',
+      x: 100,
+      y: 0,
+    },
   ]
 
   const [projects, setProjects] = useState(initialDataBuffer);
@@ -124,7 +278,7 @@ function Section({ dasar, dasarDict, code }) {
         element.color = 'white'
         element.status = 'completed'
         element.year = element.appointment
-        element.image_link = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
+        if (!element.main_picture) element.main_picture = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
         return element
       })
       console.log(data, `< in`)
@@ -174,14 +328,14 @@ function Section({ dasar, dasarDict, code }) {
       <h1 className='font-anu' style={{ textAlign: 'center' }} >{dasarDict[dasar]}</h1>
     <div className={c} >
       {
-          projects.map(({ color, year, program, status, location, name, image_link }, i) => {
+          projects.map(({ color, year, program, status, location, name, main_picture }, i) => {
           let kelas = `${item} ${program} ${status} y${year} ${location}`
           return (
             <div key={i} className={kelas} >
               <Link to={i.toString()} className='box image' style={{ background: color, color: colorDict[color] }} >
                 <p className='tulisan-kecil-corner small-text' >{name}</p>
                 <div className='box-gradient-layer' ></div>
-                <img className='inner-img' src={image_link} alt="" />
+                <img className='inner-img' src={main_picture} alt="" />
               </Link>
             </div>
           )
