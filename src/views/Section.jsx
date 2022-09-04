@@ -7,7 +7,7 @@ import { app } from "../firebase"
 
 function Section({ dasar, dasarDict, code }) {
 
-  let dataold = [
+  let initialDataBuffer = [
     {
       name: 'SMK Muhammadiyah Parung',
       year: 2021,
@@ -15,10 +15,9 @@ function Section({ dasar, dasarDict, code }) {
       scale: '>1000',
       status: 'idea',
       location: 'Depok',
-      color: 'blue',
+      color: 'white',
       x: 100,
       y: 20,
-      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264579/297174769_1263499707745193_2731266844231810095_n_jv61rp.jpg'
     },
     {
       name: 'Jembatan UI',
@@ -27,10 +26,9 @@ function Section({ dasar, dasarDict, code }) {
       scale: '>1000',
       status: 'idea',
       location: 'Jakarta',
-      color: '#EE4B4B',
+      color: 'white',
       x: 1000,
       y: 20,
-      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264988/qq_dqzcjl.webp'
     },
     {
       name: 'Central Park Taiwan',
@@ -39,10 +37,9 @@ function Section({ dasar, dasarDict, code }) {
       scale: '>1000',
       status: 'completed',
       location: 'Taiwan',
-      color: '#84D8F6',
+      color: 'white',
       x: 100,
       y: 0,
-      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
     },
     {
       name: 'Bank Syariah Indonesia',
@@ -51,10 +48,9 @@ function Section({ dasar, dasarDict, code }) {
       scale: '>1000',
       status: 'idea',
       location: 'Jakarta',
-      color: 'blue',
+      color: 'white',
       x: 100,
       y: 20,
-      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264579/297174769_1263499707745193_2731266844231810095_n_jv61rp.jpg'
     },
     {
       name: 'Jembatan UI',
@@ -63,10 +59,9 @@ function Section({ dasar, dasarDict, code }) {
       scale: '>1000',
       status: 'idea',
       location: 'Bogor',
-      color: '#EE4B4B',
+      color: 'white',
       x: 1000,
       y: 20,
-      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264988/qq_dqzcjl.webp'
     },
     {
       name: 'Central Park',
@@ -75,10 +70,9 @@ function Section({ dasar, dasarDict, code }) {
       scale: '>1000',
       status: 'completed',
       location: 'Jakarta',
-      color: '#84D8F6',
+      color: 'white',
       x: 100,
       y: 0,
-      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
     },
     {
       name: 'Bank Syariah Indonesia',
@@ -87,10 +81,9 @@ function Section({ dasar, dasarDict, code }) {
       scale: '>1000',
       status: 'idea',
       location: 'Jakarta',
-      color: 'blue',
+      color: 'white',
       x: 100,
       y: 20,
-      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264579/297174769_1263499707745193_2731266844231810095_n_jv61rp.jpg'
     },
     {
       name: 'Jembatan UI',
@@ -99,10 +92,9 @@ function Section({ dasar, dasarDict, code }) {
       scale: '>1000',
       status: 'idea',
       location: 'Bogor',
-      color: '#EE4B4B',
+      color: 'white',
       x: 1000,
       y: 20,
-      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264988/qq_dqzcjl.webp'
     },
     {
       name: 'Central Park',
@@ -111,14 +103,13 @@ function Section({ dasar, dasarDict, code }) {
       scale: '>1000',
       status: 'completed',
       location: 'Jakarta',
-      color: '#84D8F6',
+      color: 'white',
       x: 100,
       y: 0,
-      image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
     },
   ]
 
-  const [projects, setProjects] = useState(dataold);
+  const [projects, setProjects] = useState(initialDataBuffer);
 
 
   useEffect(() => {
@@ -130,7 +121,7 @@ function Section({ dasar, dasarDict, code }) {
       data = snapshot.val();
 
       data = data.map(element => {
-        element.color = '#84D8F6'
+        element.color = 'white'
         element.status = 'completed'
         element.year = element.appointment
         element.image_link = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
@@ -168,8 +159,8 @@ function Section({ dasar, dasarDict, code }) {
   }, [filterKey])
 
   const colorDict = {
-    '#84D8F6': 'white',
-    '#EE4B4B': 'white'
+    'white': 'white',
+    'white': 'white'
   }
 
   useEffect(() => {
