@@ -71,7 +71,10 @@ function Section({ dasar, dasarDict, code }) {
     cilegon: "Cilegon",
     serang: "Serang",
     y2021: "2021",
-    y2022: "2022"
+    y2022: "2022",
+    renovation: "Renovation",
+    new_dev: "New Development",
+    other: "Other",
   }
 
   let sectionTitle = classToReadableTitleDict[dasarDict[dasar]]
@@ -83,8 +86,8 @@ function Section({ dasar, dasarDict, code }) {
       <h1 className='font-anu' style={{ textAlign: 'center' }} >{sectionTitle}</h1>
       <div className={c} >
         {
-          projects.map(({ color, year, program, status, location, name, main_picture }, i) => {
-          let kelas = `${item} ${program} ${status} y${year} ${location}`
+          projects.map(({ color, year, program, status, location, name, main_picture, project_type }, i) => {
+          let kelas = `${item} ${program} ${status} y${year} ${location} ${project_type}`
           return (
               <div key={i} className={kelas} >
                 <Link to={i.toString()} className='box image' style={{ background: color, color: colorDict[color] }} >
