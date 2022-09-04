@@ -1,52 +1,84 @@
 import React from 'react'
 import Section from './Section'
 import { Link, Outlet } from "react-router-dom";
+import { initializeApp } from "firebase/app";
+import { getDatabase, ref, onValue } from "firebase/database";
+
+let data
+
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+  databaseURL: "https://persada-store-bandung-default-rtdb.asia-southeast1.firebasedatabase.app/",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Realtime Database and get a reference to the service
+const database = getDatabase(app);
+const reference = ref(database, '/projects');
+
+onValue(reference, (snapshot) => {
+  let data = snapshot.val();
+  console.log(data)
+
+  data = data.map(element => {
+    element.year = 'y' + element.appointment 
+  })
+});
 
 function Projects() {
 
-  let data = [
-    {
-      name: 'Bank Syariah Indonesia',
-      year: 2021,
-      program: 'urban',
-      scale: '>1000',
-      status: 'idea',
-      location: 'Jakarta',
-      color: 'blue',
-      x: 100,
-      y: 20,
-      kelas: 'box fooo'
-    },
-    {
-      name: 'Jembatan UI',
-      year: 2022,
-      program: 'housing',
-      scale: '>1000',
-      status: 'idea',
-      location: 'Bogor',
-      color: '#EE4B4B',
-      x: 1000,
-      y: 20,
-      kelas: 'box fooo'
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: '#84D8F6',
-      x: 100,
-      y: 0,
-      kelas: 'box sdsd'
-    },
-  ]
+  // let data = [
+  //   {
+  //     name: 'Bank Syariah Indonesia',
+  //     year: 2021,
+  //     program: 'urban',
+  //     scale: '>1000',
+  //     status: 'idea',
+  //     location: 'Jakarta',
+  //     color: 'blue',
+  //     x: 100,
+  //     y: 20,
+  //     kelas: 'box fooo'
+  //   },
+  //   {
+  //     name: 'Jembatan UI',
+  //     year: 2022,
+  //     program: 'housing',
+  //     scale: '>1000',
+  //     status: 'idea',
+  //     location: 'Bogor',
+  //     color: '#EE4B4B',
+  //     x: 1000,
+  //     y: 20,
+  //     kelas: 'box fooo'
+  //   },
+  //   {
+  //     name: 'Central Park',
+  //     year: 2022,
+  //     program: 'urban',
+  //     scale: '>1000',
+  //     status: 'completed',
+  //     location: 'Jakarta',
+  //     color: '#84D8F6',
+  //     x: 100,
+  //     y: 0,
+  //     kelas: 'box sdsd'
+  //   },
+  // ]
+
+  console.log(data)
 
   const isotope = React.useRef()
   // store the filter keyword in a state
   const [dasar, setDasar] = React.useState('location')
-
 
   // handling filter key change
 
