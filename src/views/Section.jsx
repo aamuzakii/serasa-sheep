@@ -7,263 +7,7 @@ import { app } from "../firebase"
 
 function Section({ dasar, dasarDict, code }) {
 
-  let initialDataBuffer = [
-    {
-      name: 'SMK Muhammadiyah Parung',
-      year: 2021,
-      program: 'urban',
-      scale: '>1000',
-      status: 'idea',
-      location: 'Depok',
-      color: 'white',
-      x: 100,
-      y: 20,
-    },
-    {
-      name: 'Jembatan UI',
-      year: 2022,
-      program: 'housing',
-      scale: '>1000',
-      status: 'idea',
-      location: 'Jakarta',
-      color: 'white',
-      x: 1000,
-      y: 20,
-    },
-    {
-      name: 'Central Park Taiwan',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Taiwan',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Bank Syariah Indonesia',
-      year: 2021,
-      program: 'urban',
-      scale: '>1000',
-      status: 'idea',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 20,
-    },
-    {
-      name: 'Jembatan UI',
-      year: 2022,
-      program: 'housing',
-      scale: '>1000',
-      status: 'idea',
-      location: 'Bogor',
-      color: 'white',
-      x: 1000,
-      y: 20,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Bank Syariah Indonesia',
-      year: 2021,
-      program: 'urban',
-      scale: '>1000',
-      status: 'idea',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 20,
-    },
-    {
-      name: 'Jembatan UI',
-      year: 2022,
-      program: 'housing',
-      scale: '>1000',
-      status: 'idea',
-      location: 'Bogor',
-      color: 'white',
-      x: 1000,
-      y: 20,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-    {
-      name: 'Central Park',
-      year: 2022,
-      program: 'urban',
-      scale: '>1000',
-      status: 'completed',
-      location: 'Jakarta',
-      color: 'white',
-      x: 100,
-      y: 0,
-    },
-  ]
-
-  const [projects, setProjects] = useState(initialDataBuffer);
+  const [projects, setProjects] = useState(new Array(25).fill({}));
 
 
   useEffect(() => {
@@ -281,9 +25,8 @@ function Section({ dasar, dasarDict, code }) {
         if (!element.main_picture) element.main_picture = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
         return element
       })
-      console.log(data, `< in`)
 
-      setProjects(data)
+      setProjects(_=>data)
     });
   }, [])
 
@@ -303,14 +46,14 @@ function Section({ dasar, dasarDict, code }) {
       layoutMode: 'fitRows',
     })
     return () => isotope.current.destroy()
-  }, [])
+  }, [projects])
 
   // handling filter key change
   React.useEffect(() => {
     filterKey === '*'
       ? isotope.current.arrange({filter: `*`})
       : isotope.current.arrange({filter: `.${filterKey}`})
-  }, [filterKey])
+  }, [filterKey, projects])
 
   const colorDict = {
     'white': 'white',
@@ -342,7 +85,6 @@ function Section({ dasar, dasarDict, code }) {
         })
       }
     </div>
-
     </div>
   )
 }

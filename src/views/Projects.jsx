@@ -4,8 +4,6 @@ import { Link, Outlet } from "react-router-dom";
 
 function Projects() {
 
-
-
   const isotope = React.useRef()
   // store the filter keyword in a state
   const [dasar, setDasar] = React.useState('location')
@@ -18,7 +16,7 @@ function Projects() {
     });
 
     e.target.classList.add('actived');
-    return setDasar(key)
+    return setDasar(_ => key)
   }
 
   let year = ['y2021', 'y2022']
@@ -43,6 +41,7 @@ function Projects() {
   return (
     <div className='container projects' >
       <h1 className='font-gede-banget' style={{ textAlign: 'center' }} >Our Projects</h1>
+      
       <div className='flex-row sorting-btn-container' >
         <div className=' flex-row inner-container-button'>
           <div className='sorting-btn' onClick={changeDasar('status')} >Status</div>
@@ -52,7 +51,6 @@ function Projects() {
       </div>
       
       <div className='playground-container' >
-        
         <Section dasar={dasar} dasarDict={dasarDict0} code={'b'} ></Section>
         <Section dasar={dasar} dasarDict={dasarDict1} code={'a'} ></Section>
         <Section dasar={dasar} dasarDict={dasarDict2} code={'c'} ></Section>
