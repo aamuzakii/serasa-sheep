@@ -1,24 +1,10 @@
 import React from 'react'
 import Section from './Section'
 import { Link, Outlet } from "react-router-dom";
-import { getDatabase, ref, onValue } from "firebase/database";
-import { app } from "../firebase"
 
 function Projects() {
 
-// Initialize Realtime Database and get a reference to the service
-const database = getDatabase(app);
-const reference = ref(database, '/projects');
-let data
 
-onValue(reference, (snapshot) => {
-  data = snapshot.val();
-  console.log(data, `< in`)
-
-  data = data.map(element => {
-    element.year = 'y' + element.appointment 
-  })
-});
 
   const isotope = React.useRef()
   // store the filter keyword in a state
@@ -36,11 +22,12 @@ onValue(reference, (snapshot) => {
   }
 
   let year = ['y2021', 'y2022']
-  let location = ['Bogor', 'Jakarta']
+  let location = ['Bogor', 'Depok', 'Jakarta']
   let status = ['idea', 'completed']
 
   let dasarDict0
   let dasarDict1
+  let dasarDict2
 
   for (let i = 0; i < location.length; i++) {
     let content = {
@@ -66,6 +53,7 @@ onValue(reference, (snapshot) => {
         
         <Section dasar={dasar} dasarDict={dasarDict0} code={'b'} ></Section>
         <Section dasar={dasar} dasarDict={dasarDict1} code={'a'} ></Section>
+        <Section dasar={dasar} dasarDict={dasarDict2} code={'c'} ></Section>
       </div>
       <Outlet />
     </div>

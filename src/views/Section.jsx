@@ -1,17 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Isotope from 'isotope-layout'
 import { Link } from "react-router-dom";
+import { getDatabase, ref, onValue } from "firebase/database";
+import { app } from "../firebase"
 
-function Section({dasar, dasarDict, code}) {
 
-  let data = [
+function Section({ dasar, dasarDict, code }) {
+
+  let dataold = [
     {
-      name: 'Bank Syariah Indonesia',
+      name: 'SMK Muhammadiyah Parung',
       year: 2021,
       program: 'urban',
       scale: '>1000',
       status: 'idea',
-      location: 'Jakarta',
+      location: 'Depok',
       color: 'blue',
       x: 100,
       y: 20,
@@ -23,19 +26,19 @@ function Section({dasar, dasarDict, code}) {
       program: 'housing',
       scale: '>1000',
       status: 'idea',
-      location: 'Bogor',
+      location: 'Jakarta',
       color: '#EE4B4B',
       x: 1000,
       y: 20,
       image_link: 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264988/qq_dqzcjl.webp'
     },
     {
-      name: 'Central Park',
+      name: 'Central Park Taiwan',
       year: 2022,
       program: 'urban',
       scale: '>1000',
       status: 'completed',
-      location: 'Jakarta',
+      location: 'Taiwan',
       color: '#84D8F6',
       x: 100,
       y: 0,
@@ -115,6 +118,30 @@ function Section({dasar, dasarDict, code}) {
     },
   ]
 
+  const [projects, setProjects] = useState(dataold);
+
+
+  useEffect(() => {
+    const database = getDatabase(app);
+    const reference = ref(database, '/projects');
+    let data
+
+    onValue(reference, (snapshot) => {
+      data = snapshot.val();
+
+      data = data.map(element => {
+        element.color = '#84D8F6'
+        element.status = 'completed'
+        element.year = element.appointment
+        element.image_link = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
+        return element
+      })
+      console.log(data, `< in`)
+
+      setProjects(data)
+    });
+  }, [])
+
   let container = 'filter-container' + code
   let dotContainer = '.filter-container' + code
   let item = 'filter-item' + code
@@ -156,7 +183,7 @@ function Section({dasar, dasarDict, code}) {
       <h1 className='font-anu' style={{ textAlign: 'center' }} >{dasarDict[dasar]}</h1>
     <div className={c} >
       {
-        data.map(({color, year,  program, status, location, name, image_link}, i)=> {
+          projects.map(({ color, year, program, status, location, name, image_link }, i) => {
           let kelas = `${item} ${program} ${status} y${year} ${location}`
           return (
             <div key={i} className={kelas} >

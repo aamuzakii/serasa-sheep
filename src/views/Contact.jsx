@@ -34,7 +34,7 @@ function Contact() {
     });
   };
 
-  const address = `Jl. Manyar III Blok O-3 Kav. 29-30 No. 4-6 Bintaro Jaya sektor I Jakarta Selatan 12330 Indonesia`
+  const address = `Jl. Manyar III Blok O-3 Kav. 29-30 No. 4-6 Bintaro Jaya sektor I Taiwan Selatan 12330 Indonesia`
   const telp = "telp. +62 21 735 3338"
   const email = "email. admin@andramatin.com"
   const opp = "opportunities. intern@andramatin.com"
