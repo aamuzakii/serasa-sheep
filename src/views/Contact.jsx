@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser'
 import logo from './architecture.jpg';
-import wa from './whatsapp.png';
-import linkedin from './linkedin.png';
-import instagram from './instagram.png';
+import wa from '../assets/social/whatsapp.png';
+import linkedin from '../assets/social/linkedin.png';
+import instagram from '../assets/social/instagram.png';
 
 function Contact() {
 
