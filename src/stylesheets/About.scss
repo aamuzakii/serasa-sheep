@@ -1,4 +1,4 @@
-.container.about p{
+.container.about p {
   text-align: justify;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .container.about img {
-  width: 105vw;
+  width: 71vw;
   object-fit: contain;
 }
 
@@ -22,8 +22,8 @@
   width: 90%;
 }
 
-@media only screen and (max-width: 425px){
-  .container.about img{
+@media only screen and (max-width: 425px) {
+  .container.about img {
     display: none;
   }
 
@@ -32,9 +32,8 @@
   }
 
   .about .right {
-    margin: 200px 20px 20px 20px!important;
+    margin: 200px 20px 20px 20px !important;
     width: 100%;
     /* margin-top: 400px; */
   }
-  
 }
