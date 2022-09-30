@@ -13,8 +13,8 @@ export const GET_MOVIES_FROM_CACHE = gql`
 `;
 
 export const GET_SINGLE_PROJECT = gql`
-  query projectEntryQuery {
-    project(id: "4jEXKjuKh5tWjSvUunsVk0") {
+  query projectEntryQuery($projectSysId: String!) {
+    project(id: $projectSysId) {
       sys {
         id
       }
