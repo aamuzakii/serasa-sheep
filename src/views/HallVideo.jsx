@@ -17,6 +17,7 @@ function HallVideo() {
 
     const playV4 = () => {
       source.setAttribute("src", v4);
+      source.setAttribute("type", "video/mp4");
       video.load();
       video.play();
       video.addEventListener("ended", playV1);
@@ -25,6 +26,7 @@ function HallVideo() {
 
     const playV3 = () => {
       source.setAttribute("src", v3);
+      source.setAttribute("type", "video/mp4");
       video.load();
       video.play();
 
@@ -34,6 +36,7 @@ function HallVideo() {
 
     const playV2 = () => {
       source.setAttribute("src", v2);
+      source.setAttribute("type", "video/mp4");
       video.load();
       video.play();
 
@@ -43,6 +46,7 @@ function HallVideo() {
 
     const playV1 = () => {
       source.setAttribute("src", v1);
+      source.setAttribute("type", "video/mp4");
       video.load();
       video.play();
 
