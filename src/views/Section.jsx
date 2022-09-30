@@ -1,32 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import Isotope from 'isotope-layout'
 import { Link } from "react-router-dom";
-import { getDatabase, ref, onValue } from "firebase/database";
-import { app } from "../firebase"
+import { useQuery } from "@apollo/client";
+import {  GET_ALL_PROJECT } from "../graphql/queries";
+
 
 function Section({ dasar, dasarDict, code }) {
 
   const [projects, setProjects] = useState([]);
+  let { loading, error, data, refetch } = useQuery(GET_ALL_PROJECT, {
+    fetchPolicy: "network-only",
+  });
+
 
   useEffect(() => {
-    const database = getDatabase(app);
-    const reference = ref(database, '/projects');
-    let data
-
-    onValue(reference, (snapshot) => {
-      data = snapshot.val();
-
-      data = data.map(element => {
+    if (data) {
+      data.projectCollection.items = data.projectCollection.items.map(element => {
         element.color = 'white'
         element.status = 'completed'
-        element.year = element.appointment
+        // element.year = element.appointment
         if (!element.main_picture) element.main_picture = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
         return element
-      })
+      });
 
-      setProjects(_=>data)
-    });
-  }, [])
+      console.log(data.projectCollection.items);
+
+      setProjects(data.projectCollection.items)
+    }
+  }, [data])
 
   let container = 'filter-container' + code
   let dotContainer = '.filter-container' + code
@@ -73,7 +74,7 @@ function Section({ dasar, dasarDict, code }) {
     y2021: "2021",
     y2022: "2022",
     renovation: "Renovation",
-    new_dev: "New Development",
+    new_development: "New Development",
     other: "Other",
   }
 
@@ -86,14 +87,14 @@ function Section({ dasar, dasarDict, code }) {
       <h1 className='font-anu' style={{ textAlign: 'center' }} >{sectionTitle}</h1>
       <div className={c} >
         {
-          projects.map(({ color, year, program, status, location, name, main_picture, project_type }, i) => {
-          let kelas = `${item} ${program} ${status} y${year} ${location} ${project_type}`
+          projects.map(({ color, year, program, status, location, name, mainPicture, projectType, sys }, i) => {
+          let kelas = `${item} ${program} ${status} y${year} ${location} ${projectType}`
           return (
               <div key={i} className={kelas} >
-                <Link to={i.toString()} className='box image' style={{ background: color, color: colorDict[color] }} >
+                <Link to={sys.id} className='box image' style={{ background: color, color: colorDict[color] }} >
                   <p className='small-text' >{name}</p>
                   <div className='box-gradient-layer' ></div>
-                  <img className='inner-img' src={main_picture} alt="" />
+                  <img className='inner-img' src={mainPicture} alt="" />
                 </Link>
               </div>
             )

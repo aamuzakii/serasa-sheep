@@ -22,7 +22,7 @@ function Projects() {
   let year = ['y2021', 'y2022']
   let location = ['bogor', 'depok', 'cilegon', 'madiun', 'serang']
   let status = ['idea', 'completed']
-  let project_type = ['new_dev', 'renovation', 'other']
+  let projectType = ['new_development', 'renovation', 'other']
 
   let dasarDict0
   let dasarDict1
@@ -35,7 +35,7 @@ function Projects() {
       year: year[i],
       location: location[i],
       status: status[i],
-      project_type: project_type[i],
+      projectType: projectType[i],
     }
     eval("dasarDict" + i + " = " + JSON.stringify(content));
   }
@@ -47,7 +47,7 @@ function Projects() {
       <div className='flex-row sorting-btn-container' >
         <div className=' flex-row inner-container-button'>
           <div className='sorting-btn' onClick={changeDasar('status')} >Status</div>
-          <div className='sorting-btn' onClick={changeDasar('project_type')} >Project Type</div>
+          <div className='sorting-btn' onClick={changeDasar('projectType')} >Project Type</div>
           <div className='sorting-btn' onClick={changeDasar('location')} >Location</div>
           <div className='sorting-btn' onClick={changeDasar('year')} >Year</div>
         </div>

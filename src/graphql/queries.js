@@ -19,13 +19,36 @@ export const GET_SINGLE_PROJECT = gql`
         id
       }
       description
-      title
+      name
       picturesCollection {
         items {
           url
         }
       }
       # add the fields you want to query
+    }
+  }
+`;
+
+export const GET_ALL_PROJECT = gql`
+  query projectCollectionQuery {
+    projectCollection {
+      items {
+        sys {
+          id
+        }
+        name
+        location
+        mainPicture
+        program
+        projectType
+        year
+        picturesCollection {
+          items {
+            url
+          }
+        }
+      }
     }
   }
 `;
