@@ -87,14 +87,14 @@ function Section({ dasar, dasarDict, code }) {
       <h1 className='font-anu' style={{ textAlign: 'center' }} >{sectionTitle}</h1>
       <div className={c} >
         {
-          projects.map(({ color, year, program, status, location, name, mainPicture, projectType, sys }, i) => {
+          projects.map(({ color, year, program, status, location, name, picturesCollection, projectType, sys }, i) => {
           let kelas = `${item} ${program} ${status} y${year} ${location} ${projectType}`
           return (
               <div key={i} className={kelas} >
                 <Link to={sys.id} className='box image' style={{ background: color, color: colorDict[color] }} >
                   <p className='small-text' >{name}</p>
                   <div className='box-gradient-layer' ></div>
-                  <img className='inner-img' src={mainPicture} alt="" />
+                  <img className='inner-img' src={picturesCollection.items[0].url} alt="" />
                 </Link>
               </div>
             )

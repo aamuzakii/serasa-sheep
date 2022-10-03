@@ -16,7 +16,7 @@ function Project() {
     let a = document.querySelector(".nav-container").style;
     // if (width < 425) {
     //   // mobile device
-    //   a.position = "static"
+    a.position = "static"
     // } else {
     //   a.position = "sticky"
     //   // a.top = "20px"
