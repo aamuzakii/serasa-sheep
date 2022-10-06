@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.7.0",
+    "@contentful/rich-text-html-renderer": "^15.13.1",
     "@emailjs/browser": "^3.6.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
@@ -12,6 +13,7 @@
     "firebase": "^9.9.4",
     "framer-motion": "^7.2.0",
     "graphql": "^16.6.0",
+    "interweave": "^13.0.0",
     "isotope-layout": "^3.0.6",
     "node-sass": "^7.0.1",
     "react": "^18.2.0",

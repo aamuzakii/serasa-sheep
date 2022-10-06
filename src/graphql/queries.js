@@ -50,3 +50,13 @@ export const GET_ALL_PROJECT = gql`
     }
   }
 `;
+
+export const GET_STATIC_DATA = gql`
+query {
+  about(id: "7xr37H6HNyz32EhhYCb9kZ") {
+    about {
+      json
+    }
+  }
+}
+`;
