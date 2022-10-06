@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser'
 import logo from './architecture.jpg';
@@ -6,13 +6,29 @@ import wa from '../assets/social/whatsapp.png';
 import linkedin from '../assets/social/linkedin.png';
 import instagram from '../assets/social/instagram.png';
 
+import { useQuery } from "@apollo/client";
+import {  GET_CONTACT_ADDRESS } from "../graphql/queries";
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+import { Markup } from 'interweave';
+
 function Contact() {
+
+  let { loading, error, data, refetch } = useQuery(GET_CONTACT_ADDRESS, {
+    fetchPolicy: "network-only"
+  });
+  const [richText, setRichText] = useState('');
 
   useEffect(() => {
     let a = document.querySelector(".nav-container").style
     a.position = "absolute"
     a.top = "0px"
   }, [])
+
+  useEffect(() => {
+    if (data) {
+      setRichText(documentToHtmlString(data.staticData.content.json))
+    }
+  }, [data]);
 
   const adminEmail = "aamuzakii@gmail.com"
 
@@ -34,19 +50,11 @@ function Contact() {
     });
   };
 
-  const address = `Jl. Manyar III Blok O-3 Kav. 29-30 No. 4-6 Bintaro Jaya sektor I Taiwan Selatan 12330 Indonesia`
-  const telp = "telp. +62 21 735 3338"
-  const email = "email. admin@andramatin.com"
-  const opp = "opportunities. intern@andramatin.com"
-
   return (
     <div className="container contact">
       <div className='text-container' >
         <div className='address p_y_20' >
-          <p>{address}</p>
-          <p>{telp}</p>
-          <p>{email}</p>
-          <p>{opp}</p>
+          <Markup content={richText} />
           <div className='mt100 socmed-logo-container' >
             <img className='socmed-logo' src={wa} alt="wa" width={40} />
             <img className='socmed-logo' src={linkedin} alt="wa" width={40} />

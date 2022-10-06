@@ -51,10 +51,20 @@ export const GET_ALL_PROJECT = gql`
   }
 `;
 
-export const GET_STATIC_DATA = gql`
+export const GET_ABOUT_PAGE = gql`
 query {
-  about(id: "7xr37H6HNyz32EhhYCb9kZ") {
-    about {
+  staticData(id: "Yc1MlxVguGdPbESt6ZjGR") {
+    content {
+      json
+    }
+  }
+}
+`;
+
+export const GET_CONTACT_ADDRESS = gql`
+query {
+  staticData(id: "RVZkMzHE6La1UAtucgKpN") {
+    content {
       json
     }
   }
