@@ -1,6 +1,13 @@
 import React, {useEffect} from 'react'
+import { useQuery } from "@apollo/client";
+import {  GET_ALL_PROJECT } from "../graphql/queries";
+
 
 function About() {
+
+  let { loading, error, data, refetch } = useQuery(GET_ALL_PROJECT, {
+    fetchPolicy: "network-only",
+  });
 
   useEffect(() => {
     let a = document.querySelector(".nav-container").style

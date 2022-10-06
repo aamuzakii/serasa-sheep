@@ -46,7 +46,7 @@ function Projects() {
 
       <div className='flex-row sorting-btn-container' >
         <div className=' flex-row inner-container-button'>
-          <div className='sorting-btn' onClick={changeDasar('status')} >Status</div>
+          {/* <div className='sorting-btn' onClick={changeDasar('status')} >Status</div> */}
           <div className='sorting-btn' onClick={changeDasar('projectType')} >Project Type</div>
           <div className='sorting-btn' onClick={changeDasar('location')} >Location</div>
           <div className='sorting-btn' onClick={changeDasar('year')} >Year</div>

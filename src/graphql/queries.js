@@ -39,8 +39,6 @@ export const GET_ALL_PROJECT = gql`
         }
         name
         location
-        mainPicture
-        program
         projectType
         year
         picturesCollection {
