@@ -18,13 +18,10 @@ function Section({ dasar, dasarDict, code }) {
       data.projectCollection.items = data.projectCollection.items.map(element => {
         element.color = 'white'
         element.status = 'completed'
-        element.program = 'completed' // di nama class gaboleh ada yg undefined, nanti jadi banyak
+        element.program = 'program-name' // di nama class gaboleh ada yg undefined, nanti jadi banyak
         if (!element.main_picture) element.main_picture = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
         return element
       });
-
-      console.log(data.projectCollection.items);
-
       setProjects(data.projectCollection.items)
     }
   }, [data])

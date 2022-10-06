@@ -56,7 +56,6 @@ function Journal() {
         {
           data.map(({desc, img_url, id})=> {
             const kelas = `item-yaa ${id}`
-            console.log(kelas)
             return (<>
                       <img className={kelas} src={img_url} alt="" />
                       <p className={kelas} >{desc}</p>

@@ -11,7 +11,6 @@ function Project() {
     variables: { projectSysId: id },
   });
 
-  // console.log(data);
   useEffect(() => {
     let a = document.querySelector(".nav-container").style;
     // if (width < 425) {
