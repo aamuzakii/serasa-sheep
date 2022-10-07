@@ -28,6 +28,7 @@
   }
 
   .foo {
+    width: 100%;
     border-bottom: solid 1.5px rgba(191, 189, 189, 1);
   }
 
@@ -71,6 +72,7 @@
     .thumbnail_webinar {
       margin-right: 15px;
       height: 140px;
+      max-width: 130px;
       img {
         height: inherit;
       }
