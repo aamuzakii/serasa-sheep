@@ -51,22 +51,41 @@ export const GET_ALL_PROJECT = gql`
   }
 `;
 
-export const GET_ABOUT_PAGE = gql`
-query {
-  staticData(id: "Yc1MlxVguGdPbESt6ZjGR") {
-    content {
-      json
+export const GET_ALL_JOURNALS = gql`
+  query foo {
+    journalCollection {
+      items {
+        sys {
+          id
+        }
+        title
+        date
+        pictureCollection {
+          items {
+            url
+          }
+        }
+      }
     }
   }
-}
+`;
+
+export const GET_ABOUT_PAGE = gql`
+  query {
+    staticData(id: "Yc1MlxVguGdPbESt6ZjGR") {
+      content {
+        json
+      }
+    }
+  }
 `;
 
 export const GET_CONTACT_ADDRESS = gql`
-query {
-  staticData(id: "RVZkMzHE6La1UAtucgKpN") {
-    content {
-      json
+  query {
+    staticData(id: "RVZkMzHE6La1UAtucgKpN") {
+      content {
+        json
+      }
     }
   }
-}
 `;
