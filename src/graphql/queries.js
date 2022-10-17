@@ -1,9 +1,5 @@
 import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  useQuery,
-  gql,
+  gql
 } from "@apollo/client";
 
 export const GET_MOVIES_FROM_CACHE = gql`
@@ -18,7 +14,9 @@ export const GET_SINGLE_PROJECT = gql`
       sys {
         id
       }
-      description
+      description {
+        json
+      }
       name
       picturesCollection {
         items {
