@@ -17,13 +17,13 @@ function Project() {
 
   useEffect(() => {
     let a = document.querySelector(".nav-container").style;
-    // if (width < 425) {
-    //   // mobile device
-    a.position = "static";
-    // } else {
-    //   a.position = "sticky"
-    //   // a.top = "20px"
-    // }
+    let width = document.body.clientWidth;
+    if (width < 425) {
+      // mobile device
+      a.position = "static";
+    } else {
+      a.position = "fixed"
+    }
 
     window.scrollTo(0, 0); // solve bug
   }, []);
