@@ -6,5 +6,5 @@
   "bracketSpacing": false,
   "arrowParens": "always",
   "semi": false,
-  "printWidth": 100
+  "printWidth": 1000
 }
