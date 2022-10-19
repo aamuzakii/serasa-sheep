@@ -1,36 +1,35 @@
 import React, {useEffect, useRef} from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
+let v1 =
+  'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243857/serasa/videos/1_cgn_mmcsor.mp4'
 
 const ProjectParallax = () => {
-  const layerStoryBox = useRef(null)
-  const layerStoryContentWrapper = useRef(null)
   useEffect(() => {
-    // gsap.registerPlugin(ScrollTrigger)
-    // let tl = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: '.layer-story-box',
-    //     scrub: true,
-    //     pin: true,
-    //     start: 'top top',
-    //     end: '3000px',
-    //     markers: true,
-    //   },
-    // })
-    // tl.from('.layer-story-content-wrapper', {y: 20, autoAlpha: 0, stagger: 1.5}, 0).to(
-    //   '.layer-story-content-wrapper',
-    //   {
-    //     y: 0,
-    //     autoAlpha: 0,
-    //     stagger: 1.5,
-    //   },
-    //   0.9,
-    // )
+    gsap.registerPlugin(ScrollTrigger)
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.layer-story-box',
+        scrub: true,
+        pin: true,
+        start: 'top top',
+        end: '3000px',
+      },
+    })
+    tl.from('.layer-story-content-wrapper', {y: 20, autoAlpha: 0, stagger: 1.5}, 0).to(
+      '.layer-story-content-wrapper',
+      {
+        y: 0,
+        autoAlpha: 0,
+        stagger: 1.5,
+      },
+      0.9,
+    )
   }, [])
 
   return (
     <div className="container">
-      <section className="layer-story-box" ref={layerStoryBox}>
+      <section className="layer-story-box">
         <div className="intro"></div>
         <div className="layer-story-pinned-content">
           <div className="layer-story-image-wrapper">
@@ -63,20 +62,20 @@ const ProjectParallax = () => {
               </p>
             </figure>
           </div>
-          <div className="layer-story-content-wrapper" id="layer-1" ref={layerStoryContentWrapper}>
+          <div className="layer-story-content-wrapper" id="layer-1">
             <img
               src="https://greensock.com/uploads/monthly_2020_05/greensock-thumb.png.640b7d423125b0ad11e9f2af1cbf94c9.png"
               alt=""
             />
           </div>
 
-          <div className="layer-story-content-wrapper" id="layer-2" ref={layerStoryContentWrapper}>
+          <div className="layer-story-content-wrapper" id="layer-2">
             <img
               src="https://awsimages.detik.net.id/community/media/visual/2021/03/06/tyler-hoechlin-pemeran-superman-dalam-superman-lois-1_43.jpeg?w=700&q=90"
               alt=""
             />
           </div>
-          <div className="layer-story-content-wrapper" id="layer-3" ref={layerStoryContentWrapper}>
+          <div className="layer-story-content-wrapper" id="layer-3">
             <img
               src="https://images.tokopedia.net/img/cache/700/VqbcmM/2020/12/16/7020d72f-0ee9-49ce-a458-3f9f3aad4a52.jpg"
               alt=""
@@ -85,7 +84,9 @@ const ProjectParallax = () => {
         </div>
       </section>
       <section className="last">
-        <h2>Last</h2>
+        <video muted autoPlay className="fullscreen-bg__video">
+          <source src={v1} type="video/mp4" />
+        </video>
       </section>
     </div>
   )
