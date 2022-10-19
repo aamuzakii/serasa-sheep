@@ -1,21 +1,21 @@
-@import "stylesheets/Projects.scss";
-@import "stylesheets/ProjectsPhone.scss";
+@import 'stylesheets/Projects.scss';
+@import 'stylesheets/ProjectsPhone.scss';
 
-@import "stylesheets/Project.scss";
-@import "stylesheets/ProjectPhone.scss";
+@import 'stylesheets/Project.scss';
+@import 'stylesheets/ProjectPhone.scss';
 
-@import "stylesheets/Section.scss";
+@import 'stylesheets/Section.scss';
 
-@import "stylesheets/NavList.scss";
-@import "stylesheets/NavListPhone.scss";
+@import 'stylesheets/NavList.scss';
+@import 'stylesheets/NavListPhone.scss';
 
-@import "stylesheets/Journal.scss";
-@import "stylesheets/JournalPhone.scss";
+@import 'stylesheets/Journal.scss';
+@import 'stylesheets/JournalPhone.scss';
 
-@import "stylesheets/Contact.scss";
-@import "stylesheets/ContactPhone.scss";
+@import 'stylesheets/Contact.scss';
+@import 'stylesheets/ContactPhone.scss';
 
-@import "stylesheets/About.scss";
+@import 'stylesheets/About.scss';
 
 .container {
   display: flex;
@@ -101,4 +101,87 @@ video {
   width: 100%;
   object-fit: cover;
   min-height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.container {
+  display: block;
+  position: relative;
+}
+section {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0px;
+  display: block;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+.last {
+  background-color: blue;
+  color: white;
+}
+.layer-story-box {
+  // background-color: aqua;
+  position: relative;
+  padding: 40px;
+  overflow: hidden;
+  max-height: 100vh;
+}
+.layer-story-pinned-content {
+  display: block;
+  position: relative;
+}
+.layer-story-image-wrapper {
+  position: relative;
+  margin: 20px auto;
+  max-width: 80%;
+}
+.image_container {
+  // background-color: grey;
+  width: 100%;
+  max-width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  margin: 0;
+}
+img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 2;
+}
+.layer-story-content-wrapper {
+  position: absolute;
+  max-width: 80%;
+  right: 0;
+  height: 100%;
+  z-index: 200;
+  color: white;
+}
+.layer-story-content-wrapper.active {
+  transform: translateY(0);
+  opacity: 1;
 }
