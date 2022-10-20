@@ -9,6 +9,8 @@ const img3 = 'https://images.ctfassets.net/0wvobgztd3t0/8Ns0naryVuEwOvE6ZZTFG/67
 
 const ProjectParallax = () => {
   useEffect(() => {
+    window.scrollTo(0, 300) // workaround
+    // stagger = jarak satu dgn lainnya
     gsap.registerPlugin(ScrollTrigger)
     let tl = gsap.timeline({
       scrollTrigger: {
@@ -17,15 +19,14 @@ const ProjectParallax = () => {
         pin: true,
         start: 'top top',
         end: '3000px',
-        markers: true,
       },
     })
-    tl.from('.layer-story-content-wrapper', {y: 20, autoAlpha: 0, stagger: 1.5}, 0).to(
+    tl.from('.layer-story-content-wrapper', {y: 20, autoAlpha: 0, stagger: 1.4}, 0).to(
       '.layer-story-content-wrapper',
       {
         y: 0,
         autoAlpha: 0,
-        stagger: 1.5,
+        stagger: 1.4,
       },
       0.9,
     )
