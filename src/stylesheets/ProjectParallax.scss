@@ -22,7 +22,7 @@
 }
 .layer-story-box {
   position: relative;
-  padding: 40px;
+  padding: 0 40px 40px 40px;
   overflow: hidden;
   max-height: 100vh;
   .layer-story-pinned-content {
@@ -46,6 +46,7 @@
 
     .layer-story-content-wrapper {
       position: absolute;
+      top: 40px;
       max-width: 80%;
       right: 0;
       height: 100%;

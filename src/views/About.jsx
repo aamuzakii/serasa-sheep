@@ -15,6 +15,7 @@ function About() {
     let a = document.querySelector('.nav-container').style
     a.position = 'absolute'
     a.top = '0px'
+    a.display = 'block'
   }, [])
 
   useEffect(() => {
@@ -26,10 +27,7 @@ function About() {
   return (
     <div className="container about">
       <div className="img-container">
-        <img
-          src="https://res.cloudinary.com/dm9ufmxnq/image/upload/v1664145976/serasa/Picture4_jib7k8_ziiyky.webp"
-          alt="about"
-        />
+        <img src="https://res.cloudinary.com/dm9ufmxnq/image/upload/v1664145976/serasa/Picture4_jib7k8_ziiyky.webp" alt="about" />
       </div>
       <div className="right">
         <h1 style={{fontSize: 60}}>About Us</h1>

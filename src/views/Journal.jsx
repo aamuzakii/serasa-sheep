@@ -9,6 +9,7 @@ const Journal = () => {
   useEffect(() => {
     let a = document.querySelector('.nav-container').style
     a.position = 'static'
+    a.display = 'block'
   }, [])
 
   let {loading, error, data, refetch} = useQuery(GET_ALL_JOURNALS, {

@@ -17,6 +17,7 @@ function Project() {
 
   useEffect(() => {
     let a = document.querySelector('.nav-container').style
+    a.display = 'block'
     let width = document.body.clientWidth
     if (width < 425) {
       // mobile device

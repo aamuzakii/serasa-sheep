@@ -1,22 +1,28 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Section from './Section'
-import { Link, Outlet } from "react-router-dom";
+import {Link, Outlet} from 'react-router-dom'
 
 function Projects() {
-
   const isotope = React.useRef()
   // store the filter keyword in a state
   const [dasar, setDasar] = React.useState('location')
 
+  useEffect(() => {
+    let a = document.querySelector('.nav-container').style
+    // a.position = 'absolute'
+    // a.top = '0px'
+    a.display = 'block'
+  }, [])
+
   // handling filter key change
 
-  const changeDasar = key => (e) => {
-    document.querySelectorAll(".sorting-btn").forEach(element => {
-      element.classList.remove('actived');
-    });
+  const changeDasar = (key) => (e) => {
+    document.querySelectorAll('.sorting-btn').forEach((element) => {
+      element.classList.remove('actived')
+    })
 
-    e.target.classList.add('actived');
-    return setDasar(_ => key)
+    e.target.classList.add('actived')
+    return setDasar((_) => key)
   }
 
   let year = ['y2021', 'y2022']
@@ -37,28 +43,36 @@ function Projects() {
       status: status[i],
       projectType: projectType[i],
     }
-    eval("dasarDict" + i + " = " + JSON.stringify(content));
+    eval('dasarDict' + i + ' = ' + JSON.stringify(content))
   }
 
   return (
-    <div className='container projects' >
-      <h1 className='font-gede-banget' style={{ textAlign: 'center' }} >Our Projects</h1>
+    <div className="container projects">
+      <h1 className="font-gede-banget" style={{textAlign: 'center'}}>
+        Our Projects
+      </h1>
 
-      <div className='flex-row sorting-btn-container' >
-        <div className=' flex-row inner-container-button'>
+      <div className="flex-row sorting-btn-container">
+        <div className=" flex-row inner-container-button">
           {/* <div className='sorting-btn' onClick={changeDasar('status')} >Status</div> */}
-          <div className='sorting-btn' onClick={changeDasar('projectType')} >Project Type</div>
-          <div className='sorting-btn' onClick={changeDasar('location')} >Location</div>
-          <div className='sorting-btn' onClick={changeDasar('year')} >Year</div>
+          <div className="sorting-btn" onClick={changeDasar('projectType')}>
+            Project Type
+          </div>
+          <div className="sorting-btn" onClick={changeDasar('location')}>
+            Location
+          </div>
+          <div className="sorting-btn" onClick={changeDasar('year')}>
+            Year
+          </div>
         </div>
       </div>
-      
-      <div className='playground-container' >
-        <Section dasar={dasar} dasarDict={dasarDict0} code={'b'} ></Section>
-        <Section dasar={dasar} dasarDict={dasarDict1} code={'a'} ></Section>
-        <Section dasar={dasar} dasarDict={dasarDict2} code={'c'} ></Section>
-        <Section dasar={dasar} dasarDict={dasarDict3} code={'d'} ></Section>
-        <Section dasar={dasar} dasarDict={dasarDict4} code={'e'} ></Section>
+
+      <div className="playground-container">
+        <Section dasar={dasar} dasarDict={dasarDict0} code={'b'}></Section>
+        <Section dasar={dasar} dasarDict={dasarDict1} code={'a'}></Section>
+        <Section dasar={dasar} dasarDict={dasarDict2} code={'c'}></Section>
+        <Section dasar={dasar} dasarDict={dasarDict3} code={'d'}></Section>
+        <Section dasar={dasar} dasarDict={dasarDict4} code={'e'}></Section>
       </div>
       <Outlet />
     </div>
@@ -66,6 +80,3 @@ function Projects() {
 }
 
 export default Projects
-
-  
-

@@ -1,14 +1,10 @@
 import React, {useEffect, useRef} from 'react'
 import {useMediaQuery} from 'react-responsive'
 
-let v1 =
-  'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243857/serasa/videos/1_cgn_mmcsor.mp4'
-let v2 =
-  'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664232845/serasa/videos/2_dpk_o1kcvg.mp4'
-let v3 =
-  'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243865/serasa/videos/3_cmg_e4lilc.mp4'
-let v4 =
-  'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243855/serasa/videos/madiun_dn_drwvzq.mp4'
+let v1 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243857/serasa/videos/1_cgn_mmcsor.mp4'
+let v2 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664232845/serasa/videos/2_dpk_o1kcvg.mp4'
+let v3 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243865/serasa/videos/3_cmg_e4lilc.mp4'
+let v4 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243855/serasa/videos/madiun_dn_drwvzq.mp4'
 
 function HallVideo() {
   // Note: Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.
@@ -75,6 +71,13 @@ function HallVideo() {
     }
 
     video.addEventListener('ended', playV2)
+  }, [])
+
+  useEffect(() => {
+    let a = document.querySelector('.nav-container').style
+    a.position = 'absolute'
+    a.top = '0px'
+    a.display = 'block'
   }, [])
 
   return (

@@ -3,14 +3,11 @@ import {AnimatePresence, motion} from 'framer-motion'
 import {useEffect, useState} from 'react'
 
 export default function App() {
-  const list = [
-    'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264579/297174769_1263499707745193_2731266844231810095_n_jv61rp.jpg',
-    'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264988/qq_dqzcjl.webp',
-    'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp',
-  ]
+  const list = ['https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264579/297174769_1263499707745193_2731266844231810095_n_jv61rp.jpg', 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264988/qq_dqzcjl.webp', 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp']
 
   useEffect(() => {
     let a = document.querySelector('.nav-container').style
+    a.display = 'block'
     a.position = 'absolute'
   }, [])
 

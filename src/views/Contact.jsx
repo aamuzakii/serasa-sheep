@@ -19,6 +19,7 @@ function Contact() {
 
   useEffect(() => {
     let a = document.querySelector('.nav-container').style
+    a.display = 'block'
     a.position = 'absolute'
     a.top = '0px'
   }, [])
@@ -41,21 +42,14 @@ function Contact() {
       customer_message: 'Apakah email ini diterima?',
     }
 
-    emailjs
-      .send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE,
-        templateParams,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
-      )
-      .then(
-        (result) => {
-          alert('Message Sent. ', result.text)
-        },
-        (error) => {
-          alert('An error occurred: ', error.text)
-        },
-      )
+    emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE, templateParams, process.env.REACT_APP_EMAILJS_PUBLIC_KEY).then(
+      (result) => {
+        alert('Message Sent. ', result.text)
+      },
+      (error) => {
+        alert('An error occurred: ', error.text)
+      },
+    )
   }
 
   return (
