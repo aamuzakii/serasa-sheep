@@ -1,8 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import NavList from '../views/NavList'
-
 let v1 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243857/serasa/videos/1_cgn_mmcsor.mp4'
 
 const img1 = 'https://images.ctfassets.net/0wvobgztd3t0/6yXkjQz8nsoifdm6u0mhAe/de04fd7b5f6bc98fbdbca1db9933172b/EXT.jpeg'
@@ -11,15 +9,6 @@ const img3 = 'https://images.ctfassets.net/0wvobgztd3t0/8Ns0naryVuEwOvE6ZZTFG/67
 
 const ProjectParallax = () => {
   useEffect(() => {
-    let navStyle = document.querySelector('.nav-container').style
-    let width = document.body.clientWidth
-    if (width < 425) {
-      // mobile device
-      navStyle.position = 'static'
-    } else {
-      navStyle.display = 'none'
-    }
-
     window.scrollTo(0, 300) // workaround
     // stagger = jarak satu dgn lainnya
     gsap.registerPlugin(ScrollTrigger)
@@ -48,7 +37,6 @@ const ProjectParallax = () => {
       <section className="layer-story-box">
         <div className="intro"></div>
         <div className="layer-story-pinned-content">
-          <NavList />
           <div className="woy_scroll">
             <img className="woy_scroll_2" src="https://www.golfclubmadesimo.com/images/scroll-down.gif" alt="" />
           </div>
