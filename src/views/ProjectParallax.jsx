@@ -3,9 +3,9 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 let v1 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243857/serasa/videos/1_cgn_mmcsor.mp4'
 
-const img1 = 'https://images.ctfassets.net/0wvobgztd3t0/6yXkjQz8nsoifdm6u0mhAe/de04fd7b5f6bc98fbdbca1db9933172b/EXT.jpeg'
-const img2 = 'https://images.ctfassets.net/0wvobgztd3t0/MU7nC40YGJRUJlXt5z3pR/eb40e2f35a755670942e876b5041fdcf/EXT_2.jpeg'
-const img3 = 'https://images.ctfassets.net/0wvobgztd3t0/8Ns0naryVuEwOvE6ZZTFG/675d15300d515c952aab68f2121e1047/EKSTERIOR_3.jpeg'
+const img1 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271841/EXT_q37luw.webp'
+const img2 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271840/EXT_2_tl1u2x.webp'
+const img3 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271841/EKSTERIOR_3_osjfxg.webp'
 
 const ProjectParallax = () => {
   useEffect(() => {
@@ -33,7 +33,7 @@ const ProjectParallax = () => {
   }, [])
 
   return (
-    <div className="container">
+    <div className="container_project_parallax">
       <section className="layer-story-box">
         <div className="intro"></div>
         <div className="layer-story-pinned-content">
