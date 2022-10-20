@@ -1,4 +1,7 @@
-a, a:hover, a:focus, a:active {
+a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
   color: inherit;
 }
@@ -12,7 +15,8 @@ ul {
   padding: 0;
 }
 
-.nav-container {
+.nav-container,
+.nav-container2 {
   width: 100%;
   position: absolute;
   // border: 1px solid red;
@@ -26,7 +30,7 @@ ul {
     align-items: center;
     padding: 20px 20px 0px 20px;
 
-    ul.right  {
+    ul.right {
       display: flex;
       text-decoration: none;
       list-style-type: none;
@@ -42,4 +46,10 @@ ul {
 
 .nav-logo {
   /* border: 1px solid purple; */
+}
+
+.nav-container2 {
+  .inner-nav-container {
+    padding: 0;
+  }
 }

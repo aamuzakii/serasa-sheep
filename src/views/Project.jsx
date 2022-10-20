@@ -1,43 +1,43 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, {useEffect, useState} from 'react'
+import {useParams} from 'react-router-dom'
 
-import { useQuery } from "@apollo/client";
-import { GET_SINGLE_PROJECT } from "../graphql/queries";
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import { Markup } from "interweave";
+import {useQuery} from '@apollo/client'
+import {GET_SINGLE_PROJECT} from '../graphql/queries'
+import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
+import {Markup} from 'interweave'
 
 function Project() {
-  const { id } = useParams();
-  const [richText, setRichText] = useState("");
+  const {id} = useParams()
+  const [richText, setRichText] = useState('')
 
-  const { loading, error, data, refetch } = useQuery(GET_SINGLE_PROJECT, {
-    fetchPolicy: "network-only",
-    variables: { projectSysId: id },
-  });
+  const {loading, error, data, refetch} = useQuery(GET_SINGLE_PROJECT, {
+    fetchPolicy: 'network-only',
+    variables: {projectSysId: id},
+  })
 
   useEffect(() => {
-    let a = document.querySelector(".nav-container").style;
-    // if (width < 425) {
-    //   // mobile device
-    a.position = "static";
-    // } else {
-    //   a.position = "sticky"
-    //   // a.top = "20px"
-    // }
+    let a = document.querySelector('.nav-container').style
+    a.display = 'block'
+    let width = document.body.clientWidth
+    if (width < 425) {
+      // mobile device
+      a.position = 'static'
+    } else {
+      a.position = 'fixed'
+    }
 
-    window.scrollTo(0, 0); // solve bug
-  }, []);
+    window.scrollTo(0, 0) // solve bug
+  }, [])
 
   useEffect(() => {
     if (data) {
-      setRichText(documentToHtmlString(data.project.description.json));
+      setRichText(documentToHtmlString(data.project.description.json))
     }
-  }, [data]);
+  }, [data])
 
+  if (!data) return
 
-  if (!data) return;
-
-  let { description, picturesCollection } = data.project;
+  let {description, picturesCollection} = data.project
 
   return (
     <div className="container project-single">
@@ -47,12 +47,12 @@ function Project() {
         </div>
       </div>
       <div className="right">
-        {picturesCollection.items.map(({ url }, i) => (
+        {picturesCollection.items.map(({url}, i) => (
           <img key={i} className="single-img" src={url} alt="" width={800} />
         ))}
       </div>
     </div>
-  );
+  )
 }
 
-export default Project;
+export default Project

@@ -17,21 +17,21 @@ function NavList() {
 
   let arr = [
     {
-      name: 'Projects',
+      name: '/Projects',
     },
     {
-      name: 'Journal',
+      name: '/Journal',
     },
     {
-      name: 'About',
+      name: '/About',
     },
     {
-      name: 'Contact',
+      name: '/Contact',
     },
   ]
 
   return (
-    <nav className="nav-container" style={{}}>
+    <nav className="nav-container2" style={{}}>
       <div style={{display: 'flex', width: '100%'}} className="inner-nav-container">
         <NavLink to={''} className="nav-logo">
           <img src={logo} alt="" height={40} />
@@ -40,7 +40,7 @@ function NavList() {
           {arr.map(({name}) => (
             <li key={name}>
               <NavLink to={name} style={({isActive}) => (isActive ? activeStyle : normalStyle)}>
-                {name}
+                {name.split('/')[1]}
               </NavLink>
             </li>
           ))}

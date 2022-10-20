@@ -1,21 +1,23 @@
-@import "stylesheets/Projects.scss";
-@import "stylesheets/ProjectsPhone.scss";
+@import 'stylesheets/Projects.scss';
+@import 'stylesheets/ProjectsPhone.scss';
 
-@import "stylesheets/Project.scss";
-@import "stylesheets/ProjectPhone.scss";
+@import 'stylesheets/Project.scss';
+@import 'stylesheets/ProjectPhone.scss';
 
-@import "stylesheets/Section.scss";
+@import 'stylesheets/Section.scss';
 
-@import "stylesheets/NavList.scss";
-@import "stylesheets/NavListPhone.scss";
+@import 'stylesheets/NavList.scss';
+@import 'stylesheets/NavListPhone.scss';
 
-@import "stylesheets/Journal.scss";
-@import "stylesheets/JournalPhone.scss";
+@import 'stylesheets/Journal.scss';
+@import 'stylesheets/JournalPhone.scss';
 
-@import "stylesheets/Contact.scss";
-@import "stylesheets/ContactPhone.scss";
+@import 'stylesheets/Contact.scss';
+@import 'stylesheets/ContactPhone.scss';
 
-@import "stylesheets/About.scss";
+@import 'stylesheets/About.scss';
+
+@import 'stylesheets/ProjectParallax.scss';
 
 .container {
   display: flex;
@@ -24,7 +26,6 @@
   align-items: center;
   width: 100%;
   height: 100vh;
-  padding: 0 20px;
   box-sizing: border-box;
   background-color: white;
 }
@@ -101,4 +102,13 @@ video {
   width: 100%;
   object-fit: cover;
   min-height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
+
+.naon {
+  font-weight: 100;
+  font-size: 14px;
+  text-align: justify;
+  color: #444;
 }

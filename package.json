@@ -13,6 +13,7 @@
     "firebase": "^9.9.4",
     "framer-motion": "^7.2.0",
     "graphql": "^16.6.0",
+    "gsap": "^3.11.3",
     "interweave": "^13.0.0",
     "isotope-layout": "^3.0.6",
     "node-sass": "^7.0.1",
