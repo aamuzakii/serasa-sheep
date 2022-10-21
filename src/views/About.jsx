@@ -3,6 +3,7 @@ import {useQuery} from '@apollo/client'
 import {GET_ABOUT_PAGE} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
 import {Markup} from 'interweave'
+import middleware from '../helper/middleware'
 
 function About() {
   let {loading, error, data, refetch} = useQuery(GET_ABOUT_PAGE, {

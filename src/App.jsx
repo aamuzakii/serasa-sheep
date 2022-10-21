@@ -8,7 +8,7 @@ import Journal from './views/Journal'
 import About from './views/About'
 import Zepto from './views/Zepto'
 import Projects from './views/Projects'
-import Project from './views/Project'
+import ProjectParallax from './views/ProjectParallax'
 import NavList from './views/NavList'
 
 export default function App() {

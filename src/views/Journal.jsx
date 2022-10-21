@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useQuery} from '@apollo/client'
 import {GET_ALL_JOURNALS} from '../graphql/queries'
 import styles from '../stylesheets/Journal.module.scss'
+import middleware from '../helper/middleware'
 
 const Journal = () => {
   const [journalList, setJournalList] = useState('')

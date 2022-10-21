@@ -5,6 +5,7 @@ import {useQuery} from '@apollo/client'
 import {GET_SINGLE_PROJECT} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
 import {Markup} from 'interweave'
+import middleware from '../helper/middleware'
 
 function Project() {
   const {id} = useParams()

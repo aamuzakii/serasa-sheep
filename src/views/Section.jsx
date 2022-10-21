@@ -3,6 +3,7 @@ import Isotope from 'isotope-layout'
 import {Link} from 'react-router-dom'
 import {useQuery} from '@apollo/client'
 import {GET_ALL_PROJECT} from '../graphql/queries'
+import middleware from '../helper/middleware'
 
 function Section({dasar, dasarDict, code}) {
   const [projects, setProjects] = useState([])

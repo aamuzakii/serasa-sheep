@@ -2,6 +2,7 @@ import React, {useEffect, useRef} from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import NavList2 from './NavList2'
+import middleware from '../helper/middleware'
 
 let v1 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243857/serasa/videos/1_cgn_mmcsor.mp4'
 

@@ -10,6 +10,7 @@ import {useQuery} from '@apollo/client'
 import {GET_CONTACT_ADDRESS} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
 import {Markup} from 'interweave'
+import middleware from '../helper/middleware'
 
 function Contact() {
   let {loading, error, data, refetch} = useQuery(GET_CONTACT_ADDRESS, {

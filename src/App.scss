@@ -113,13 +113,40 @@ video {
   color: #444;
 }
 
-html,
-body,
-div {
+// html,
+// body {
+//   width: 100%;
+//   height: 110%;
+//   max-height: 880px;
+//   overflow: hidden;
+//   position: absolute;
+// }
+
+.main,
+.mainBoxes,
+.mainClose {
   width: 100%;
   height: 110%;
   max-height: 880px;
   overflow: hidden;
-  // background: black;
   position: absolute;
+  div {
+    width: 100%;
+    height: 110%;
+    max-height: 880px;
+    overflow: hidden;
+    position: absolute;
+  }
+}
+
+.annn {
+  top: 20vh;
+  left: 3vw;
+  font-weight: 100;
+  font-size: 14px;
+  text-align: justify;
+  color: #444;
+  p {
+    width: 30vw;
+  }
 }

@@ -1,5 +1,6 @@
 import React, {useEffect, useRef} from 'react'
 import {useMediaQuery} from 'react-responsive'
+import middleware from '../helper/middleware'
 
 let v1 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243857/serasa/videos/1_cgn_mmcsor.mp4'
 let v2 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664232845/serasa/videos/2_dpk_o1kcvg.mp4'

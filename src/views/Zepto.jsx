@@ -1,15 +1,45 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import gsap from 'gsap'
 import $ from 'jquery'
+import middleware from '../helper/middleware'
+import {useQuery} from '@apollo/client'
+import {GET_ABOUT_PAGE} from '../graphql/queries'
+import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
+import {Markup} from 'interweave'
 
 const Zepto = () => {
+  let {loading, error, data, refetch} = useQuery(GET_ABOUT_PAGE, {
+    fetchPolicy: 'network-only',
+    variables: {staticSysId: '7xr37H6HNyz32EhhYCb9kZ'},
+  })
+  const [richText, setRichText] = useState('')
+
+  useEffect(() => {
+    let a = document.querySelector('.nav-container').style
+    a.position = 'absolute'
+    a.top = '0px'
+    a.display = 'block'
+  }, [])
+
+  useEffect(() => {
+    if (data) {
+      setRichText(documentToHtmlString(data.staticData.content.json))
+    }
+  }, [data])
+
   const img1 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271841/EXT_q37luw.webp'
   const img2 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271840/EXT_2_tl1u2x.webp'
   const img3 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271841/EKSTERIOR_3_osjfxg.webp'
+  const kafi = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666357683/serasa/kafi_tunt2r.jpg'
+  const muzammil = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666357887/serasa/muza_zw5l0v.jpg'
+  const andra = 'https://manual.co.id/wp-content/uploads/2016/02/Andra-Matin-Interview-15.jpg'
+  const gub = 'https://kontraktorsyariah.com/wp-content/uploads/2019/03/60d4a696e54874696919268053484836-575x800.jpg'
+  const budi = 'https://ladrianarchitects.files.wordpress.com/2017/01/bp.jpg?w=662'
 
-  let arr = [img1, img2, img3, img1, img2, img3, img1, img2, img3, img1, img2, img3]
+  let arr = [andra, img2, budi, muzammil, img1, gub, img3, img1, budi, img2, img3, kafi]
 
   useEffect(() => {
+    // middleware('zepto')
     var currentImg = undefined,
       currentImgProps = {x: 0, y: 0},
       isZooming = false,
@@ -162,6 +192,9 @@ const Zepto = () => {
   }, [])
   return (
     <div className="main">
+      <div className="annn">
+        <Markup content={richText} />
+      </div>
       <div className="mainBoxes fs"></div>
       <div className="mainClose">
         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="100%" height="100%" fill="none">
