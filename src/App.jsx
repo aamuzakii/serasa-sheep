@@ -7,7 +7,7 @@ import Contact from './views/Contact'
 import Journal from './views/Journal'
 import About from './views/About'
 import Projects from './views/Projects'
-import ProjectParallax from './views/ProjectParallax'
+import Project from './views/Project'
 import NavList from './views/NavList'
 
 export default function App() {
@@ -20,7 +20,7 @@ export default function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="journal" element={<Journal />} />
         <Route path="projects" element={<Projects />} />
-        <Route path="projects/:id" element={<ProjectParallax />} />
+        <Route path="projects/:id" element={<Project />} />
         <Route path="about" element={<About />} />
       </Routes>
     </>
