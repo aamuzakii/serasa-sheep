@@ -66,7 +66,7 @@ const ProjectParallax = () => {
         </div>
       </section>
       <section className="last">
-        <video muted autoPlay className="kelas-el-video">
+        <video repeat muted autoPlay className="kelas-el-video">
           <source src={v1} type="video/mp4" />
         </video>
       </section>
