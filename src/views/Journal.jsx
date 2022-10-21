@@ -8,9 +8,7 @@ const Journal = () => {
   const [journalList, setJournalList] = useState('')
 
   useEffect(() => {
-    let a = document.querySelector('.nav-container').style
-    a.position = 'static'
-    a.display = 'block'
+    middleware('journal')
   }, [])
 
   let {loading, error, data, refetch} = useQuery(GET_ALL_JOURNALS, {

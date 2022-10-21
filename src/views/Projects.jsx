@@ -9,10 +9,7 @@ function Projects() {
   const [dasar, setDasar] = React.useState('location')
 
   useEffect(() => {
-    let a = document.querySelector('.nav-container').style
-    // a.position = 'absolute'
-    // a.top = '0px'
-    a.display = 'block'
+    middleware('projects')
   }, [])
 
   // handling filter key change

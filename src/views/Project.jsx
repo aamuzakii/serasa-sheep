@@ -17,17 +17,7 @@ function Project() {
   })
 
   useEffect(() => {
-    let a = document.querySelector('.nav-container').style
-    a.display = 'block'
-    let width = document.body.clientWidth
-    if (width < 425) {
-      // mobile device
-      a.position = 'static'
-    } else {
-      a.position = 'fixed'
-    }
-
-    window.scrollTo(0, 0) // solve bug
+    middleware('project')
   }, [])
 
   useEffect(() => {
