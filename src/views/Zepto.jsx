@@ -112,7 +112,6 @@ const Zepto = () => {
         .fromTo('.main', {autoAlpha: 0}, {duration: 0.6, ease: 'power2.inOut', autoAlpha: 1}, 0.2)
 
       $('.photoBox').on('mouseenter', function (e) {
-        console.log($(e.currentTarget).hasClass('pb-col0'))
         if (currentImg) return
         if (delayedPlay) delayedPlay.kill()
         pauseBoxes(e.currentTarget)
@@ -175,7 +174,6 @@ const Zepto = () => {
       })
 
       if (!!('ontouchstart' in window)) {
-        console.log('touch device!')
         mouse.x = window.innerWidth - 50
         mouse.y = 60
       } else {
