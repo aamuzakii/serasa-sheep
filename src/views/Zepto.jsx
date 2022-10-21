@@ -15,6 +15,10 @@ const Zepto = () => {
   const [richText, setRichText] = useState('')
 
   useEffect(() => {
+    if (localStorage.getItem('prev_page') === 'non-zepto') {
+      window.location.reload(false)
+    }
+
     middleware('zepto')
   }, [])
 

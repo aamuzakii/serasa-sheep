@@ -75,10 +75,7 @@ function HallVideo() {
   }, [])
 
   useEffect(() => {
-    let a = document.querySelector('.nav-container').style
-    a.position = 'absolute'
-    a.top = '0px'
-    a.display = 'block'
+    middleware('hall-video')
   }, [])
 
   return (

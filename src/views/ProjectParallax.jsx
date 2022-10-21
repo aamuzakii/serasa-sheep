@@ -12,8 +12,7 @@ const img3 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271841/EKST
 
 const ProjectParallax = () => {
   useEffect(() => {
-    let a = document.querySelector('.nav-container').style
-    a.display = 'none'
+    middleware('project-parallax')
   }, [])
 
   useEffect(() => {

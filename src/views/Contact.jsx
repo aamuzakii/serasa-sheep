@@ -19,10 +19,7 @@ function Contact() {
   const [richText, setRichText] = useState('')
 
   useEffect(() => {
-    let a = document.querySelector('.nav-container').style
-    a.display = 'block'
-    a.position = 'absolute'
-    a.top = '0px'
+    middleware('contact')
   }, [])
 
   useEffect(() => {
