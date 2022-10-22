@@ -111,6 +111,8 @@ video {
   font-size: 14px;
   text-align: justify;
   color: #444;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 // html,

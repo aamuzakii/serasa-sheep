@@ -3,10 +3,6 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import NavList2 from './NavList2'
 import middleware from '../helper/middleware'
-import {useParams} from 'react-router-dom'
-import {useQuery} from '@apollo/client'
-import {GET_SINGLE_PROJECT} from '../graphql/queries'
-import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
 import {Markup} from 'interweave'
 
 let v1 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243857/serasa/videos/1_cgn_mmcsor.mp4'
@@ -15,7 +11,7 @@ const img1 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271841/EXT_
 const img2 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271840/EXT_2_tl1u2x.webp'
 const img3 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271841/EKSTERIOR_3_osjfxg.webp'
 
-const ProjectParallax = () => {
+const ProjectParallax = ({arr, richText}) => {
   useEffect(() => {
     middleware('project-parallax')
   }, [])
@@ -44,25 +40,6 @@ const ProjectParallax = () => {
     )
   }, [])
 
-  const {id} = useParams()
-  const [richText, setRichText] = useState('')
-
-  const {loading, error, data, refetch} = useQuery(GET_SINGLE_PROJECT, {
-    fetchPolicy: 'network-only',
-    variables: {projectSysId: id},
-  })
-
-  useEffect(() => {
-    if (data) {
-      setRichText(documentToHtmlString(data.project.description.json))
-    }
-  }, [data])
-
-  // if (!data) return
-  if (data) {
-    let {description, picturesCollection} = data.project
-  }
-
   return (
     <div className="container_project_parallax">
       <section className="layer-story-box">
@@ -73,20 +50,15 @@ const ProjectParallax = () => {
             <img className="woy_scroll_2" src="https://www.golfclubmadesimo.com/images/scroll-down.gif" alt="" />
           </div>
           <div className="layer-story-image-wrapper">
-            <figure className="image_container layer-story-image" id="layer-1">
-              <Mark />
+            <figure className="image_container layer-story-image naon" id="layer-1">
+              <Markup content={richText} />
             </figure>
           </div>
-          <div className="layer-story-content-wrapper">
-            <img src={img1} alt="" />
-          </div>
-
-          <div className="layer-story-content-wrapper">
-            <img src={img2} alt="" />
-          </div>
-          <div className="layer-story-content-wrapper">
-            <img src={img3} alt="" />
-          </div>
+          {arr.map(({url}, i) => (
+            <div key={i} className="layer-story-content-wrapper">
+              <img src={url} alt="" />
+            </div>
+          ))}
         </div>
       </section>
       <section className="last">
