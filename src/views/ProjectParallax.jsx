@@ -1,8 +1,13 @@
-import React, {useEffect, useRef} from 'react'
+import React, {useEffect, useState} from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import NavList2 from './NavList2'
 import middleware from '../helper/middleware'
+import {useParams} from 'react-router-dom'
+import {useQuery} from '@apollo/client'
+import {GET_SINGLE_PROJECT} from '../graphql/queries'
+import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
+import {Markup} from 'interweave'
 
 let v1 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243857/serasa/videos/1_cgn_mmcsor.mp4'
 
@@ -39,6 +44,25 @@ const ProjectParallax = () => {
     )
   }, [])
 
+  const {id} = useParams()
+  const [richText, setRichText] = useState('')
+
+  const {loading, error, data, refetch} = useQuery(GET_SINGLE_PROJECT, {
+    fetchPolicy: 'network-only',
+    variables: {projectSysId: id},
+  })
+
+  useEffect(() => {
+    if (data) {
+      setRichText(documentToHtmlString(data.project.description.json))
+    }
+  }, [data])
+
+  // if (!data) return
+  if (data) {
+    let {description, picturesCollection} = data.project
+  }
+
   return (
     <div className="container_project_parallax">
       <section className="layer-story-box">
@@ -53,20 +77,20 @@ const ProjectParallax = () => {
               <Mark />
             </figure>
           </div>
-          <div className="layer-story-content-wrapper" id="layer-1">
+          <div className="layer-story-content-wrapper">
             <img src={img1} alt="" />
           </div>
 
-          <div className="layer-story-content-wrapper" id="layer-2">
+          <div className="layer-story-content-wrapper">
             <img src={img2} alt="" />
           </div>
-          <div className="layer-story-content-wrapper" id="layer-3">
+          <div className="layer-story-content-wrapper">
             <img src={img3} alt="" />
           </div>
         </div>
       </section>
       <section className="last">
-        <video repeat muted autoPlay className="kelas-el-video">
+        <video repeat="true" muted autoPlay className="kelas-el-video">
           <source src={v1} type="video/mp4" />
         </video>
       </section>
@@ -75,7 +99,7 @@ const ProjectParallax = () => {
 }
 
 const Mark = () => (
-  <div class="naon">
+  <div className="naon">
     <span>
       <p>Bismillah</p>
       <p></p>
