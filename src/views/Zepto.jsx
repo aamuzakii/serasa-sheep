@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useRef} from 'react'
 import middleware from '../helper/middleware'
 import {useQuery} from '@apollo/client'
 import {GET_ABOUT_PAGE} from '../graphql/queries'
@@ -19,6 +19,10 @@ const Zepto = () => {
       window.location.reload(false)
     }
     middleware('zepto')
+
+    setTimeout(() => {
+      firstRef.current.style.display = 'block'
+    }, 200)
   }, [])
 
   useEffect(() => {
@@ -29,10 +33,12 @@ const Zepto = () => {
 
   useZepto()
 
+  const firstRef = useRef(null)
+
   if (prevPage === 'non-zepto') return <>...</>
 
   return (
-    <div className="main">
+    <div className="main" style={{display: 'none'}} ref={firstRef}>
       <div className="annn">
         <Markup content={richText} />
       </div>
