@@ -35,11 +35,12 @@ const Zepto = () => {
 
   const firstRef = useRef(null)
 
-  if (prevPage === 'non-zepto') return <>...</>
+  if (prevPage === 'non-zepto') return <></>
 
   return (
     <div className="main" style={{display: 'none'}} ref={firstRef}>
       <div className="annn">
+        <h1 style={{fontSize: 60, color: 'black'}}>About Us</h1>
         <Markup content={richText} />
       </div>
       <div className="mainBoxes fs"></div>
