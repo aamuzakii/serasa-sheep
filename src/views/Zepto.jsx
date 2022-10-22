@@ -12,6 +12,7 @@ const Zepto = () => {
     variables: {staticSysId: '7xr37H6HNyz32EhhYCb9kZ'},
   })
   const [richText, setRichText] = useState('')
+  const [prevPage, setPrevPage] = useState(localStorage.getItem('prev_page'))
 
   useEffect(() => {
     if (localStorage.getItem('prev_page') === 'non-zepto') {
@@ -27,6 +28,8 @@ const Zepto = () => {
   }, [data])
 
   useZepto()
+
+  if (prevPage === 'non-zepto') return <>...</>
 
   return (
     <div className="main">
