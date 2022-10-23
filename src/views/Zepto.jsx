@@ -39,7 +39,7 @@ const Zepto = () => {
 
   return (
     <div className="main" style={{display: 'none'}} ref={firstRef}>
-      <div className="annn">
+      <div className="zepto_markup_wrapper">
         <h1 style={{fontSize: 60, color: 'black'}}>About Us</h1>
         <Markup content={richText} />
       </div>

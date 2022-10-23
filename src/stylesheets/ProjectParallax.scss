@@ -44,6 +44,21 @@
         left: 2%;
         padding: 20px 0;
         margin: 0;
+        &.markup_wrapper {
+          font-weight: 100;
+          font-size: 14px;
+          color: #444;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          top: 50px;
+          max-height: 78vh;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          p {
+            margin-block-start: unset;
+            margin-block-end: unset;
+          }
+        }
       }
     }
 

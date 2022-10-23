@@ -106,28 +106,6 @@ video {
 
 @import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
 
-.markup_wrapper {
-  font-weight: 100;
-  font-size: 14px;
-  color: #444;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  top: 40px;
-  p {
-    margin-block-start: unset;
-    margin-block-end: unset;
-  }
-}
-
-// html,
-// body {
-//   width: 100%;
-//   height: 110%;
-//   max-height: 880px;
-//   overflow: hidden;
-//   position: absolute;
-// }
-
 .main,
 .mainBoxes,
 .mainClose {
@@ -143,16 +121,16 @@ video {
     overflow: hidden;
     position: absolute;
   }
-}
 
-.annn {
-  top: 12vh;
-  left: 3vw;
-  font-weight: 100;
-  font-size: 14px;
-  text-align: justify;
-  color: #444;
-  p {
-    width: 30vw;
+  .zepto_markup_wrapper {
+    top: 12vh;
+    left: 3vw;
+    font-weight: 100;
+    font-size: 14px;
+    text-align: justify;
+    color: #444;
+    p {
+      width: 30vw;
+    }
   }
 }
