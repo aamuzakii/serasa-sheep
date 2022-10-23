@@ -16,6 +16,10 @@ const ProjectParallax = ({arr, richText}) => {
     middleware('project-parallax')
   }, [])
 
+  const scrollGifHeight = 100
+  const topNavHeight = 60
+  const docHeight = document.documentElement.clientHeight
+
   useEffect(() => {
     window.scrollTo(0, 300) // workaround
     // stagger = jarak satu dgn lainnya
@@ -54,17 +58,26 @@ const ProjectParallax = ({arr, richText}) => {
               <Markup content={richText} />
             </figure>
           </div>
-          {arr.map(({url}, i) => (
-            <div key={i} className="layer-story-content-wrapper">
-              <img src={url} alt="" />
-            </div>
-          ))}
+          {arr.map(({url}, i) => {
+            setTimeout(() => {
+              let currentWrapper = document.getElementsByClassName('layer-story-content-wrapper')[i]
+              let imgEl
+              let currentH
+              if (currentWrapper) {
+                imgEl = currentWrapper.children[0]
+                currentH = imgEl.clientHeight
+                let topMarginNeeded = (docHeight - topNavHeight - scrollGifHeight - currentH) / 2
+                imgEl.style.top = `${topMarginNeeded}px`
+              }
+            }, 200)
+
+            return (
+              <div key={i} className="layer-story-content-wrapper">
+                <img src={url} alt="" />
+              </div>
+            )
+          })}
         </div>
-      </section>
-      <section className="last">
-        <video repeat="true" muted autoPlay className="kelas-el-video">
-          <source src={v1} type="video/mp4" />
-        </video>
       </section>
     </div>
   )
