@@ -106,13 +106,17 @@ video {
 
 @import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
 
-.naon {
+.markup_wrapper {
   font-weight: 100;
   font-size: 14px;
-  text-align: justify;
   color: #444;
   overflow: hidden;
   text-overflow: ellipsis;
+  top: 40px;
+  p {
+    margin-block-start: unset;
+    margin-block-end: unset;
+  }
 }
 
 // html,

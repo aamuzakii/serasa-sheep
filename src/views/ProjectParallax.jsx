@@ -20,7 +20,8 @@ const ProjectParallax = ({arr, richText}) => {
   const topNavHeight = 60
   const docHeight = document.documentElement.clientHeight
   const docWidth = document.documentElement.clientWidth
-  const defaultVideoHeight = 400
+  const assumedVideoRatio = 488 / 638
+  const maxWidthInVW = 45 / 100
 
   useEffect(() => {
     window.scrollTo(0, 300) // workaround
@@ -44,6 +45,19 @@ const ProjectParallax = ({arr, richText}) => {
       },
       0.9,
     )
+
+    setTimeout(() => {
+      let array = document.getElementsByTagName('span')[0].childNodes
+      console.log(array[0])
+      for (let i = 0; i < array.length; i++) {
+        const p = array[i]
+        if (p.children[0]) {
+          p.style.margin = '0 0 0.5em 0'
+        } else {
+          p.style.margin = '0 0 1em 0'
+        }
+      }
+    }, 200)
   }, [])
 
   return (
@@ -56,7 +70,7 @@ const ProjectParallax = ({arr, richText}) => {
             <img className="woy_scroll_2" src="https://www.golfclubmadesimo.com/images/scroll-down.gif" alt="" />
           </div>
           <div className="layer-story-image-wrapper">
-            <figure className="image_container layer-story-image naon" id="layer-1">
+            <figure className="image_container layer-story-image markup_wrapper" id="layer-1">
               <Markup content={richText} />
             </figure>
           </div>
@@ -69,7 +83,7 @@ const ProjectParallax = ({arr, richText}) => {
               if (currentWrapper) {
                 imgEl = currentWrapper.children[0]
                 if (isVideo) {
-                  currentH = (docWidth / 2) * (488 / 638)
+                  currentH = docWidth * maxWidthInVW * assumedVideoRatio
                 } else {
                   currentH = imgEl.clientHeight
                 }

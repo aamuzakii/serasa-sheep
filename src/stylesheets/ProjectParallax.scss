@@ -41,7 +41,7 @@
         height: 100vh;
         position: absolute;
         top: 20px;
-        left: 0;
+        left: 2%;
         padding: 20px 0;
         margin: 0;
       }
@@ -51,24 +51,17 @@
       position: absolute;
       top: 40px;
       max-width: 80%;
-      right: 0;
+      right: 2%;
       height: 100%;
       z-index: 200;
       // color: white;
-      img {
-        position: relative;
-        top: 0px;
-        left: 0;
-        width: 100%;
-        max-width: 50vw;
-        z-index: 2;
-      }
+      img,
       video {
         position: relative;
         top: 0px;
         left: 0;
         width: 100%;
-        max-width: 50vw;
+        max-width: 45vw;
         z-index: 2;
       }
     }
