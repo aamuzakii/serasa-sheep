@@ -19,6 +19,8 @@ const ProjectParallax = ({arr, richText}) => {
   const scrollGifHeight = 100
   const topNavHeight = 60
   const docHeight = document.documentElement.clientHeight
+  const docWidth = document.documentElement.clientWidth
+  const defaultVideoHeight = 400
 
   useEffect(() => {
     window.scrollTo(0, 300) // workaround
@@ -59,56 +61,43 @@ const ProjectParallax = ({arr, richText}) => {
             </figure>
           </div>
           {arr.map(({url}, i) => {
+            const isVideo = url.split('.')[0] === 'https://videos'
             setTimeout(() => {
               let currentWrapper = document.getElementsByClassName('layer-story-content-wrapper')[i]
               let imgEl
               let currentH
               if (currentWrapper) {
                 imgEl = currentWrapper.children[0]
-                currentH = imgEl.clientHeight
+                if (isVideo) {
+                  currentH = (docWidth / 2) * (488 / 638)
+                } else {
+                  currentH = imgEl.clientHeight
+                }
                 let topMarginNeeded = (docHeight - topNavHeight - scrollGifHeight - currentH) / 2
                 imgEl.style.top = `${topMarginNeeded}px`
               }
             }, 200)
 
-            return (
-              <div key={i} className="layer-story-content-wrapper">
-                <img src={url} alt="" />
-              </div>
-            )
+            if (isVideo) {
+              return (
+                <div key={i} className="layer-story-content-wrapper">
+                  <video loop muted autoPlay>
+                    <source src={v1} type="video/mp4" />
+                  </video>
+                </div>
+              )
+            } else {
+              return (
+                <div key={i} className="layer-story-content-wrapper">
+                  <img src={url} alt="" />
+                </div>
+              )
+            }
           })}
         </div>
       </section>
     </div>
   )
 }
-
-const Mark = () => (
-  <div className="naon">
-    <span>
-      <p>Bismillah</p>
-      <p></p>
-      <p>
-        <b>PREFACE</b>
-      </p>
-      <p>CGN House terletak di tengah tanah kavling yang masih kosong. Cilegon layaknya kota-kota besar di Indonesia mempunyai temperatur yang cukup tinggi dari tengah hingga petang hari.</p>
-      <p>
-        <b>Form</b>
-      </p>
-      <p>Fasad depan yang menghadap barat di dominasi dengan permukaan solid dan kantilever pada massa lantai atas untuk mencegah panas masuk ke dalam bangunan dari tengah hingga petang hari. Sisi Timur (Belakang) bangunan diletakan sebuah courtyard untuk menjadi sumber cahaya di pagi hari dan penghawaan alami pada bangunan.</p>
-      <p>
-        <b>Surface Temperature</b>
-      </p>
-      <p>Tantangan site yang berada di lahan kosong adalah cahaya matahari dapat langsung mendarat di selubung bangunan. Simulasi sepanjang hari (05.00-19.00) dilakukan untuk melihat bagaimana paparan radiasi matahari yang akan jatuh ke selubung bangunan yang selanjutnya berguna untuk melakukan analisa lanjutan kenyamanan thermal dan menentukan strategi pasif yang akan diterapkan pada bangunan.</p>
-      <p>
-        <b>Thermal Comfort</b>
-      </p>
-      <p>Potensi kecepatan udara yang cukup tinggi pada site dimaksimalkan untuk membantu mencapai kenyamanan thermal pada bangunan. Hampir seluruh ruangan pada lantai 2 dibuat plafon miring mengikuti bentuk atap guna menciptakan volume udara yang besar pada ruangan. Untuk mencapai standar kenyamanan thermal Ashrae setidaknya ada 3 strategi utama yang diterapkan pada bangunan : Pembesaran volume ruangan melalui peninggian plafon, Cross Air Ventilation pada seluruh ruangan dengan okupansi tinggi dan Penerapan Ceiling Fan yang hanya mulai beroperasi pada periode panas (jam 12-17).</p>
-      <p>Principal : @kafipangestu Team : @fazlysuper Vis : @edodarm Building Physics : @hale_lab</p>
-      <p>@serasa.architect #biohouse #serasaarchitect</p>
-      <p>#biohouse #biophilic #pandemi #housedesign #architecture #greenhouse #greenbuilding #sustainabledesign #architecturevisualization </p>
-    </span>
-  </div>
-)
 
 export default ProjectParallax
