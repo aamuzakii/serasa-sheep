@@ -76,21 +76,25 @@ const ProjectParallax = ({arr, richText}) => {
           </div>
           {arr.map(({url}, i) => {
             const isVideo = url.split('.')[0] === 'https://videos'
-            setTimeout(() => {
-              let currentWrapper = document.getElementsByClassName('layer-story-content-wrapper')[i]
-              let imgEl
-              let currentH
-              if (currentWrapper) {
-                imgEl = currentWrapper.children[0]
-                if (isVideo) {
-                  currentH = docWidth * maxWidthInVW * assumedVideoRatio
-                } else {
-                  currentH = imgEl.clientHeight
+
+            if (docWidth > 425) {
+              setTimeout(() => {
+                let currentWrapper = document.getElementsByClassName('layer-story-content-wrapper')[i]
+                let imgEl
+                let currentH
+                if (currentWrapper) {
+                  imgEl = currentWrapper.children[0]
+                  if (isVideo) {
+                    currentH = docWidth * maxWidthInVW * assumedVideoRatio
+                  } else {
+                    currentH = imgEl.clientHeight
+                  }
+                  let topMarginNeeded = (docHeight - topNavHeight - scrollGifHeight - currentH) / 2
+                  imgEl.style.top = `${topMarginNeeded}px`
                 }
-                let topMarginNeeded = (docHeight - topNavHeight - scrollGifHeight - currentH) / 2
-                imgEl.style.top = `${topMarginNeeded}px`
-              }
-            }, 200)
+              }, 200)
+            } else {
+            }
 
             if (isVideo) {
               return (
