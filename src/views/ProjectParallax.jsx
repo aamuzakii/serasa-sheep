@@ -24,7 +24,9 @@ const ProjectParallax = ({arr, richText}) => {
   const maxWidthInVW = 45 / 100
 
   useEffect(() => {
-    window.scrollTo(0, 300) // workaround
+    setTimeout(() => {
+      window.scrollTo(0, 300) // workaround
+    }, 350)
     // stagger = jarak satu dgn lainnya
     gsap.registerPlugin(ScrollTrigger)
     let tl = gsap.timeline({
