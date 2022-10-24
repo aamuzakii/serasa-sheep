@@ -12,6 +12,8 @@ import ParallaxParent from './views/ParallaxParent'
 import NavList from './views/NavList'
 
 export default function App() {
+  const docWidth = document.documentElement.clientWidth
+
   return (
     <>
       <NavList />
@@ -22,6 +24,7 @@ export default function App() {
         <Route path="journal" element={<Journal />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<ParallaxParent />} />
+        {docWidth > 425 ? <Route path="about" element={<Zepto />} /> : <Route path="about" element={<About />} />}
         <Route path="about" element={<Zepto />} />
       </Routes>
     </>

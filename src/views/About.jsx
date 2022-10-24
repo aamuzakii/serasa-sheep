@@ -31,7 +31,7 @@ function About() {
         <img src="https://res.cloudinary.com/dm9ufmxnq/image/upload/v1664145976/serasa/Picture4_jib7k8_ziiyky.webp" alt="about" />
       </div>
       <div className="right">
-        <h1 style={{fontSize: 60}}>About Us</h1>
+        <h1>About Us</h1>
         <Markup content={richText} />
       </div>
     </div>

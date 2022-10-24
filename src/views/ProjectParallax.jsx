@@ -50,7 +50,6 @@ const ProjectParallax = ({arr, richText}) => {
 
     setTimeout(() => {
       let array = document.getElementsByTagName('span')[0].childNodes
-      console.log(array[0])
       for (let i = 0; i < array.length; i++) {
         const p = array[i]
         if (p.children[0]) {
@@ -79,8 +78,8 @@ const ProjectParallax = ({arr, richText}) => {
           {arr.map(({url}, i) => {
             const isVideo = url.split('.')[0] === 'https://videos'
 
-            if (docWidth > 425) {
-              setTimeout(() => {
+            setTimeout(() => {
+              if (docWidth > 425) {
                 let currentWrapper = document.getElementsByClassName('layer-story-content-wrapper')[i]
                 let imgEl
                 let currentH
@@ -94,9 +93,10 @@ const ProjectParallax = ({arr, richText}) => {
                   let topMarginNeeded = (docHeight - topNavHeight - scrollGifHeight - currentH) / 2
                   imgEl.style.top = `${topMarginNeeded}px`
                 }
-              }, 200)
-            } else {
-            }
+              } else {
+                const marginPalingAtas = document.getElementsByClassName('nav-container2')[0].offsetHeight
+              }
+            }, 200)
 
             if (isVideo) {
               return (
