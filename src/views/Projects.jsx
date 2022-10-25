@@ -26,7 +26,7 @@ function Projects() {
   let year = ['y2021', 'y2022']
   let location = ['bogor', 'depok', 'cilegon', 'madiun', 'serang']
   let status = ['idea', 'completed']
-  let projectType = ['new_development', 'renovation', 'other']
+  let projectType = ['residential', 'commercial', 'educational', 'public_space', 'others']
 
   let dasarDict0
   let dasarDict1

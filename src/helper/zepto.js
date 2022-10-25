@@ -2,9 +2,16 @@ const img1 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271841/EXT_
 const img2 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271840/EXT_2_tl1u2x.webp'
 const img3 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271841/EKSTERIOR_3_osjfxg.webp'
 const kafi = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666357683/serasa/kafi_tunt2r.jpg'
-const muzammil = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666357887/serasa/muza_zw5l0v.jpg'
-const andra = 'https://manual.co.id/wp-content/uploads/2016/02/Andra-Matin-Interview-15.jpg'
 const gub = 'https://kontraktorsyariah.com/wp-content/uploads/2019/03/60d4a696e54874696919268053484836-575x800.jpg'
 const budi = 'https://ladrianarchitects.files.wordpress.com/2017/01/bp.jpg?w=662'
+const sketch = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666661561/serasa/312489411_1521518911660063_4970050011812926792_n_uiw8so.jpg'
+const design1 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1664145928/serasa/Picture3_pmmelj_d3ujqo.webp'
+const inner1 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666661746/serasa/312059742_637151684663239_4570978276278089679_n_k8jklh.jpg'
+const inner2 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666661746/serasa/312003316_153333360729830_6472794579910601551_n_cjom10.jpg'
+const rorongkong1 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666661856/serasa/311590009_1111089363129491_7869318662202263727_n_ajjv0b.jpg'
+const inner3 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666661917/serasa/304542636_442625721164181_4757794933619299648_n_fdaiin.jpg'
+const ryan = 'https://i1.sndcdn.com/avatars-000055608293-v1odhw-t500x500.jpg'
+const smk1 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666662100/serasa/261737789_227020939565177_8640738007267397973_n_ho5wu9.jpg'
+const smk2 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666662100/serasa/262363369_1103073847165683_8432654672032604132_n_i1qt4f.jpg'
 
-export const arrOfPhoto = [andra, img2, budi, muzammil, img1, gub, img3, img1, budi, img2, img3, kafi]
+export const arrOfPhoto = [inner1, rorongkong1, design1, sketch, img1, smk1, ryan, inner3, inner2, img2, smk2, kafi]

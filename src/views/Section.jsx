@@ -73,9 +73,11 @@ function Section({dasar, dasarDict, code}) {
     serang: 'Serang',
     y2021: '2021',
     y2022: '2022',
-    renovation: 'Renovation',
-    new_development: 'New Development',
-    other: 'Other',
+    residential: 'Residential',
+    commercial: 'Commercial',
+    educational: 'Educational',
+    public_space: 'Public Space',
+    others: 'Others',
   }
 
   let sectionTitle = classToReadableTitleDict[dasarDict[dasar]]
