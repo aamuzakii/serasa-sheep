@@ -58,7 +58,7 @@ const ProjectParallax = ({arr, richText}) => {
           p.style.margin = '0 0 1em 0'
         }
       }
-    }, 200)
+    }, 400)
   }, [])
 
   return (
@@ -93,10 +93,8 @@ const ProjectParallax = ({arr, richText}) => {
                   let topMarginNeeded = (docHeight - topNavHeight - scrollGifHeight - currentH) / 2
                   imgEl.style.top = `${topMarginNeeded}px`
                 }
-              } else {
-                const marginPalingAtas = document.getElementsByClassName('nav-container2')[0].offsetHeight
               }
-            }, 200)
+            }, 400)
 
             if (isVideo) {
               return (
