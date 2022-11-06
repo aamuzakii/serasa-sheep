@@ -77,10 +77,6 @@ button.learn-more {
   margin-right: 15px;
 }
 
-.section {
-  /* border-bottom: 3px solid #d0dadd; */
-}
-
 .fullscreen-bg {
   position: absolute;
   top: -300px;
@@ -89,13 +85,6 @@ button.learn-more {
   left: 0;
   overflow: hidden;
   z-index: -100;
-}
-
-.fullscreen-bg__video {
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
 }
 
 video {
