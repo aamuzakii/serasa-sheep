@@ -10,6 +10,7 @@ import Zepto from './views/Zepto'
 import Projects from './views/Projects'
 import ParallaxParent from './views/ParallaxParent'
 import NavList from './views/NavList'
+import MiddlewareAbout from './views/MiddlewareAbout'
 
 export default function App() {
   const docWidth = document.documentElement.clientWidth
@@ -21,6 +22,7 @@ export default function App() {
         <Route index element={<Hall />} />
         <Route path="home" element={<Home />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="mid" element={<MiddlewareAbout />} />
         <Route path="journal" element={<Journal />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<ParallaxParent />} />

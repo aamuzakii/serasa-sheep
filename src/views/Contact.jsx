@@ -56,9 +56,9 @@ function Contact() {
         <div className="address p_y_20">
           <Markup content={richText} />
           <div className="mt100 socmed-logo-container">
-            <img className="socmed-logo" src={wa} alt="wa" width={40} />
-            <img className="socmed-logo" src={linkedin} alt="wa" width={40} />
-            <img className="socmed-logo" src={instagram} alt="wa" width={40} />
+            <img className="socmed-logo" src={wa} alt="wa" width={40} height={40} />
+            <img className="socmed-logo" src={linkedin} alt="wa" width={40} height={40} />
+            <img className="socmed-logo" src={instagram} alt="wa" width={40} height={40} />
           </div>
         </div>
         <div className="form p_y_20">

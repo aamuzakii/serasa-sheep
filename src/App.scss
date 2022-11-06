@@ -159,3 +159,21 @@ video {
     transform: rotate(360deg);
   }
 }
+
+.mid-container {
+  display: flex;
+  height: 100vh;
+  div {
+    width: 30%;
+    margin: auto;
+    img {
+      width: 100%;
+      position: relative;
+      cursor: pointer;
+    }
+    p {
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+}
