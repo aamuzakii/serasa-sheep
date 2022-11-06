@@ -26,7 +26,7 @@ export default function App() {
         <Route path="journal" element={<Journal />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<ParallaxParent />} />
-        {docWidth > 425 ? <Route path="team" element={<Zepto />} /> : <Route path="team" element={<About />} />}
+        <Route path="team" element={<About />} />
       </Routes>
     </>
   )
