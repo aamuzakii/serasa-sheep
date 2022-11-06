@@ -16,14 +16,14 @@ const MiddlewareAbout = () => {
   return (
     <div className="mid-container">
       <div>
-        <img src={a} alt="" onClick={goToCompany} />
-        <p className="centered" onClick={goToCompany}>
+        <img src={a} alt="" onClick={goToTeam} />
+        <p className="centered" onClick={goToTeam}>
           TEAM
         </p>
       </div>
       <div>
-        <img src={c} alt="" onClick={goToTeam} />
-        <p className="centered" onClick={goToTeam}>
+        <img src={c} alt="" onClick={goToCompany} />
+        <p className="centered" onClick={goToCompany}>
           COMPANY
         </p>
       </div>

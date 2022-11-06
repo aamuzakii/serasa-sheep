@@ -40,38 +40,15 @@ export default function middleware(page) {
       a.position = 'absolute'
       a.top = '0px'
       break
-    case 'zepto':
+    case 'zepto': // team
       if (typeof window !== 'undefined') localStorage.setItem('prev_page', 'zepto')
 
       a.position = 'absolute'
       a.top = '0px'
       a.display = 'block'
-
-      // html.width = '100%'
-      // html.height = '110%'
-      // html.maxHeight = '880px'
-      // html.overflow = 'hidden'
-      // html.position = 'absolute'
-
-      // body.width = '100%'
-      // body.height = '110%'
-      // body.maxHeight = '880px'
-      // body.overflow = 'hidden'
-      // body.position = 'absolute'
-
       break
     default:
       navStyle.display = 'block'
       break
   }
 }
-
-// html,
-// body,
-// div {
-//   width: 100%;
-//   height: 110%;
-//   max-height: 880px;
-//   overflow: hidden;
-//   position: absolute;
-// }

@@ -37,6 +37,10 @@ const Zepto = () => {
 
   if (prevPage === 'non-zepto') return <></>
 
+  setTimeout(() => {
+    localStorage.setItem('prev_page', 'non-zepto') // workaround trick, handle if user press back from browser. Coz if press back, will not go thru middleware.js, so local_storage will not set to non-zepto in middleware
+  }, 2000)
+
   return (
     <div className="main" style={{display: 'none'}} ref={firstRef}>
       <div className="zepto_markup_wrapper">

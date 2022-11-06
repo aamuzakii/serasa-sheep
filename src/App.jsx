@@ -22,12 +22,12 @@ export default function App() {
         <Route index element={<Hall />} />
         <Route path="home" element={<Home />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="mid" element={<MiddlewareAbout />} />
+        <Route path="about" element={<MiddlewareAbout />} />
         <Route path="journal" element={<Journal />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<ParallaxParent />} />
         {docWidth > 425 ? <Route path="about" element={<Zepto />} /> : <Route path="about" element={<About />} />}
-        <Route path="about" element={<Zepto />} />
+        <Route path="team" element={<Zepto />} />
       </Routes>
     </>
   )
