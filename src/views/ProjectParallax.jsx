@@ -100,7 +100,7 @@ const ProjectParallax = ({arr, richText}) => {
               return (
                 <div key={i} className="layer-story-content-wrapper">
                   <video loop muted autoPlay>
-                    <source src={v1} type="video/mp4" />
+                    <source src={url} type="video/mp4" />
                   </video>
                 </div>
               )
