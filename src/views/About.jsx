@@ -17,10 +17,10 @@ function About() {
     variables: {staticSysId: '7xr37H6HNyz32EhhYCb9kZ'},
   })
 
-  let { data : imageData} = useQuery(GET_IMG_BY_ID, {
-    fetchPolicy: 'network-only',
-    variables: {projectSysId: firstId},
-  }) // << to make scalabale should use this instead of hardcode the img link
+  // let { data : imageData} = useQuery(GET_IMG_BY_ID, {
+  //   fetchPolicy: 'network-only',
+  //   variables: {projectSysId: firstId},
+  // }) // << to make scalabale should use this instead of hardcode the img link
   const img1 = 'https://images.ctfassets.net/0wvobgztd3t0/5LED5Hj4Uh2H5A3phKCAnL/d6fb6a34e8b635524119452c1ca35c11/Ryan.jpg'
 
   const [richText, setRichText] = useState('')

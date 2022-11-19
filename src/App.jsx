@@ -6,7 +6,8 @@ import Hall from './views/HallVideo'
 import Contact from './views/Contact'
 import Journal from './views/Journal'
 import About from './views/About'
-import Zepto from './views/Zepto'
+import Company from './views/Company'
+// import Zepto from './views/Zepto'
 import Projects from './views/Projects'
 import ParallaxParent from './views/ParallaxParent'
 import NavList from './views/NavList'
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<ParallaxParent />} />
         <Route path="team" element={<About />} />
+        <Route path="company" element={<Company />} />
       </Routes>
     </>
   )

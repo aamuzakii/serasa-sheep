@@ -1,12 +1,10 @@
-import {
-  gql
-} from "@apollo/client";
+import {gql} from '@apollo/client'
 
 export const GET_MOVIES_FROM_CACHE = gql`
   query GetMovies {
     movies @client
   }
-`;
+`
 
 export const GET_SINGLE_PROJECT = gql`
   query projectEntryQuery($projectSysId: String!) {
@@ -26,7 +24,7 @@ export const GET_SINGLE_PROJECT = gql`
       # add the fields you want to query
     }
   }
-`;
+`
 
 export const GET_ALL_PROJECT = gql`
   query projectCollectionQuery {
@@ -47,7 +45,7 @@ export const GET_ALL_PROJECT = gql`
       }
     }
   }
-`;
+`
 
 export const GET_ALL_JOURNALS = gql`
   query foo {
@@ -66,7 +64,7 @@ export const GET_ALL_JOURNALS = gql`
       }
     }
   }
-`;
+`
 
 export const GET_ABOUT_PAGE = gql`
   query {
@@ -76,7 +74,17 @@ export const GET_ABOUT_PAGE = gql`
       }
     }
   }
-`;
+`
+
+export const GET_COMPANY_PAGE = gql`
+  query {
+    staticData(id: "4Rw2XUuDtESn7nZkhzJYki") {
+      content {
+        json
+      }
+    }
+  }
+`
 
 export const GET_CONTACT_ADDRESS = gql`
   query {
@@ -86,11 +94,12 @@ export const GET_CONTACT_ADDRESS = gql`
       }
     }
   }
-`;
+`
 
 export const GET_IMG_BY_ID = gql`
-  query foo ($projectSysId: String!) {
-    asset (id: $projectSysId) {
+  query foo($projectSysId: String!) {
+    asset(id: $projectSysId) {
       url
     }
-}`
+  }
+`
