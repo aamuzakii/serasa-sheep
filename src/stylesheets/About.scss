@@ -7,21 +7,28 @@ i {
 .container.about {
   align-items: flex-start;
   padding: 0px;
+  display: flex;
+  flex-direction: column;
+  .up1, .up2 {
+    display: flex;
+  }
+  .up2 {
+    flex-direction: row-reverse;
+  }
 }
 
 .about .right {
-  margin: 5%;
+  margin: 5% 2%;
 }
 
 .container.about img {
-  width: 71vw;
+  width: 50vw;
   object-fit: contain;
 }
 
 .container.about .img-container {
   height: 100%;
-  overflow: hidden;
-  width: 90%;
+
 }
 
 @media only screen and (max-width: 425px) {

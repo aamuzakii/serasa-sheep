@@ -5,6 +5,7 @@
   "dependencies": {
     "@apollo/client": "^3.7.0",
     "@contentful/rich-text-html-renderer": "^15.13.1",
+    "@contentful/rich-text-links": "^15.12.1",
     "@emailjs/browser": "^3.6.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",

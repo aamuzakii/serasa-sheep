@@ -87,3 +87,10 @@ export const GET_CONTACT_ADDRESS = gql`
     }
   }
 `;
+
+export const GET_IMG_BY_ID = gql`
+  query foo ($projectSysId: String!) {
+    asset (id: $projectSysId) {
+      url
+    }
+}`

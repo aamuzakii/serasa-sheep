@@ -1,16 +1,30 @@
 import React, {useState, useEffect} from 'react'
 import {useQuery} from '@apollo/client'
-import {GET_ABOUT_PAGE} from '../graphql/queries'
+import {GET_ABOUT_PAGE, GET_IMG_BY_ID} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
+import { getRichTextEntityLinks } from '@contentful/rich-text-links';
 import {Markup} from 'interweave'
 import middleware from '../helper/middleware'
+
+const firstId = "6aI6XUHSSfJE0w3lb1VWYF"
+const secondId = "5LED5Hj4Uh2H5A3phKCAnL"
+const firstImg = 'https://images.ctfassets.net/0wvobgztd3t0/6aI6XUHSSfJE0w3lb1VWYF/124cf0f27487c7e985aacf96fd4de81f/Kafi.jpg'
+const secondImg = 'https://images.ctfassets.net/0wvobgztd3t0/5LED5Hj4Uh2H5A3phKCAnL/d6fb6a34e8b635524119452c1ca35c11/Ryan.jpg'
 
 function About() {
   let {loading, error, data, refetch} = useQuery(GET_ABOUT_PAGE, {
     fetchPolicy: 'network-only',
     variables: {staticSysId: '7xr37H6HNyz32EhhYCb9kZ'},
   })
+
+  let { data : imageData} = useQuery(GET_IMG_BY_ID, {
+    fetchPolicy: 'network-only',
+    variables: {projectSysId: firstId},
+  }) // << to make scalabale should use this instead of hardcode the img link
+  const img1 = 'https://images.ctfassets.net/0wvobgztd3t0/5LED5Hj4Uh2H5A3phKCAnL/d6fb6a34e8b635524119452c1ca35c11/Ryan.jpg'
+
   const [richText, setRichText] = useState('')
+  const [richText2, setRichText2] = useState('')
 
   useEffect(() => {
     let a = document.querySelector('.nav-container').style
@@ -19,20 +33,44 @@ function About() {
     a.display = 'block'
   }, [])
 
+  // useEffect(() => {
+  //   if (imageData) {
+  //     console.log(imageData.asset.url)
+  //   }
+  // }, [imageData])
+
   useEffect(() => {
     if (data) {
-      setRichText(documentToHtmlString(data.staticData.content.json))
+      let template = `<img src=${firstImg} alt="" height=${500} />`
+      let template2 = `<img src=${secondImg} alt="" height=${500} />`
+      let parsedHtml = documentToHtmlString(data.staticData.content.json)
+      let x = parsedHtml.split('section_boundary')[0]
+      let x2 = parsedHtml.split('section_boundary')[1]
+      console.log(parsedHtml);
+      setRichText(x)
+      setRichText2(x2)
+
     }
   }, [data])
 
   return (
     <div className="container about">
-      <div className="img-container">
-        <img src="https://res.cloudinary.com/dm9ufmxnq/image/upload/v1664145976/serasa/Picture4_jib7k8_ziiyky.webp" alt="about" />
+      <div className='up1' >
+        <div className="img-container">
+          <img src={firstImg} alt="about" />
+        </div>
+        <div className="right">
+          <h1 className='font-gede-banget' >About Us</h1>
+          <Markup content={richText} />
+        </div>
       </div>
-      <div className="right">
-        <h1>About Us</h1>
-        <Markup content={richText} />
+      <div className='up2' >
+        <div className="img-container2">
+          <img src={secondImg} alt="about" />
+        </div>
+        <div className="right">
+          <Markup content={richText2} />
+        </div>
       </div>
     </div>
   )
