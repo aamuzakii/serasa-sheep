@@ -26,7 +26,7 @@ function Company() {
   }, [data])
 
   return (
-    <div className="container about">
+    <div className="container company">
       <div className="right">
         <Markup content={richText} />
       </div>

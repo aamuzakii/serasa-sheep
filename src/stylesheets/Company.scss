@@ -1,0 +1,49 @@
+.container.company p,
+i {
+  text-align: justify;
+  font-weight: 100;
+}
+
+.container.company {
+  align-items: flex-start;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  .up1,
+  .up2 {
+    display: flex;
+  }
+  .up2 {
+    flex-direction: row-reverse;
+  }
+}
+
+.company .right {
+  margin: 5% 2%;
+}
+
+.container.company img {
+  width: 50vw;
+  object-fit: contain;
+}
+
+.container.company .img-container {
+  height: 100%;
+}
+
+@media only screen and (max-width: 425px) {
+  .container.company img {
+    display: none;
+  }
+
+  .container.company .img-container {
+    display: none;
+  }
+
+  .company .right {
+    margin: 7vh 20px 20px 0px !important;
+    padding: 0px 20px;
+    width: 100%;
+    /* margin-top: 400px; */
+  }
+}
