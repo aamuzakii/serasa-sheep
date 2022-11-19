@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Hubbali;
+  src: url(Hubballi-Regular.ttf);
+}
+
 @import 'stylesheets/Projects.scss';
 @import 'stylesheets/ProjectsPhone.scss';
 
@@ -19,6 +24,10 @@
 
 @import 'stylesheets/ProjectParallax.scss';
 @import 'stylesheets/ProjectParallaxPhone.scss';
+
+* {
+  font-family: Hubbali !important;
+}
 
 .container {
   display: flex;
