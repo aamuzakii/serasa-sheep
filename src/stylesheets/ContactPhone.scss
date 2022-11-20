@@ -1,4 +1,4 @@
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 425px) {
   .contact .right-img {
     display: none;
   }
@@ -9,11 +9,12 @@
 
   .text-container {
     flex-direction: column;
-    margin: 500px 0px 0px 0px;
+    margin: 250px 0px 0px 0px;
     padding: 0px;
   }
 
-  .address, .form {
+  .address,
+  .form {
     width: 100%;
     margin-bottom: 100px;
   }
@@ -27,8 +28,7 @@
     padding: 0px 15px;
   }
 
-  .container.contact h3{
+  .container.contact h3 {
     text-align: center;
   }
-  
 }

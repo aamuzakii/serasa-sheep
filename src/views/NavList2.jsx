@@ -34,7 +34,7 @@ function NavList() {
     <nav className="nav-container2" style={{}}>
       <div style={{display: 'flex', width: '100%'}} className="inner-nav-container">
         <NavLink to={''} className="nav-logo">
-          <img src={logo} alt="" height={40} />
+          {document.body.clientWidth > 768 ? <img src={logo} alt="" height={40} /> : <img src={logo} alt="" height={25} />}
         </NavLink>
         <ul className="right">
           {arr.map(({name}) => (

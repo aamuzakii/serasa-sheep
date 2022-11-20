@@ -6,6 +6,7 @@ import Hall from './views/HallVideo'
 import Contact from './views/Contact'
 import Journal from './views/Journal'
 import About from './views/About'
+import AboutMobile from './views/AboutMobile'
 import Company from './views/Company'
 // import Zepto from './views/Zepto'
 import Projects from './views/Projects'
@@ -27,7 +28,7 @@ export default function App() {
         <Route path="journal" element={<Journal />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<ParallaxParent />} />
-        <Route path="team" element={<About />} />
+        {docWidth > 425 ? <Route path="team" element={<About />} /> : <Route path="team" element={<AboutMobile />} />}
         <Route path="company" element={<Company />} />
       </Routes>
     </>
