@@ -11,8 +11,8 @@ import Company from './views/Company'
 // import Zepto from './views/Zepto'
 import Projects from './views/Projects'
 import ParallaxParent from './views/ParallaxParent'
-import NavList from './views/NavList'
-import MiddlewareAbout from './views/MiddlewareAbout'
+import NavList from './components/NavList'
+import MiddlewareAbout from './components/MiddlewareAbout'
 
 export default function App() {
   const docWidth = document.documentElement.clientWidth

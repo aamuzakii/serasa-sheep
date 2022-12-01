@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
-import NavList2 from './NavList2'
+import NavList2 from '../components/NavList2'
 import middleware from '../helper/middleware'
 import {Markup} from 'interweave'
 
