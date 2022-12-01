@@ -1,4 +1,4 @@
-.container.journal p{
+.container.journal p {
   font-weight: 100;
   font-size: 16px;
 }
@@ -11,7 +11,6 @@
 }
 
 .container.journal .bemper-kiri {
-  /* border: 1px solid red; */
   height: 100%;
   width: 100%;
   display: flex;
@@ -23,31 +22,29 @@
 
 .container.journal .bemper-kiri img {
   width: 50%;
-  /* border: 1px solid green; */
   position: unset;
 }
 
 .container.journal .bemper-kiri p {
   width: 90%;
-  /* border: 1px solid green; */
   text-align: justify;
 }
 
-.container.journal .right, .container.journal .left{
+.container.journal .right,
+.container.journal .left {
   margin: 1%;
   display: table;
   width: 200px;
-  /* border: 1px solid blue; */
 }
 
-@media only screen and (max-width: 425px){
-
+@media only screen and (max-width: 425px) {
   .container.journal {
     flex-direction: column;
     justify-content: flex-start;
   }
 
-  .container.journal .right, .container.journal .left {
+  .container.journal .right,
+  .container.journal .left {
     color: black;
     margin: 20px;
     width: 50%;
@@ -60,5 +57,4 @@
   .container.journal .big-table {
     margin: 0;
   }
-
 }

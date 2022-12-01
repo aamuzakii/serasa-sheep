@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {Routes, Route, Link} from 'react-router-dom'
 import './App.scss'
-import Home from './views/Home'
+// import Home from './views/Home'
 import Hall from './views/HallVideo'
 import Contact from './views/Contact'
 import Journal from './views/Journal'
@@ -22,7 +22,7 @@ export default function App() {
       <NavList />
       <Routes>
         <Route index element={<Hall />} />
-        <Route path="home" element={<Home />} />
+        {/* <Route path="home" element={<Home />} /> */}
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<MiddlewareAbout />} />
         <Route path="journal" element={<Journal />} />

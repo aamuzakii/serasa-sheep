@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import {motion} from 'framer-motion'
 import emailjs from '@emailjs/browser'
-import logo from './architecture.jpg'
+import logo from '../assets/architecture.jpg'
 import wa from '../assets/social/whatsapp.png'
-import linkedin from '../assets/social/linkedin.png'
 import instagram from '../assets/social/instagram.png'
 
 import {useQuery} from '@apollo/client'

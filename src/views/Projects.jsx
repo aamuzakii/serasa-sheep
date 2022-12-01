@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import Section from './Section'
+import Section from '../components/Section'
 import {Link, Outlet} from 'react-router-dom'
 import middleware from '../helper/middleware'
 
