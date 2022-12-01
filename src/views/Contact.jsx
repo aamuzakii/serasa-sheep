@@ -56,9 +56,12 @@ function Contact() {
         <div className="address p_y_20">
           <Markup content={richText} />
           <div className="mt100 socmed-logo-container">
-            <img className="socmed-logo" src={wa} alt="wa" width={40} height={40} />
-            <img className="socmed-logo" src={linkedin} alt="wa" width={40} height={40} />
-            <img className="socmed-logo" src={instagram} alt="wa" width={40} height={40} />
+            <a href="https://wa.me/6287881143691" rel="noopener noreferrer" target="_blank">
+              <img className="socmed-logo" src={wa} alt="wa" width={40} height={40} />
+            </a>
+            <a href="https://www.instagram.com/serasa.architect/" rel="noopener noreferrer" target="_blank">
+              <img className="socmed-logo" src={instagram} alt="wa" width={40} height={40} />
+            </a>
           </div>
         </div>
         <div className="form p_y_20">

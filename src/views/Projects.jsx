@@ -6,7 +6,7 @@ import middleware from '../helper/middleware'
 function Projects() {
   const isotope = React.useRef()
   // store the filter keyword in a state
-  const [dasar, setDasar] = React.useState('location')
+  const [dasar, setDasar] = React.useState('all')
 
   useEffect(() => {
     middleware('projects')
