@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {NavLink} from 'react-router-dom'
-import logo from '../assets/horizontal_new_logo.png'
+import logo from '../assets/impossible_logo.png'
 
 function NavList() {
   // This styling will be applied to a <NavLink> when the
@@ -34,7 +34,7 @@ function NavList() {
     <nav className="nav-container2" style={{}}>
       <div style={{display: 'flex', width: '100%'}} className="inner-nav-container">
         <NavLink to={''} className="nav-logo">
-          {document.body.clientWidth > 768 ? <img src={logo} alt="" height={40} /> : <img src={logo} alt="" height={25} />}
+          {document.body.clientWidth > 768 ? <img src={logo} alt="" height={30} /> : <img src={logo} alt="" height={20} />}
         </NavLink>
         <ul className="right">
           {arr.map(({name}) => (
