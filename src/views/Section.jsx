@@ -60,7 +60,11 @@ function Section({dasar, dasarDict, code}) {
   }
 
   useEffect(() => {
-    setFilterKey(() => dasarDict[dasar])
+    if (dasar === 'all') {
+      setFilterKey('*')
+    } else {
+      setFilterKey(() => dasarDict[dasar])
+    }
   }, [dasar])
 
   const classToReadableTitleDict = {
@@ -83,6 +87,25 @@ function Section({dasar, dasarDict, code}) {
   let sectionTitle = classToReadableTitleDict[dasarDict[dasar]]
 
   let c = `satu-row ${container}`
+
+  // trik buat tab ALL
+  //jadi kita passing wildcard sbg filter key, nah smwa row akan tampilin all. buat biar cuma nampilin row pertama pake ini:
+  if (code !== 'a' && filterKey === '*') {
+    return (
+      <div className="section">
+        <h1 className="font-anu" style={{textAlign: 'center'}}>
+          {sectionTitle}
+        </h1>
+        <div className={c}>
+          {projects.map(({color, year, program, status, location, name, picturesCollection, projectType, sys}, i) => {
+            let kelas = `${item} ${program} ${status} y${year} ${location} ${projectType}`
+            return <div key={i} className={kelas}></div>
+          })}
+        </div>
+      </div>
+    )
+  }
+  // return <></>
 
   return (
     <div className="section">

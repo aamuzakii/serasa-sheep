@@ -53,6 +53,9 @@ function Projects() {
       <div className="flex-row sorting-btn-container">
         <div className=" flex-row inner-container-button">
           {/* <div className='sorting-btn' onClick={changeDasar('status')} >Status</div> */}
+          <div className="sorting-btn" onClick={changeDasar('all')}>
+            All
+          </div>
           <div className="sorting-btn" onClick={changeDasar('projectType')}>
             Project Type
           </div>

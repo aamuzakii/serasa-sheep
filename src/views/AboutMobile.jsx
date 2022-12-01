@@ -18,8 +18,6 @@ function About() {
     variables: {staticSysId: '7xr37H6HNyz32EhhYCb9kZ'},
   })
 
-  console.log(111111)
-
   // let { data : imageData} = useQuery(GET_IMG_BY_ID, {
   //   fetchPolicy: 'network-only',
   //   variables: {projectSysId: firstId},
@@ -36,12 +34,6 @@ function About() {
     a.display = 'block'
   }, [])
 
-  // useEffect(() => {
-  //   if (imageData) {
-  //     console.log(imageData.asset.url)
-  //   }
-  // }, [imageData])
-
   useEffect(() => {
     if (data) {
       let template = `<img src=${firstImg} alt="" height=${500} />`
@@ -49,7 +41,6 @@ function About() {
       let parsedHtml = documentToHtmlString(data.staticData.content.json)
       let x = parsedHtml.split('section_boundary')[0]
       let x2 = parsedHtml.split('section_boundary')[1]
-      console.log(parsedHtml)
       setRichText(x)
       setRichText2(x2)
     }
