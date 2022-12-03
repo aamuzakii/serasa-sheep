@@ -1,14 +1,12 @@
 import * as React from 'react'
 import {Routes, Route, Link} from 'react-router-dom'
 import './App.scss'
-// import Home from './views/Home'
 import Hall from './views/HallVideo'
 import Contact from './views/Contact'
 import Journal from './views/Journal'
 import About from './views/About'
 import AboutMobile from './views/AboutMobile'
 import Company from './views/Company'
-// import Zepto from './views/Zepto'
 import Projects from './views/Projects'
 import ParallaxParent from './views/ParallaxParent'
 import NavList from './components/NavList'
@@ -22,7 +20,6 @@ export default function App() {
       <NavList />
       <Routes>
         <Route index element={<Hall />} />
-        {/* <Route path="home" element={<Home />} /> */}
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<MiddlewareAbout />} />
         <Route path="journal" element={<Journal />} />
