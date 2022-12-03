@@ -17,6 +17,11 @@ function Contact() {
   })
   const [richText, setRichText] = useState('')
 
+  const [name, setName] = useState('')
+  const [subject, setSubject] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
   useEffect(() => {
     middleware('contact')
   }, [])
@@ -27,16 +32,16 @@ function Contact() {
     }
   }, [data])
 
-  const adminEmail = 'aamuzakii@gmail.com'
+  const destinationEmail = process.env.ADMIN_EMAIL || 'aamuzakii@gmail.com'
 
   const handleSubmit = (e) => {
     e.preventDefault()
     let templateParams = {
-      admin_email: adminEmail,
-      customer_name: 'Budi ini dr obj',
-      customer_subject: 'Test Email Inquiry',
-      customer_email: 'real-customer@gmail.com',
-      customer_message: 'Apakah email ini diterima?',
+      admin_email: destinationEmail,
+      customer_name: name,
+      customer_subject: subject,
+      customer_email: email,
+      customer_message: message,
     }
 
     emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE, templateParams, process.env.REACT_APP_EMAILJS_PUBLIC_KEY).then(
@@ -47,6 +52,19 @@ function Contact() {
         alert('An error occurred: ', error.text)
       },
     )
+  }
+
+  const handleChgName = (e) => {
+    setName(e.target.value)
+  }
+  const handleChgEmail = (e) => {
+    setEmail(e.target.value)
+  }
+  const handleChgSubject = (e) => {
+    setSubject(e.target.value)
+  }
+  const handleChgMSg = (e) => {
+    setMessage(e.target.value)
   }
 
   return (
@@ -66,11 +84,13 @@ function Contact() {
         <div className="form p_y_20">
           <h3>Get in Touch</h3>
           <div action="" style={{}} className="sss">
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Email" />
-            <input type="text" placeholder="Subject" />
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-            <button className="learn-more">Send</button>
+            <input type="text" placeholder="Name" onChange={handleChgName} />
+            <input type="text" placeholder="Email" onChange={handleChgEmail} />
+            <input type="text" placeholder="Subject" onChange={handleChgSubject} />
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message" onChange={handleChgMSg}></textarea>
+            <button className="learn-more" onClick={handleSubmit}>
+              Send
+            </button>
           </div>
         </div>
       </div>
