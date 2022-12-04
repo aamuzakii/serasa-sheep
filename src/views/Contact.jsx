@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import {motion} from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import logo from '../assets/architecture.jpg'
 import wa from '../assets/social/whatsapp.png'
@@ -32,7 +31,7 @@ function Contact() {
     }
   }, [data])
 
-  const destinationEmail = process.env.ADMIN_EMAIL || 'aamuzakii@gmail.com'
+  const destinationEmail = process.env.REACT_APP_ADMIN_EMAIL || 'aamuzakii@gmail.com'
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -47,6 +46,10 @@ function Contact() {
     emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE, templateParams, process.env.REACT_APP_EMAILJS_PUBLIC_KEY).then(
       (result) => {
         alert('Message Sent. ', result.text)
+        setName('')
+        setSubject('')
+        setEmail('')
+        setMessage('')
       },
       (error) => {
         alert('An error occurred: ', error.text)
@@ -84,10 +87,10 @@ function Contact() {
         <div className="form p_y_20">
           <h3>Get in Touch</h3>
           <div action="" style={{}} className="sss">
-            <input type="text" placeholder="Name" onChange={handleChgName} />
-            <input type="text" placeholder="Email" onChange={handleChgEmail} />
-            <input type="text" placeholder="Subject" onChange={handleChgSubject} />
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message" onChange={handleChgMSg}></textarea>
+            <input type="text" placeholder="Name" onChange={handleChgName} value={name} />
+            <input type="text" placeholder="Email" onChange={handleChgEmail} value={email} />
+            <input type="text" placeholder="Subject" onChange={handleChgSubject} value={subject} />
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message" onChange={handleChgMSg} value={message}></textarea>
             <button className="learn-more" onClick={handleSubmit}>
               Send
             </button>
