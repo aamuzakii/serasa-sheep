@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from 'react'
-import {useQuery} from '@apollo/client'
-import {GET_ABOUT_PAGE, GET_IMG_BY_ID} from '../graphql/queries'
-import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
-import {getRichTextEntityLinks} from '@contentful/rich-text-links'
-import {Markup} from 'interweave'
+import React, { useState, useEffect } from 'react'
+import { useQuery } from '@apollo/client'
+import { GET_ABOUT_PAGE, GET_IMG_BY_ID } from '../graphql/queries'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+import { getRichTextEntityLinks } from '@contentful/rich-text-links'
+import { Markup } from 'interweave'
 import middleware from '../helper/middleware'
 import style from './AboutMobile.module.scss'
 
@@ -13,9 +13,8 @@ const firstImg = 'https://images.ctfassets.net/0wvobgztd3t0/6aI6XUHSSfJE0w3lb1VW
 const secondImg = 'https://images.ctfassets.net/0wvobgztd3t0/5LED5Hj4Uh2H5A3phKCAnL/d6fb6a34e8b635524119452c1ca35c11/Ryan.jpg'
 
 function About() {
-  let {loading, error, data, refetch} = useQuery(GET_ABOUT_PAGE, {
-    fetchPolicy: 'network-only',
-    variables: {staticSysId: '7xr37H6HNyz32EhhYCb9kZ'},
+  let { loading, error, data, refetch } = useQuery(GET_ABOUT_PAGE, {
+    variables: { staticSysId: '7xr37H6HNyz32EhhYCb9kZ' },
   })
 
   // let { data : imageData} = useQuery(GET_IMG_BY_ID, {

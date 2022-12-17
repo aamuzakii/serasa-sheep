@@ -1,19 +1,18 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import ProjectParallax from './ProjectParallax'
-import {useParams} from 'react-router-dom'
-import {useQuery} from '@apollo/client'
-import {GET_SINGLE_PROJECT} from '../graphql/queries'
-import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
+import { useParams } from 'react-router-dom'
+import { useQuery } from '@apollo/client'
+import { GET_SINGLE_PROJECT } from '../graphql/queries'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import spinner from '../assets/spinner.png'
 
 const ParallaxParent = () => {
-  const {id} = useParams()
+  const { id } = useParams()
   const [richText, setRichText] = useState('')
   const [isPreloadReady, setisPreloadReady] = useState(false)
 
-  const {loading, error, data, refetch} = useQuery(GET_SINGLE_PROJECT, {
-    fetchPolicy: 'network-only',
-    variables: {projectSysId: id},
+  const { loading, error, data, refetch } = useQuery(GET_SINGLE_PROJECT, {
+    variables: { projectSysId: id },
   })
 
   useEffect(() => {
@@ -35,9 +34,9 @@ const ParallaxParent = () => {
   let imageUrlHeap = []
 
   if (!data) return
-  let {description, picturesCollection} = data.project
+  let { description, picturesCollection } = data.project
 
-  imageUrlHeap = picturesCollection.items.map(({url}) => url)
+  imageUrlHeap = picturesCollection.items.map(({ url }) => url)
 
   preloadImages(imageUrlHeap)
 
