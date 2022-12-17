@@ -14,7 +14,8 @@ ul {
 .nav-container2 {
   z-index: 20;
   width: 100%;
-  position: absolute;
+  position: sticky;
+  top: 0;
 
   a {
     font-weight: 100;

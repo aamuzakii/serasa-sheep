@@ -85,7 +85,7 @@ function Contact() {
         </div>
         <div className="form p_y_20">
           <h3>Get in Touch</h3>
-          <div action="" style={{}} className="sss">
+          <div action="" className="sss">
             <input type="text" placeholder="Name" onChange={handleChgName} value={name} />
             <input type="text" placeholder="Email" onChange={handleChgEmail} value={email} />
             <input type="text" placeholder="Subject" onChange={handleChgSubject} value={subject} />

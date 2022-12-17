@@ -20,7 +20,7 @@ function NavList() {
   ]
 
   return (
-    <nav className="nav-container2" style={{}}>
+    <nav className="nav-container2" >
       <div style={{ display: 'flex', width: '100%' }} className="inner-nav-container">
         <NavLink to={''} className="nav-logo">
           {document.body.clientWidth > 768 ? <img src={logo} alt="" height={30} /> : <img src={logo} alt="" height={20} />}
