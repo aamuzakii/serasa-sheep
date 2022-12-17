@@ -4,7 +4,7 @@ import {GET_ALL_JOURNALS} from '../graphql/queries'
 import styles from '../stylesheets/Journal.module.scss'
 import middleware from '../helper/middleware'
 
-const Journal = () => {
+const Journals = () => {
   const [journalList, setJournalList] = useState('')
 
   useEffect(() => {
@@ -46,4 +46,4 @@ const Journal = () => {
   )
 }
 
-export default Journal
+export default Journals

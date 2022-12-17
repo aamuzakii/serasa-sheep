@@ -3,7 +3,7 @@ import {Routes, Route, Link} from 'react-router-dom'
 import './App.scss'
 import Hall from './views/HallVideo'
 import Contact from './views/Contact'
-import Journal from './views/Journal'
+import Journals from './views/Journals'
 import About from './views/About'
 import AboutMobile from './views/AboutMobile'
 import Company from './views/Company'
@@ -22,7 +22,7 @@ export default function App() {
         <Route index element={<Hall />} />
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<MiddlewareAbout />} />
-        <Route path="journal" element={<Journal />} />
+        <Route path="journal" element={<Journals />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<ParallaxParent />} />
         {docWidth > 425 ? <Route path="team" element={<About />} /> : <Route path="team" element={<AboutMobile />} />}
