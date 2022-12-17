@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+
+  .image_wrapper {
+    .img {
+      object-fit: contain;
+      padding: 100px;
+      margin: auto;
+      max-height: 100vh;
+    }
+  }
+}
+
+.markup_wrapper {
+  padding: 5%;
+}

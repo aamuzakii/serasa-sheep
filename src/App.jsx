@@ -1,9 +1,10 @@
 import * as React from 'react'
-import {Routes, Route, Link} from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import './App.scss'
 import Hall from './views/HallVideo'
 import Contact from './views/Contact'
 import Journals from './views/Journals'
+import Journal from './views/Journal'
 import About from './views/About'
 import AboutMobile from './views/AboutMobile'
 import Company from './views/Company'
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<MiddlewareAbout />} />
         <Route path="journal" element={<Journals />} />
+        <Route path="journal/:id" element={<Journal />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<ParallaxParent />} />
         {docWidth > 425 ? <Route path="team" element={<About />} /> : <Route path="team" element={<AboutMobile />} />}

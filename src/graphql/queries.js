@@ -1,4 +1,4 @@
-import {gql} from '@apollo/client'
+import { gql } from '@apollo/client'
 
 export const GET_MOVIES_FROM_CACHE = gql`
   query GetMovies {
@@ -22,6 +22,25 @@ export const GET_SINGLE_PROJECT = gql`
         }
       }
       # add the fields you want to query
+    }
+  }
+`
+
+export const GET_SINGLE_JOURNAL = gql`
+  query journalEntryQuery($journalSysId: String!) {
+    journal(id: $journalSysId) {
+      sys {
+        id
+      }
+      content {
+        json
+      }
+      title
+      pictureCollection {
+        items {
+          url
+        }
+      }
     }
   }
 `
