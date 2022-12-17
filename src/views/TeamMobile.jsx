@@ -5,7 +5,7 @@ import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
 import { getRichTextEntityLinks } from '@contentful/rich-text-links'
 import { Markup } from 'interweave'
 import middleware from '../helper/middleware'
-import style from './AboutMobile.module.scss'
+import style from './TeamMobile.module.scss'
 
 const firstId = '6aI6XUHSSfJE0w3lb1VWYF'
 const secondId = '5LED5Hj4Uh2H5A3phKCAnL'
