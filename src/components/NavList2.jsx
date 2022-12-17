@@ -28,7 +28,7 @@ function NavList() {
         <ul className="right">
           {arr.map(({ name }) => (
             <li key={name}>
-              <NavLink to={name} style={({ isActive }) => (isActive ? activeStyle : normalStyle)}>
+              <NavLink to={name} >
                 {name.split('/')[1]}
               </NavLink>
             </li>

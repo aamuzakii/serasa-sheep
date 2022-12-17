@@ -1,17 +1,13 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import NavList2 from '../components/NavList2'
 import middleware from '../helper/middleware'
-import {Markup} from 'interweave'
+import { Markup } from 'interweave'
 
 let v1 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243857/serasa/videos/1_cgn_mmcsor.mp4'
 
-const img1 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271841/EXT_q37luw.webp'
-const img2 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271840/EXT_2_tl1u2x.webp'
-const img3 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1666271841/EKSTERIOR_3_osjfxg.webp'
-
-const ProjectParallax = ({arr, richText}) => {
+const ProjectParallax = ({ arr, richText }) => {
   useEffect(() => {
     middleware('project-parallax')
   }, [])
@@ -38,7 +34,7 @@ const ProjectParallax = ({arr, richText}) => {
         end: '3000px',
       },
     })
-    tl.from('.layer-story-content-wrapper', {y: 20, autoAlpha: 0, stagger: 1.4}, 0).to(
+    tl.from('.layer-story-content-wrapper', { y: 20, autoAlpha: 0, stagger: 1.4 }, 0).to(
       '.layer-story-content-wrapper',
       {
         y: 0,
@@ -66,7 +62,7 @@ const ProjectParallax = ({arr, richText}) => {
       <section className="layer-story-box">
         <div className="intro"></div>
         <div className="layer-story-pinned-content">
-          <NavList2></NavList2>
+          <NavList2 />
           <div className="woy_scroll">
             <img className="woy_scroll_2" src="https://www.golfclubmadesimo.com/images/scroll-down.gif" alt="" />
           </div>
@@ -75,7 +71,7 @@ const ProjectParallax = ({arr, richText}) => {
               <Markup content={richText} />
             </figure>
           </div>
-          {arr.map(({url}, i) => {
+          {arr.map(({ url }, i) => {
             const isVideo = url.split('.')[0] === 'https://videos'
 
             setTimeout(() => {
