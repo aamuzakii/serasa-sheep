@@ -1,5 +1,5 @@
 import React from 'react'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const MiddlewareAbout = () => {
   let navigate = useNavigate()
@@ -14,13 +14,13 @@ const MiddlewareAbout = () => {
     <div className="mid-container">
       <div>
         {/* <img src={a} alt="" onClick={goToTeam} /> */}
-        <p className="centered" onClick={goToTeam} style={{fontSize: 30}}>
+        <p className="centered" onClick={goToTeam} style={{ fontSize: 30 }}>
           TEAM
         </p>
       </div>
       <div>
         {/* <img src={c} alt="" onClick={goToCompany} /> */}
-        <p className="centered" onClick={goToCompany} style={{fontSize: 30}}>
+        <p className="centered" onClick={goToCompany} style={{ fontSize: 30 }}>
           COMPANY
         </p>
       </div>

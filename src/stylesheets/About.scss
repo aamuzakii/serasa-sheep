@@ -9,9 +9,12 @@ i {
   padding: 0px;
   display: flex;
   flex-direction: column;
-  .up1, .up2 {
+
+  .up1,
+  .up2 {
     display: flex;
   }
+
   .up2 {
     flex-direction: row-reverse;
   }

@@ -7,6 +7,7 @@
 .mid {
   width: 1000px;
   margin: auto;
+
   .big_font {
     font-size: 60px;
     text-align: center;
@@ -18,9 +19,11 @@
   min-height: 100px;
   display: flex;
   margin-bottom: 15px;
+
   h3 {
     font-weight: 500;
   }
+
   p {
     font-style: 8px;
     color: rgba(117, 117, 117, 1);
@@ -35,17 +38,21 @@
   .thumbnail_webinar {
     width: 280px;
     height: 150px;
+
     @media only screen and (max-width: 425px) {
       height: 100px;
     }
+
     overflow: hidden;
     position: relative;
     display: block;
     margin-right: 20px;
+
     img {
       object-fit: cover;
       width: 100%;
       height: auto;
+
       @media only screen and (max-width: 425px) {
         height: inherit;
       }
@@ -56,23 +63,29 @@
 @media only screen and (max-width: 425px) {
   .mid {
     max-width: 100%;
+
     .big_font {
       font-size: 30px;
     }
   }
+
   .card {
     margin: 0 15px;
+
     h3 {
       font-weight: 400;
       font-size: 14px;
     }
+
     p {
       font-size: 12px;
     }
+
     .thumbnail_webinar {
       margin-right: 15px;
       height: 140px;
       max-width: 130px;
+
       img {
         height: inherit;
       }
