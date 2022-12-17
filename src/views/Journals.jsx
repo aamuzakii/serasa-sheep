@@ -12,7 +12,6 @@ const Journals = () => {
   }, [])
 
   let { loading, error, data, refetch } = useQuery(GET_ALL_JOURNALS, {
-    fetchPolicy: 'network-only',
   })
 
   useEffect(() => {

@@ -11,12 +11,10 @@ const firstId = '6aI6XUHSSfJE0w3lb1VWYF'
 function Journal() {
   const { id } = useParams()
   let { loading, error, data, refetch } = useQuery(GET_SINGLE_JOURNAL, {
-    fetchPolicy: 'network-only',
     variables: { journalSysId: id },
   })
 
   let { data: imageData } = useQuery(GET_IMG_BY_ID, {
-    fetchPolicy: 'network-only',
     variables: { projectSysId: firstId },
   })
 

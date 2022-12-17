@@ -1,18 +1,17 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import logo from '../assets/architecture.jpg'
 import wa from '../assets/social/whatsapp.png'
 import instagram from '../assets/social/instagram.png'
 
-import {useQuery} from '@apollo/client'
-import {GET_CONTACT_ADDRESS} from '../graphql/queries'
-import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
-import {Markup} from 'interweave'
+import { useQuery } from '@apollo/client'
+import { GET_CONTACT_ADDRESS } from '../graphql/queries'
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
+import { Markup } from 'interweave'
 import middleware from '../helper/middleware'
 
 function Contact() {
-  let {loading, error, data, refetch} = useQuery(GET_CONTACT_ADDRESS, {
-    fetchPolicy: 'network-only',
+  let { loading, error, data, refetch } = useQuery(GET_CONTACT_ADDRESS, {
   })
   const [richText, setRichText] = useState('')
 
