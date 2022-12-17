@@ -26,19 +26,21 @@ const Journals = () => {
       <div className={styles.mid}>
         <h1 className={styles.big_font}>Our Journals</h1>
         {journalList &&
-          journalList.map(({title, pictureCollection, date}, i) => {
+          journalList.map(({title, pictureCollection, date, sys}, i) => {
             let dateObject = new Date(date)
             let cleanDate = dateObject.toLocaleDateString()
             return (
-              <div className={styles.card} key={i}>
-                <div className={styles.thumbnail_webinar}>
-                  <img src={pictureCollection.items[0].url} alt="foo" />
+              <a href={"/journal/" + sys.id}>
+                <div className={styles.card} key={i}>
+                  <div className={styles.thumbnail_webinar}>
+                    <img src={pictureCollection.items[0].url} alt={title} />
+                  </div>
+                  <div className={styles.foo}>
+                    <h3>{title}</h3>
+                    <p>{cleanDate}</p>
+                  </div>
                 </div>
-                <div className={styles.foo}>
-                  <h3>{title}</h3>
-                  <p>{cleanDate}</p>
-                </div>
-              </div>
+              </a>
             )
           })}
       </div>
