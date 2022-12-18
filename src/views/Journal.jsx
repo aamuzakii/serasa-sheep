@@ -10,7 +10,7 @@ const firstId = '6aI6XUHSSfJE0w3lb1VWYF'
 
 function Journal() {
   const { id } = useParams()
-  let { loading, error, data, refetch } = useQuery(GET_SINGLE_JOURNAL, {
+  let { data } = useQuery(GET_SINGLE_JOURNAL, {
     variables: { journalSysId: id },
   })
 

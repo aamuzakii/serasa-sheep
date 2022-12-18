@@ -6,7 +6,7 @@ import { Markup } from 'interweave'
 import middleware from '../helper/middleware'
 
 function Company() {
-  let { loading, error, data, refetch } = useQuery(GET_COMPANY_PAGE, {
+  let { data } = useQuery(GET_COMPANY_PAGE, {
     variables: { staticSysId: '7xr37H6HNyz32EhhYCb9kZ' },
   })
   const [richText, setRichText] = useState('')

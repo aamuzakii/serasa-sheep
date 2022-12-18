@@ -11,7 +11,7 @@ function Project() {
   const { id } = useParams()
   const [richText, setRichText] = useState('')
 
-  const { loading, error, data, refetch } = useQuery(GET_SINGLE_PROJECT, {
+  const { data } = useQuery(GET_SINGLE_PROJECT, {
     variables: { projectSysId: id },
   })
 

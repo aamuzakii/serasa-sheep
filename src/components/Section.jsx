@@ -7,7 +7,7 @@ import middleware from '../helper/middleware'
 
 function Section({ dasar, dasarDict, code }) {
   const [projects, setProjects] = useState([])
-  let { loading, error, data, refetch } = useQuery(GET_ALL_PROJECT, {
+  let { data } = useQuery(GET_ALL_PROJECT, {
     fetchPolicy: 'network-only',
   })
 

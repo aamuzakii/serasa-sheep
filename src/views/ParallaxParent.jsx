@@ -11,7 +11,7 @@ const ParallaxParent = () => {
   const [richText, setRichText] = useState('')
   const [isPreloadReady, setisPreloadReady] = useState(false)
 
-  const { loading, error, data, refetch } = useQuery(GET_SINGLE_PROJECT, {
+  const { data } = useQuery(GET_SINGLE_PROJECT, {
     variables: { projectSysId: id },
   })
 

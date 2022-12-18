@@ -11,7 +11,7 @@ import { Markup } from 'interweave'
 import middleware from '../helper/middleware'
 
 function Contact() {
-  let { loading, error, data, refetch } = useQuery(GET_CONTACT_ADDRESS, {
+  let { data } = useQuery(GET_CONTACT_ADDRESS, {
   })
   const [richText, setRichText] = useState('')
 

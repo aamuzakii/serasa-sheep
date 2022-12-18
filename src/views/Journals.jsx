@@ -11,12 +11,14 @@ const Journals = () => {
     middleware('journal')
   }, [])
 
-  let { loading, error, data, refetch } = useQuery(GET_ALL_JOURNALS, {
+  let { data } = useQuery(GET_ALL_JOURNALS, {
   })
 
   useEffect(() => {
     if (data) {
-      setJournalList(data.journalCollection.items)
+      let arr = data.journalCollection.items
+      arr = arr.slice().sort((a, b) => new Date(b.date) - new Date(a.date))
+      setJournalList(arr)
     }
   }, [data])
 
@@ -27,7 +29,7 @@ const Journals = () => {
         {journalList &&
           journalList.map(({ title, pictureCollection, date, sys }, i) => {
             let dateObject = new Date(date)
-            let cleanDate = dateObject.toLocaleDateString()
+            let cleanDate = dateObject.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })
             return (
               <a href={"/journal/" + sys.id} key={i} >
                 <div className={styles.card} >

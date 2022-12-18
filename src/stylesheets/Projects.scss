@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 50px 240px;
+  padding: 50px 30px;
   align-items: center;
 
   .box-gradient-layer {
@@ -61,7 +61,8 @@
 .sorting-btn.actived {
   color: #666;
   border-bottom: 3.5px solid #4acca5;
-  margin-bottom: -1px; /* kalau gapake ini, border bakal take space  */
+  margin-bottom: -1px;
+  /* kalau gapake ini, border bakal take space  */
 }
 
 .inner-container-button {

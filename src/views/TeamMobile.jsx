@@ -13,7 +13,7 @@ const firstImg = 'https://images.ctfassets.net/0wvobgztd3t0/6aI6XUHSSfJE0w3lb1VW
 const secondImg = 'https://images.ctfassets.net/0wvobgztd3t0/5LED5Hj4Uh2H5A3phKCAnL/d6fb6a34e8b635524119452c1ca35c11/Ryan.jpg'
 
 function About() {
-  let { loading, error, data, refetch } = useQuery(GET_ABOUT_PAGE, {
+  let { data } = useQuery(GET_ABOUT_PAGE, {
     variables: { staticSysId: '7xr37H6HNyz32EhhYCb9kZ' },
   })
 
