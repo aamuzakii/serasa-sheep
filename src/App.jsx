@@ -5,7 +5,7 @@ import Hall from './views/HallVideo'
 import Contact from './views/Contact'
 import Journals from './views/Journals'
 import Journal from './views/Journal'
-import Team from './views/Team'
+import Team from './views/Team2'
 import TeamMobile from './views/TeamMobile'
 import Company from './views/Company'
 import Projects from './views/Projects'
@@ -14,7 +14,6 @@ import NavList from './components/NavList'
 import MiddlewareAbout from './components/MiddlewareAbout'
 
 export default function App() {
-  const docWidth = document.documentElement.clientWidth
 
   return (
     <>
@@ -27,7 +26,7 @@ export default function App() {
         <Route path="journal/:id" element={<Journal />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<ParallaxParent />} />
-        {docWidth > 425 ? <Route path="team" element={<Team />} /> : <Route path="team" element={<TeamMobile />} />}
+        <Route path="team" element={<Team />} />
         <Route path="company" element={<Company />} />
       </Routes>
     </>

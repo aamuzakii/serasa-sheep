@@ -66,6 +66,28 @@ export const GET_ALL_PROJECT = gql`
   }
 `
 
+export const GET_ALL_TEAMS = gql`
+  query teamCollectionQuery {
+    teamCollection {
+      items {
+        sys {
+          id
+        }
+        name
+        type
+        position
+        photo {
+          url
+        }
+        order
+        bio {
+          json
+        }
+      }
+    }
+  }
+`
+
 export const GET_ALL_JOURNALS = gql`
   query foo {
     journalCollection {
