@@ -8,6 +8,7 @@ import {useQuery} from '@apollo/client'
 import {GET_CONTACT_ADDRESS} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
 import {Markup} from 'interweave'
+import middleware from '../helper/middleware'
 
 function Contact() {
   let {data} = useQuery(GET_CONTACT_ADDRESS, {})
@@ -17,6 +18,10 @@ function Contact() {
   const [subject, setSubject] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+
+  useEffect(() => {
+    middleware('foo')
+  }, [])
 
   useEffect(() => {
     if (data) {

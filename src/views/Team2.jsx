@@ -3,6 +3,7 @@ import {useQuery} from '@apollo/client'
 import {GET_ALL_TEAMS, GET_IMG_BY_ID} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
 import style from './Team2.module.scss'
+import middleware from '../helper/middleware'
 
 function About() {
   let {data} = useQuery(GET_ALL_TEAMS, {})
@@ -11,7 +12,9 @@ function About() {
   const [contributors, setContributors] = useState('')
   const [boardMembers, setBoardMembers] = useState('')
 
-  useEffect(() => {}, [])
+  useEffect(() => {
+    middleware('foo')
+  }, [])
 
   useEffect(() => {
     if (data) {

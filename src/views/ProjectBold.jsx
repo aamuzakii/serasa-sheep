@@ -4,6 +4,7 @@ import {useParams} from 'react-router-dom'
 import {useQuery} from '@apollo/client'
 import {GET_SINGLE_PROJECT} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
+import middleware from '../helper/middleware'
 
 const ProjectParallax = () => {
   useEffect(() => {
@@ -11,6 +12,10 @@ const ProjectParallax = () => {
       window.scrollTo(0, 300) // workaround
     }, 350)
     // stagger = jarak satu dgn lainnya
+  }, [])
+
+  useEffect(() => {
+    middleware('foo')
   }, [])
 
   const {id} = useParams()
