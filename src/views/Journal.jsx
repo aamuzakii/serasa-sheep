@@ -29,7 +29,7 @@ function Journal() {
   useEffect(() => {
     if (data) {
       setImage(data.journal.pictureCollection.items[0].url)
-      const parsedHtml = documentToHtmlString(data.journal.content.json)
+      const parsedHtml = data.journal.content.json
       setRichText(parsedHtml)
     }
   }, [data])
@@ -43,7 +43,7 @@ function Journal() {
       </div>
       <div className={style.markup_wrapper}>
         <h1>{data.journal.title}</h1>
-        <Markup content={richText} />
+        <p dangerouslySetInnerHTML={{__html: documentToHtmlString(richText)}} className={style.injected_rich_text}></p>
       </div>
     </div>
   )

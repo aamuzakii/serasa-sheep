@@ -6,7 +6,7 @@
 - team editable di contenful (Komposisi Board 2, Team 4) ✔️
 - Project template sama dengan team ✔️
 - Project perbesar margin (center)
-- Deskripsi singkat di google search
+- Deskripsi singkat di google search ✔️
 
 *Secondary*
 - mainten ketika suatu saat terjadi problem trhadap web.
