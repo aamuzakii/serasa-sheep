@@ -16,7 +16,10 @@ ul {
   width: 100%;
   position: sticky;
   top: 0;
-
+  @media only screen and (max-width: 425px) {
+    background: rgb(255, 255, 255);
+  }
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 6%, rgba(255, 255, 255, 0.3897934173669467) 54%, rgba(255, 255, 255, 1) 94%);
   a {
     font-weight: 100;
   }

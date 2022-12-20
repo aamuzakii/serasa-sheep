@@ -41,7 +41,6 @@ const ProjectParallax = () => {
 
   return (
     <div className={style.container}>
-      <h1 className={style.center}>Board Member</h1>
       <p dangerouslySetInnerHTML={{__html: richText}} className={style.injected_rich_text}></p>
 
       <section className={style.asset_list}>
@@ -49,10 +48,7 @@ const ProjectParallax = () => {
           if (true) {
             return (
               <div className={style.single_person}>
-                {/* <div className={style.img_wrapper}> */}
                 <img src={url} alt="" className={style.imgo} />
-                {/* </div> */}
-                {/* <p dangerouslySetInnerHTML={{__html: documentToHtmlString(bio.json)}} className={style.injected_rich_text}></p> */}
               </div>
             )
           } else {
