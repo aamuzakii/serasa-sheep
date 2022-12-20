@@ -9,7 +9,6 @@ import Team from './views/Team2'
 import Company from './views/Company'
 import Projects from './views/Projects'
 import ProjectBold from './views/ProjectBold'
-import ParallaxParent from './views/ParallaxParent'
 import NavList from './components/NavList'
 import MiddlewareAbout from './components/MiddlewareAbout'
 

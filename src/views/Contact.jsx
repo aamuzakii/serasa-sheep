@@ -1,28 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React, {useState, useEffect} from 'react'
 import emailjs from '@emailjs/browser'
 import logo from '../assets/architecture.jpg'
 import wa from '../assets/social/whatsapp.png'
 import instagram from '../assets/social/instagram.png'
 
-import { useQuery } from '@apollo/client'
-import { GET_CONTACT_ADDRESS } from '../graphql/queries'
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
-import { Markup } from 'interweave'
-import middleware from '../helper/middleware'
+import {useQuery} from '@apollo/client'
+import {GET_CONTACT_ADDRESS} from '../graphql/queries'
+import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
+import {Markup} from 'interweave'
 
 function Contact() {
-  let { data } = useQuery(GET_CONTACT_ADDRESS, {
-  })
+  let {data} = useQuery(GET_CONTACT_ADDRESS, {})
   const [richText, setRichText] = useState('')
 
   const [name, setName] = useState('')
   const [subject, setSubject] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-
-  useEffect(() => {
-    middleware('contact')
-  }, [])
 
   useEffect(() => {
     if (data) {

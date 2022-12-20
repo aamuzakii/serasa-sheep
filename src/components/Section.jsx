@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState} from 'react'
 import Isotope from 'isotope-layout'
-import { Link } from 'react-router-dom'
-import { useQuery } from '@apollo/client'
-import { GET_ALL_PROJECT } from '../graphql/queries'
-import middleware from '../helper/middleware'
+import {Link} from 'react-router-dom'
+import {useQuery} from '@apollo/client'
+import {GET_ALL_PROJECT} from '../graphql/queries'
 
-function Section({ dasar, dasarDict, code }) {
+function Section({dasar, dasarDict, code}) {
   const [projects, setProjects] = useState([])
-  let { data } = useQuery(GET_ALL_PROJECT, {
+  let {data} = useQuery(GET_ALL_PROJECT, {
     fetchPolicy: 'network-only',
   })
 
@@ -51,7 +50,7 @@ function Section({ dasar, dasarDict, code }) {
 
   // handling filter key change
   React.useEffect(() => {
-    filterKey === '*' ? isotope.current.arrange({ filter: `*` }) : isotope.current.arrange({ filter: `.${filterKey}` })
+    filterKey === '*' ? isotope.current.arrange({filter: `*`}) : isotope.current.arrange({filter: `.${filterKey}`})
   }, [filterKey, projects]) // harus tambah dependency ternyata buat solve bug
 
   const colorDict = {
@@ -93,11 +92,11 @@ function Section({ dasar, dasarDict, code }) {
   if (code !== 'a' && filterKey === '*') {
     return (
       <div className="section">
-        <h1 className="font-anu" style={{ textAlign: 'center' }}>
+        <h1 className="font-anu" style={{textAlign: 'center'}}>
           {sectionTitle}
         </h1>
         <div className={c}>
-          {projects.map(({ color, year, program, status, location, name, picturesCollection, projectType, sys }, i) => {
+          {projects.map(({color, year, program, status, location, name, picturesCollection, projectType, sys}, i) => {
             let kelas = `${item} ${program} ${status} y${year} ${location} ${projectType}`
             return <div key={i} className={kelas}></div>
           })}
@@ -109,15 +108,15 @@ function Section({ dasar, dasarDict, code }) {
 
   return (
     <div className="section">
-      <h1 className="font-anu" style={{ textAlign: 'center' }}>
+      <h1 className="font-anu" style={{textAlign: 'center'}}>
         {sectionTitle}
       </h1>
       <div className={c}>
-        {projects.map(({ color, year, program, status, location, name, picturesCollection, projectType, sys }, i) => {
+        {projects.map(({color, year, program, status, location, name, picturesCollection, projectType, sys}, i) => {
           let kelas = `${item} ${program} ${status} y${year} ${location} ${projectType}`
           return (
             <div key={i} className={kelas}>
-              <Link to={sys.id} className="box image" style={{ background: color, color: colorDict[color] }}>
+              <Link to={sys.id} className="box image" style={{background: color, color: colorDict[color]}}>
                 <p className="small-text">{name}</p>
                 <div className="box-gradient-layer"></div>
                 <img className="inner-img" src={picturesCollection.items[0].url} alt="" />

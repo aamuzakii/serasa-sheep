@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react'
-import { useMediaQuery } from 'react-responsive'
+import React, {useEffect, useRef} from 'react'
+import {useMediaQuery} from 'react-responsive'
 import middleware from '../helper/middleware'
 
 let v1 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243857/serasa/videos/1_cgn_mmcsor.mp4'
@@ -12,9 +12,9 @@ function HallVideo() {
   const videoRef = useRef('')
   const backgroundRef = useRef('')
 
-  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' })
-  const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+  const isDesktopOrLaptop = useMediaQuery({query: '(min-width: 1224px)'})
+  const isBigScreen = useMediaQuery({query: '(min-width: 1824px)'})
+  const isTabletOrMobile = useMediaQuery({query: '(max-width: 1224px)'})
 
   const getVerticalAlignment = (desktop, mobile) => {
     if (isDesktopOrLaptop || isBigScreen) {

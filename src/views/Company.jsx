@@ -11,13 +11,6 @@ function Company() {
   const [richText, setRichText] = useState('')
 
   useEffect(() => {
-    let a = document.querySelector('.nav-container').style
-    a.position = 'absolute'
-    a.top = '0px'
-    a.display = 'block'
-  }, [])
-
-  useEffect(() => {
     if (data) {
       setRichText(documentToHtmlString(data.staticData.content.json))
     }

@@ -13,21 +13,8 @@ export default function middleware(page) {
       navStyle.display = 'block'
       break
     case 'journal':
-      navStyle.position = 'static'
+      // navStyle.position = 'static'
       navStyle.display = 'block'
-      break
-    case 'project':
-      navStyle.display = 'block'
-      let width = document.body.clientWidth
-      if (width < 425) {
-        // mobile device
-        navStyle.position = 'static'
-      } else {
-        navStyle.position = 'fixed'
-      }
-      break
-    case 'project-parallax':
-      navStyle.display = 'none'
       break
     case 'projects':
       navStyle.display = 'block'
@@ -38,13 +25,6 @@ export default function middleware(page) {
       navStyle.display = 'block'
       navStyle.position = 'absolute'
       navStyle.top = '0px'
-      break
-    case 'zepto': // team
-      if (typeof window !== 'undefined') localStorage.setItem('prev_page', 'zepto')
-
-      navStyle.position = 'absolute'
-      navStyle.top = '0px'
-      navStyle.display = 'block'
       break
     default:
       navStyle.display = 'block'

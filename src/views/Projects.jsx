@@ -1,16 +1,11 @@
 import React, {useEffect} from 'react'
 import Section from '../components/Section'
 import {Link, Outlet} from 'react-router-dom'
-import middleware from '../helper/middleware'
 
 function Projects() {
   const isotope = React.useRef()
   // store the filter keyword in a state
   const [dasar, setDasar] = React.useState('all')
-
-  useEffect(() => {
-    middleware('projects')
-  }, [])
 
   // handling filter key change
 
