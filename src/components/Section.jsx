@@ -11,13 +11,6 @@ function Section({dasar, dasarDict, code}) {
   })
 
   useEffect(() => {
-    let a = document.querySelector('.nav-container').style
-    // a.position = 'absolute'
-    // a.top = '0px'
-    a.display = 'block'
-  }, [])
-
-  useEffect(() => {
     if (data) {
       data.projectCollection.items = data.projectCollection.items.map((element) => {
         element.color = 'white'

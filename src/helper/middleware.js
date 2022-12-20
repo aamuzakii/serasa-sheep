@@ -7,27 +7,5 @@ export default function middleware(page) {
   if (typeof window !== 'undefined') localStorage.setItem('prev_page', 'non-zepto')
 
   switch (page) {
-    case 'hall-video':
-      navStyle.position = 'absolute'
-      navStyle.top = '0px'
-      navStyle.display = 'block'
-      break
-    case 'journal':
-      // navStyle.position = 'static'
-      navStyle.display = 'block'
-      break
-    case 'projects':
-      navStyle.display = 'block'
-      break
-    case 'about':
-      break
-    case 'contact':
-      navStyle.display = 'block'
-      navStyle.position = 'absolute'
-      navStyle.top = '0px'
-      break
-    default:
-      navStyle.display = 'block'
-      break
   }
 }
