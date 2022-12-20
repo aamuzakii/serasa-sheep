@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useQuery} from '@apollo/client'
 import {GET_ALL_TEAMS, GET_IMG_BY_ID} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
-import style from './Team2.module.scss'
+import style from './Team.module.scss'
 import middleware from '../helper/middleware'
 
 function About() {
