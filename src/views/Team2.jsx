@@ -2,9 +2,6 @@ import React, {useState, useEffect} from 'react'
 import {useQuery} from '@apollo/client'
 import {GET_ALL_TEAMS, GET_IMG_BY_ID} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
-import {getRichTextEntityLinks} from '@contentful/rich-text-links'
-import {Markup} from 'interweave'
-import middleware from '../helper/middleware'
 import style from './Team2.module.scss'
 
 function About() {
@@ -14,12 +11,7 @@ function About() {
   const [contributors, setContributors] = useState('')
   const [boardMembers, setBoardMembers] = useState('')
 
-  useEffect(() => {
-    let a = document.querySelector('.nav-container').style
-    a.position = 'absolute'
-    a.top = '0px'
-    a.display = 'block'
-  }, [])
+  useEffect(() => {}, [])
 
   useEffect(() => {
     if (data) {

@@ -1,17 +1,9 @@
 import React, {useEffect, useState} from 'react'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-import NavList2 from '../components/NavList2'
-import middleware from '../helper/middleware'
-import {Markup} from 'interweave'
 import style from './ProjectBold.module.scss'
 import {useParams} from 'react-router-dom'
 import {useQuery} from '@apollo/client'
 import {GET_SINGLE_PROJECT} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
-import spinner from '../assets/spinner.png'
-
-let v1 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1664243857/serasa/videos/1_cgn_mmcsor.mp4'
 
 const ProjectParallax = () => {
   useEffect(() => {
