@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import { useQuery } from '@apollo/client'
-import { GET_ALL_JOURNALS } from '../graphql/queries'
-import styles from '../stylesheets/Journal.module.scss'
+import React, {useState, useEffect} from 'react'
+import {useQuery} from '@apollo/client'
+import {GET_ALL_JOURNALS} from '../graphql/queries'
+import styles from '../stylesheets/Journals.module.scss'
 import middleware from '../helper/middleware'
 
 const Journals = () => {
@@ -11,8 +11,7 @@ const Journals = () => {
     middleware('journal')
   }, [])
 
-  let { data } = useQuery(GET_ALL_JOURNALS, {
-  })
+  let {data} = useQuery(GET_ALL_JOURNALS, {})
 
   useEffect(() => {
     if (data) {
@@ -27,12 +26,12 @@ const Journals = () => {
       <div className={styles.mid}>
         <h1 className={styles.big_font}>Our Journals</h1>
         {journalList &&
-          journalList.map(({ title, pictureCollection, date, sys }, i) => {
+          journalList.map(({title, pictureCollection, date, sys}, i) => {
             let dateObject = new Date(date)
-            let cleanDate = dateObject.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })
+            let cleanDate = dateObject.toLocaleDateString('id-ID', {day: 'numeric', month: 'long', year: 'numeric'})
             return (
-              <a href={"/journal/" + sys.id} key={i} >
-                <div className={styles.card} >
+              <a href={'/journal/' + sys.id} key={i}>
+                <div className={styles.card}>
                   <div className={styles.thumbnail_webinar}>
                     <img src={pictureCollection.items[0].url} alt={title} />
                   </div>
