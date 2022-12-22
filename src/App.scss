@@ -27,6 +27,21 @@
   font-family: Hubbali !important;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  background: white;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(205, 205, 205);
+  background-color: #666;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(141, 141, 141);
+}
+
 .container {
   display: flex;
   flex-direction: row;
