@@ -8,6 +8,18 @@ function Projects() {
     middleware('foo')
   }, [])
 
+  useEffect(() => {
+    // BEWARE
+    let x = document.getElementsByClassName('playground-container')[0]
+    let screenWidth = document.body.clientWidth
+
+    if (screenWidth > 500) {
+      let cc = (screenWidth % 260) / 2 - 10
+      x.style.paddingLeft = cc + 'px'
+      x.style.paddingRight = cc + 'px'
+    }
+  }, [])
+
   const isotope = React.useRef()
   // store the filter keyword in a state
   const [dasar, setDasar] = React.useState('all')
