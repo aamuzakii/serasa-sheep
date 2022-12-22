@@ -1,3 +1,7 @@
+.container {
+  display: flex;
+}
+
 .asset_list {
   display: flex;
   flex-direction: column;
@@ -39,11 +43,15 @@
 }
 
 .imgo {
-  width: 75vw;
+  width: 10vw;
   height: auto;
 }
 
 @media only screen and (max-width: 425px) {
+  .container {
+    display: block;
+    margin-top: 70px;
+  }
   .asset_list {
     margin: unset;
     .imgo {

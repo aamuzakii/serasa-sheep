@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import style from './ProjectBold.module.scss'
+import style from './Project.module.scss'
 import {useParams} from 'react-router-dom'
 import {useQuery} from '@apollo/client'
 import {GET_SINGLE_PROJECT} from '../graphql/queries'
@@ -34,11 +34,9 @@ const ProjectParallax = () => {
   if (!data) return
   let {description, picturesCollection: assets} = data.project
 
-  console.log(richText)
-
   return (
     <div className={style.container}>
-      <p dangerouslySetInnerHTML={{__html: richText}} className={style.injected_rich_text}></p>
+      <section dangerouslySetInnerHTML={{__html: richText}} className={style.injected_rich_text}></section>
 
       <section className={style.asset_list}>
         {assets.items.map(({url}, i) => {
