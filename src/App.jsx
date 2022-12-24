@@ -5,6 +5,8 @@ import Hall from './views/HallVideo'
 import Contact from './views/Contact'
 import Journals from './views/Journals'
 import Journal from './views/Journal'
+import Awards from './views/Awards'
+import Award from './views/Award'
 import Team from './views/Team'
 import Company from './views/Company'
 import Projects from './views/Projects'
@@ -20,8 +22,10 @@ export default function App() {
         <Route index element={<Hall />} />
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<MiddlewareAbout />} />
-        <Route path="journal" element={<Journals />} />
-        <Route path="journal/:id" element={<Journal />} />
+        <Route path="journals" element={<Journals />} />
+        <Route path="journals/:id" element={<Journal />} />
+        <Route path="awards" element={<Awards />} />
+        <Route path="awards/:id" element={<Award />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<Project />} />
         <Route path="team" element={<Team />} />

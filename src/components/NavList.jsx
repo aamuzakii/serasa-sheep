@@ -8,7 +8,10 @@ function NavList() {
       name: 'Projects',
     },
     {
-      name: 'Journal',
+      name: 'Journals',
+    },
+    {
+      name: 'Awards',
     },
     {
       name: 'About',

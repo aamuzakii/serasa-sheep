@@ -107,6 +107,25 @@ export const GET_ALL_JOURNALS = gql`
   }
 `
 
+export const GET_ALL_AWARDS = gql`
+  query foo {
+    awardCollection {
+      items {
+        sys {
+          id
+        }
+        title
+        date
+        pictureCollection {
+          items {
+            url
+          }
+        }
+      }
+    }
+  }
+`
+
 export const GET_ABOUT_PAGE = gql`
   query {
     staticData(id: "Yc1MlxVguGdPbESt6ZjGR") {
