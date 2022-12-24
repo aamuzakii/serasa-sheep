@@ -4,6 +4,8 @@ import {Link, Outlet} from 'react-router-dom'
 import middleware from '../helper/middleware'
 
 function Projects() {
+  const [dasar, setDasar] = React.useState('all')
+
   useEffect(() => {
     middleware('foo')
   }, [])
@@ -13,16 +15,25 @@ function Projects() {
     let x = document.getElementsByClassName('playground-container')[0]
     let screenWidth = document.body.clientWidth
 
+    x.style.paddingLeft = 0 + 'px'
+    x.style.paddingRight = 0 + 'px'
+
     if (screenWidth > 500) {
-      let cc = (screenWidth % 260) / 2 - 10
+      let cc
+      if (dasar === 'location' && screenWidth > 1600) {
+        cc = (screenWidth % 260) / 2 - 10
+        cc = cc + 260
+      } else {
+        cc = (screenWidth % 260) / 2 - 10
+      }
+
       x.style.paddingLeft = cc + 'px'
       x.style.paddingRight = cc + 'px'
     }
-  }, [])
+  }, [dasar])
 
   const isotope = React.useRef()
   // store the filter keyword in a state
-  const [dasar, setDasar] = React.useState('all')
 
   // handling filter key change
 
