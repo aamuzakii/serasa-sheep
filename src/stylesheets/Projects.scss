@@ -10,12 +10,12 @@
 }
 
 .box:hover {
-  // box-shadow: 3px 3px 5px rgb(0 0 0 / 20%);
-  // -webkit-box-shadow: 3px 3px 5px rgb(0 0 0 / 20%);
-  transform: scale(1.5);
-  transition: 0.5s;
-  position: relative;
-  z-index: 7 !important;
+  @media only screen and (min-width: 450px) {
+    transform: scale(1.5);
+    transition: 0.5s;
+    position: relative;
+    z-index: 7 !important;
+  }
 }
 
 .container.projects {
