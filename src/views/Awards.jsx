@@ -30,7 +30,7 @@ const Awards = () => {
             let dateObject = new Date(date)
             let cleanDate = dateObject.toLocaleDateString('id-ID', {day: 'numeric', month: 'long', year: 'numeric'})
             return (
-              <a href={'/award/' + sys.id} key={i}>
+              <a href={'/awards/' + sys.id} key={i}>
                 <div className={styles.card}>
                   <div className={styles.thumbnail_webinar}>
                     <img src={pictureCollection.items[0].url} alt={title} />

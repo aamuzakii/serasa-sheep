@@ -45,6 +45,25 @@ export const GET_SINGLE_JOURNAL = gql`
   }
 `
 
+export const GET_SINGLE_AWARD = gql`
+  query journalEntryQuery($journalSysId: String!) {
+    award(id: $journalSysId) {
+      sys {
+        id
+      }
+      content {
+        json
+      }
+      title
+      pictureCollection {
+        items {
+          url
+        }
+      }
+    }
+  }
+`
+
 export const GET_ALL_PROJECT = gql`
   query projectCollectionQuery {
     projectCollection {
