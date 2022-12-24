@@ -11,9 +11,6 @@ function NavList() {
       name: 'Journals',
     },
     {
-      name: 'Awards',
-    },
-    {
       name: 'About',
     },
     {

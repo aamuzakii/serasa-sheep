@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import emailjs from '@emailjs/browser'
-import logo from '../assets/architecture.jpg'
+import logo from '../assets/team.webp'
 import wa from '../assets/social/whatsapp.png'
 import instagram from '../assets/social/instagram.png'
 
@@ -96,9 +96,7 @@ function Contact() {
         </div>
       </div>
 
-      <div className="img-container">
-        <img className="right-img" width="800" height="940" src={logo} alt="about" />
-      </div>
+      <img className="right-img" src={logo} alt="about" />
     </div>
   )
 }
