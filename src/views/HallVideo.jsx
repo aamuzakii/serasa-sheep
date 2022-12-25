@@ -39,20 +39,24 @@ function HallVideo() {
     var speed = 80
 
     function typeWriter1() {
-      const text1 = document.getElementById('txt1')
+      const txtDOM = document.getElementById('txt1')
+      txtDOM.style.display = 'block'
       if (i < innerString1.length) {
-        text1.innerHTML += innerString1.charAt(i)
+        txtDOM.innerHTML += innerString1.charAt(i)
         i++
         setTimeout(typeWriter1, speed)
       } else {
         setTimeout(() => {
-          text1.style.display = 'none'
+          txtDOM.style.display = 'none'
+          txtDOM.innerHTML = ''
+          i = 0
         }, 4000)
       }
-      text1.style.transform = 'scale(0.7)'
+      txtDOM.style.transform = 'scale(0.7)'
     }
     function typeWriter2() {
       const txtDOM = document.getElementById('txt2')
+      txtDOM.style.display = 'block'
       if (k < innerString2.length) {
         txtDOM.innerHTML += innerString2.charAt(k)
         k++
@@ -60,12 +64,15 @@ function HallVideo() {
       } else {
         setTimeout(() => {
           txtDOM.style.display = 'none'
+          txtDOM.innerHTML = ''
+          k = 0
         }, 2000)
       }
       txtDOM.style.transform = 'scale(0.7)'
     }
     function typeWriter3() {
       const txtDOM = document.getElementById('txt3')
+      txtDOM.style.display = 'block'
       if (m < innerString3.length) {
         txtDOM.innerHTML += innerString3.charAt(m)
         m++
@@ -73,6 +80,8 @@ function HallVideo() {
       } else {
         setTimeout(() => {
           txtDOM.style.display = 'none'
+          txtDOM.innerHTML = ''
+          m = 0
         }, 2000)
       }
       txtDOM.style.transform = 'scale(0.7)'
@@ -80,6 +89,7 @@ function HallVideo() {
 
     function typeWriter4() {
       const txtDOM = document.getElementById('txt4')
+      txtDOM.style.display = 'block'
       if (n < innerString4.length) {
         txtDOM.innerHTML += innerString4.charAt(n)
         n++
@@ -87,6 +97,8 @@ function HallVideo() {
       } else {
         setTimeout(() => {
           txtDOM.style.display = 'none'
+          txtDOM.innerHTML = ''
+          n = 0
         }, 2000)
       }
       txtDOM.style.transform = 'scale(0.7)'
@@ -97,7 +109,6 @@ function HallVideo() {
 
     const playV4 = () => {
       source.setAttribute('src', v4)
-      source.setAttribute('type', 'video/mp4')
       video.load()
       video.play()
       video.addEventListener('ended', playV1)
@@ -108,7 +119,6 @@ function HallVideo() {
 
     const playV3 = () => {
       source.setAttribute('src', v3)
-      source.setAttribute('type', 'video/mp4')
       video.load()
       video.play()
 
@@ -120,7 +130,6 @@ function HallVideo() {
 
     const playV2 = () => {
       source.setAttribute('src', v2)
-      source.setAttribute('type', 'video/mp4')
       video.load()
       video.play()
 
@@ -132,7 +141,6 @@ function HallVideo() {
 
     const playV1 = () => {
       source.setAttribute('src', v1)
-      source.setAttribute('type', 'video/mp4')
       video.load()
       video.play()
 
