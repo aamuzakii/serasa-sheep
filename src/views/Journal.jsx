@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useQuery} from '@apollo/client'
 import {GET_SINGLE_JOURNAL, GET_IMG_BY_ID} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
-import {Markup} from 'interweave'
+import Back from '../components/Back'
 import style from './Journal.module.scss'
 import {useParams} from 'react-router-dom'
 import middleware from '../helper/middleware'
@@ -44,6 +44,7 @@ function Journal() {
       <div className={style.markup_wrapper}>
         <h1>{data.journal.title}</h1>
         <p dangerouslySetInnerHTML={{__html: documentToHtmlString(richText)}} className={style.injected_rich_text}></p>
+        <Back destination="journals"></Back>
       </div>
     </div>
   )

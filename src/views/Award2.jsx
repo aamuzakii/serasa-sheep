@@ -38,7 +38,7 @@ const Award = () => {
     <div className={style.container}>
       <div className={style.injected_rich_text}>
         <section dangerouslySetInnerHTML={{__html: richText}}></section>
-        <Back></Back>
+        <Back destination="awards"></Back>
       </div>
 
       <section className={style.asset_list}>
