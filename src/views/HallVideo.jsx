@@ -30,8 +30,12 @@ function HallVideo() {
   useEffect(() => {
     var i = 0
     var k = 0
+    var m = 0
+    var n = 0
     var innerString1 = 'Bring The Nature Get Closer in Your Home'
     var innerString2 = 'We Convince The Building Performance through Thermal Simulation'
+    var innerString3 = 'To Create a Convert Space and Less Energy Consumption'
+    var innerString4 = 'The Serenity through Biophilic and Artistic Spaces'
     var speed = 80
 
     function typeWriter1() {
@@ -60,6 +64,33 @@ function HallVideo() {
       }
       txtDOM.style.transform = 'scale(0.7)'
     }
+    function typeWriter3() {
+      const txtDOM = document.getElementById('txt3')
+      if (m < innerString3.length) {
+        txtDOM.innerHTML += innerString3.charAt(m)
+        m++
+        setTimeout(typeWriter3, speed)
+      } else {
+        setTimeout(() => {
+          txtDOM.style.display = 'none'
+        }, 2000)
+      }
+      txtDOM.style.transform = 'scale(0.7)'
+    }
+
+    function typeWriter4() {
+      const txtDOM = document.getElementById('txt4')
+      if (n < innerString4.length) {
+        txtDOM.innerHTML += innerString4.charAt(n)
+        n++
+        setTimeout(typeWriter4, speed)
+      } else {
+        setTimeout(() => {
+          txtDOM.style.display = 'none'
+        }, 2000)
+      }
+      txtDOM.style.transform = 'scale(0.7)'
+    }
 
     let video = document.getElementById('root_video')
     let source = video.children[0]
@@ -72,6 +103,7 @@ function HallVideo() {
       video.addEventListener('ended', playV1)
       video.removeEventListener('ended', playV4)
       getVerticalAlignment('-100px', '0')
+      typeWriter4()
     }
 
     const playV3 = () => {
@@ -83,6 +115,7 @@ function HallVideo() {
       video.addEventListener('ended', playV4)
       video.removeEventListener('ended', playV3)
       getVerticalAlignment('-280px', '0')
+      typeWriter3()
     }
 
     const playV2 = () => {
