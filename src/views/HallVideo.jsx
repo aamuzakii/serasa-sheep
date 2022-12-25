@@ -20,6 +20,7 @@ function HallVideo() {
   const isTabletOrMobile = useMediaQuery({query: '(max-width: 1224px)'})
 
   const getVerticalAlignment = (desktop, mobile) => {
+    console.log('masuk:', desktop)
     if (isDesktopOrLaptop || isBigScreen) {
       backgroundRef.current.style.top = desktop
     } else if (isTabletOrMobile) {
@@ -52,7 +53,7 @@ function HallVideo() {
       video.play()
       video.addEventListener('ended', playV1)
       video.removeEventListener('ended', playV4)
-      getVerticalAlignment('-300px', '0')
+      getVerticalAlignment('-100px', '0')
     }
 
     const playV3 = () => {
@@ -63,7 +64,7 @@ function HallVideo() {
 
       video.addEventListener('ended', playV4)
       video.removeEventListener('ended', playV3)
-      getVerticalAlignment('-500px', '0')
+      getVerticalAlignment('-280px', '0')
     }
 
     const playV2 = () => {
@@ -85,10 +86,10 @@ function HallVideo() {
 
       video.addEventListener('ended', playV2)
       video.removeEventListener('ended', playV1)
-      getVerticalAlignment('100px', '0')
+      getVerticalAlignment('-200px', '0')
     }
 
-    video.addEventListener('ended', playV2)
+    playV1()
   }, [])
 
   useEffect(() => {
