@@ -25,6 +25,19 @@ function HallVideo() {
   }
 
   useEffect(() => {
+    var i = 0
+    var txt = 'Lorem ipsum dummy text blabla.'
+    var speed = 80
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById('demo').innerHTML += txt.charAt(i)
+        i++
+        setTimeout(typeWriter, speed)
+      }
+    }
+    typeWriter()
+
     let video = document.getElementById('root_video')
     let source = video.children[0]
 
@@ -80,6 +93,7 @@ function HallVideo() {
 
   return (
     <div className="fullscreen-bg" ref={backgroundRef}>
+      <p className="ooo" id="demo"></p>
       <video muted autoPlay className="fullscreen-bg__video" id="root_video" ref={videoRef}>
         <source src={v1} type="video/mp4" />
       </video>
