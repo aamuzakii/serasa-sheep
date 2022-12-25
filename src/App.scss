@@ -203,9 +203,11 @@ video {
 .ooo {
   position: absolute;
   color: white;
-  font-size: 70px;
+  font-size: 120px;
   z-index: 9999;
   top: 700px;
   right: 100px;
-  font-weight: bold;
+  font-weight: 1000;
+  transition: margin 0.5s ease-in-out, transform 0.5s ease-in-out, max-width 0.5s ease-in-out;
+  transition-delay: 5s; // ini sama aja kyk ngasih timeout
 }
