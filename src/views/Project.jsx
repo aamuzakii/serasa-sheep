@@ -5,6 +5,7 @@ import {useQuery} from '@apollo/client'
 import {GET_SINGLE_PROJECT} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
 import middleware from '../helper/middleware'
+import Back from '../components/Back'
 
 const ProjectParallax = () => {
   useEffect(() => {
@@ -36,7 +37,10 @@ const ProjectParallax = () => {
 
   return (
     <div className={style.container}>
-      <section dangerouslySetInnerHTML={{__html: richText}} className={style.injected_rich_text}></section>
+      <div className={style.injected_rich_text}>
+        <section dangerouslySetInnerHTML={{__html: richText}}></section>
+        <Back></Back>
+      </div>
 
       <section className={style.asset_list}>
         {assets.items.map(({url}, i) => {

@@ -30,7 +30,7 @@ const Journals = () => {
             let dateObject = new Date(date)
             let cleanDate = dateObject.toLocaleDateString('id-ID', {day: 'numeric', month: 'long', year: 'numeric'})
             return (
-              <a href={'/journal/' + sys.id} key={i}>
+              <a href={'/journals/' + sys.id} key={i}>
                 <div className={styles.card}>
                   <div className={styles.thumbnail_webinar}>
                     <img src={pictureCollection.items[0].url} alt={title} />
