@@ -33,13 +33,19 @@ function HallVideo() {
     var txt = 'Bring The Nature Get Closer in Your Home'
     var speed = 80
 
+    const text1 = document.getElementById('demo')
+
     function typeWriter() {
       if (i < txt.length) {
-        document.getElementById('demo').innerHTML += txt.charAt(i)
+        text1.innerHTML += txt.charAt(i)
         i++
         setTimeout(typeWriter, speed)
+      } else {
+        setTimeout(() => {
+          text1.style.display = 'none'
+        }, 4000)
       }
-      document.getElementById('demo').style.transform = 'scale(0.7)'
+      text1.style.transform = 'scale(0.7)'
     }
     typeWriter()
 
@@ -99,8 +105,11 @@ function HallVideo() {
   return (
     <div className="fullscreen-bg" ref={backgroundRef}>
       <p className="ooo" id="demo"></p>
+      <p className="ooo" id="txt2"></p>
+      <p className="ooo" id="txt3"></p>
+      <p className="ooo" id="txt4"></p>
       <video muted autoPlay className="fullscreen-bg__video" id="root_video" ref={videoRef}>
-        <source src={v1} type="video/mp4" />
+        <source type="video/mp4" />
       </video>
     </div>
   )
