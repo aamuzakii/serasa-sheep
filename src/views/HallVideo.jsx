@@ -20,7 +20,6 @@ function HallVideo() {
   const isTabletOrMobile = useMediaQuery({query: '(max-width: 1224px)'})
 
   const getVerticalAlignment = (desktop, mobile) => {
-    console.log('masuk:', desktop)
     if (isDesktopOrLaptop || isBigScreen) {
       backgroundRef.current.style.top = desktop
     } else if (isTabletOrMobile) {
@@ -30,16 +29,15 @@ function HallVideo() {
 
   useEffect(() => {
     var i = 0
-    var txt = 'Bring The Nature Get Closer in Your Home'
+    var innerString1 = 'Bring The Nature Get Closer in Your Home'
     var speed = 80
 
-    const text1 = document.getElementById('demo')
-
-    function typeWriter() {
-      if (i < txt.length) {
-        text1.innerHTML += txt.charAt(i)
+    function typeWriter1() {
+      const text1 = document.getElementById('txt1')
+      if (i < innerString1.length) {
+        text1.innerHTML += innerString1.charAt(i)
         i++
-        setTimeout(typeWriter, speed)
+        setTimeout(typeWriter1, speed)
       } else {
         setTimeout(() => {
           text1.style.display = 'none'
@@ -47,7 +45,6 @@ function HallVideo() {
       }
       text1.style.transform = 'scale(0.7)'
     }
-    typeWriter()
 
     let video = document.getElementById('root_video')
     let source = video.children[0]
@@ -93,6 +90,7 @@ function HallVideo() {
       video.addEventListener('ended', playV2)
       video.removeEventListener('ended', playV1)
       getVerticalAlignment('-200px', '0')
+      typeWriter1()
     }
 
     playV1()
@@ -104,7 +102,7 @@ function HallVideo() {
 
   return (
     <div className="fullscreen-bg" ref={backgroundRef}>
-      <p className="ooo" id="demo"></p>
+      <p className="ooo" id="txt1"></p>
       <p className="ooo" id="txt2"></p>
       <p className="ooo" id="txt3"></p>
       <p className="ooo" id="txt4"></p>
