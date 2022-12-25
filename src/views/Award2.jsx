@@ -2,17 +2,16 @@ import React, {useEffect, useState} from 'react'
 import style from './Project.module.scss'
 import {useParams} from 'react-router-dom'
 import {useQuery} from '@apollo/client'
-import {GET_SINGLE_PROJECT} from '../graphql/queries'
+import {GET_SINGLE_AWARD} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
 import middleware from '../helper/middleware'
 import Back from '../components/Back'
 
-const Project = () => {
+const Award = () => {
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo(0, 300) // workaround
     }, 350)
-    // stagger = jarak satu dgn lainnya
   }, [])
 
   useEffect(() => {
@@ -22,18 +21,18 @@ const Project = () => {
   const {id} = useParams()
   const [richText, setRichText] = useState('')
 
-  const {data} = useQuery(GET_SINGLE_PROJECT, {
-    variables: {projectSysId: id},
+  const {data} = useQuery(GET_SINGLE_AWARD, {
+    variables: {journalSysId: id},
   })
 
   useEffect(() => {
     if (data) {
-      setRichText(documentToHtmlString(data.project.description.json))
+      setRichText(documentToHtmlString(data.award.content.json))
     }
   }, [data])
 
   if (!data) return
-  let {description, picturesCollection: assets} = data.project
+  let {pictureCollection: assets} = data.award
 
   return (
     <div className={style.container}>
@@ -44,18 +43,15 @@ const Project = () => {
 
       <section className={style.asset_list}>
         {assets.items.map(({url}, i) => {
-          if (true) {
-            return (
-              <div className={style.single_person}>
-                <img src={url} alt="" className={style.imgo} />
-              </div>
-            )
-          } else {
-          }
+          return (
+            <div className={style.single_person} key={i}>
+              <img src={url} alt="" className={style.imgo} />
+            </div>
+          )
         })}
       </section>
     </div>
   )
 }
 
-export default Project
+export default Award
