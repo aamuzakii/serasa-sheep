@@ -29,7 +29,9 @@ function HallVideo() {
 
   useEffect(() => {
     var i = 0
+    var k = 0
     var innerString1 = 'Bring The Nature Get Closer in Your Home'
+    var innerString2 = 'We Convince The Building Performance through Thermal Simulation'
     var speed = 80
 
     function typeWriter1() {
@@ -44,6 +46,19 @@ function HallVideo() {
         }, 4000)
       }
       text1.style.transform = 'scale(0.7)'
+    }
+    function typeWriter2() {
+      const txtDOM = document.getElementById('txt2')
+      if (k < innerString2.length) {
+        txtDOM.innerHTML += innerString2.charAt(k)
+        k++
+        setTimeout(typeWriter2, speed)
+      } else {
+        setTimeout(() => {
+          txtDOM.style.display = 'none'
+        }, 2000)
+      }
+      txtDOM.style.transform = 'scale(0.7)'
     }
 
     let video = document.getElementById('root_video')
@@ -79,6 +94,7 @@ function HallVideo() {
       video.addEventListener('ended', playV3)
       video.removeEventListener('ended', playV2)
       getVerticalAlignment('-500px', '0')
+      typeWriter2()
     }
 
     const playV1 = () => {
@@ -103,7 +119,7 @@ function HallVideo() {
   return (
     <div className="fullscreen-bg" ref={backgroundRef}>
       <p className="ooo" id="txt1"></p>
-      <p className="ooo" id="txt2"></p>
+      <p className="ooo" id="txt2" style={{color: 'black'}}></p>
       <p className="ooo" id="txt3"></p>
       <p className="ooo" id="txt4"></p>
       <video muted autoPlay className="fullscreen-bg__video" id="root_video" ref={videoRef}>
