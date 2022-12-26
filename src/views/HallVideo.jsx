@@ -187,11 +187,12 @@ function HallVideo() {
   }, [])
 
   useEffect(() => {
-    // function reload() {
-    //   window.location.reload()
-    // }
+    function reload() {
+      window.location.reload()
+    }
+
     middleware('hall-video')
-    // window.onfocus = reload
+    window.onfocus = reload
   }, [])
 
   return (

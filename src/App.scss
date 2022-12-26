@@ -211,13 +211,17 @@ video {
   font-weight: 1000;
   transition: margin 0.5s ease-in-out, transform 0.5s ease-in-out, max-width 0.5s ease-in-out;
   transition-delay: 5s; // ini sama aja kyk ngasih timeout
+  @media only screen and (max-width: 500px) {
+    top: 20px;
+    font-size: 50px;
+  }
 }
 
 .image_hall {
   width: 100vw;
-
-  // height: 100vh;
   min-width: 100vw;
-  // height: auto;
   display: none;
+  @media only screen and (max-width: 500px) {
+    transform: scale(2.5) translateY(117px) translateX(-8px);
+  }
 }
