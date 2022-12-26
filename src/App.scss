@@ -212,3 +212,12 @@ video {
   transition: margin 0.5s ease-in-out, transform 0.5s ease-in-out, max-width 0.5s ease-in-out;
   transition-delay: 5s; // ini sama aja kyk ngasih timeout
 }
+
+.image_hall {
+  width: 100vw;
+
+  // height: 100vh;
+  min-width: 100vw;
+  // height: auto;
+  display: none;
+}

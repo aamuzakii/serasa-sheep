@@ -7,6 +7,7 @@ let v2 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1671956568/serasa/v
 let v3 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1671965301/serasa/videos/3_eomjwo.mp4'
 let v4 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1671956580/serasa/videos/4_vblhg4.jpg'
 let v5 = 'https://res.cloudinary.com/dm9ufmxnq/video/upload/v1671956584/serasa/videos/5_dba5tq.mp4'
+let imgURL = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1672066381/serasa/4_qnyiwm.jpg'
 
 v4 = v5
 
@@ -36,6 +37,7 @@ function HallVideo() {
     var innerString2 = 'We Convince The Building Performance through Thermal Simulation'
     var innerString3 = 'To Create a Convert Space and Less Energy Consumption'
     var innerString4 = 'The Serenity through Biophilic and Artistic Spaces'
+    var innerString7 = 'Micro Bioclimatic House for Your Limitation'
     var speed = 65
 
     function typeWriter1() {
@@ -50,7 +52,7 @@ function HallVideo() {
           txtDOM.style.display = 'none'
           txtDOM.innerHTML = ''
           i = 0
-        }, 14000)
+        }, 13000)
       }
       txtDOM.style.transform = 'scale(0.7)'
     }
@@ -104,8 +106,26 @@ function HallVideo() {
       txtDOM.style.transform = 'scale(0.7)'
     }
 
+    function typeWriter7() {
+      const txtDOM = document.getElementById('txt7')
+      txtDOM.style.display = 'block'
+      if (n < innerString7.length) {
+        txtDOM.innerHTML += innerString7.charAt(n)
+        n++
+        setTimeout(typeWriter7, speed)
+      } else {
+        setTimeout(() => {
+          txtDOM.style.display = 'none'
+          txtDOM.innerHTML = ''
+          n = 0
+        }, 5000)
+      }
+      txtDOM.style.transform = 'scale(0.7)'
+    }
+
     let video = document.getElementById('root_video')
     let source = video.children[0]
+    const img = document.getElementById('image')
 
     const playV4 = () => {
       source.setAttribute('src', v4)
@@ -122,7 +142,7 @@ function HallVideo() {
       video.load()
       video.play()
 
-      video.addEventListener('ended', playV4)
+      video.addEventListener('ended', playImg)
       video.removeEventListener('ended', playV3)
       getVerticalAlignment('-280px', '0')
       typeWriter3()
@@ -150,15 +170,28 @@ function HallVideo() {
       typeWriter1()
     }
 
+    const playImg = () => {
+      video.style.display = 'none'
+      img.style.display = 'block'
+      getVerticalAlignment('-100px', '0')
+      typeWriter7()
+      setTimeout(() => {
+        img.style.display = 'none'
+        video.style.display = 'block'
+        video.removeEventListener('ended', playImg)
+        playV4()
+      }, 10000)
+    }
+
     playV1()
   }, [])
 
   useEffect(() => {
-    function reload() {
-      window.location.reload()
-    }
+    // function reload() {
+    //   window.location.reload()
+    // }
     middleware('hall-video')
-    window.onfocus = reload
+    // window.onfocus = reload
   }, [])
 
   return (
@@ -167,9 +200,11 @@ function HallVideo() {
       <p className="ooo" id="txt2" style={{color: 'black'}}></p>
       <p className="ooo" id="txt3"></p>
       <p className="ooo" id="txt4"></p>
+      <p className="ooo" id="txt7" style={{color: 'black'}}></p>
       <video muted autoPlay id="root_video" ref={videoRef}>
         <source type="video/mp4" />
       </video>
+      <img src={imgURL} alt="" className="image_hall" id="image" style={{display: 'none'}} />
     </div>
   )
 }
