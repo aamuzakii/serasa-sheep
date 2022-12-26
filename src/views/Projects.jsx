@@ -46,7 +46,7 @@ function Projects() {
     return setDasar((_) => key)
   }
 
-  let year = ['y2021', 'y2022']
+  let year = ['y2021', 'y2022', 'y2023']
   let location = ['bogor', 'depok', 'cilegon', 'madiun', 'serang']
   let status = ['idea', 'completed']
   let projectType = ['residential', 'commercial', 'educational', 'public_space', 'others']

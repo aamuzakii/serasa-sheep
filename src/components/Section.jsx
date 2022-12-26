@@ -69,6 +69,7 @@ function Section({dasar, dasarDict, code}) {
     serang: 'Serang',
     y2021: '2021',
     y2022: '2022',
+    y2023: '2023',
     residential: 'Residential',
     commercial: 'Commercial',
     educational: 'Educational',
