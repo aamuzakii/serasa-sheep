@@ -167,7 +167,7 @@ function HallVideo() {
       <p className="ooo" id="txt2" style={{color: 'black'}}></p>
       <p className="ooo" id="txt3"></p>
       <p className="ooo" id="txt4"></p>
-      <video muted autoPlay className="fullscreen-bg__video" id="root_video" ref={videoRef}>
+      <video muted autoPlay id="root_video" ref={videoRef}>
         <source type="video/mp4" />
       </video>
     </div>
