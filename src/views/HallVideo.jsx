@@ -36,7 +36,7 @@ function HallVideo() {
     var innerString2 = 'We Convince The Building Performance through Thermal Simulation'
     var innerString3 = 'To Create a Convert Space and Less Energy Consumption'
     var innerString4 = 'The Serenity through Biophilic and Artistic Spaces'
-    var speed = 80
+    var speed = 65
 
     function typeWriter1() {
       const txtDOM = document.getElementById('txt1')
@@ -50,7 +50,7 @@ function HallVideo() {
           txtDOM.style.display = 'none'
           txtDOM.innerHTML = ''
           i = 0
-        }, 4000)
+        }, 14500)
       }
       txtDOM.style.transform = 'scale(0.7)'
     }
@@ -66,7 +66,7 @@ function HallVideo() {
           txtDOM.style.display = 'none'
           txtDOM.innerHTML = ''
           k = 0
-        }, 2000)
+        }, 3000)
       }
       txtDOM.style.transform = 'scale(0.7)'
     }
@@ -82,7 +82,7 @@ function HallVideo() {
           txtDOM.style.display = 'none'
           txtDOM.innerHTML = ''
           m = 0
-        }, 2000)
+        }, 7000)
       }
       txtDOM.style.transform = 'scale(0.7)'
     }
@@ -99,7 +99,7 @@ function HallVideo() {
           txtDOM.style.display = 'none'
           txtDOM.innerHTML = ''
           n = 0
-        }, 2000)
+        }, 7000)
       }
       txtDOM.style.transform = 'scale(0.7)'
     }
@@ -154,7 +154,11 @@ function HallVideo() {
   }, [])
 
   useEffect(() => {
+    function reload() {
+      window.location.reload()
+    }
     middleware('hall-video')
+    window.onfocus = reload
   }, [])
 
   return (
