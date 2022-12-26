@@ -46,8 +46,8 @@ function Projects() {
     return setDasar((_) => key)
   }
 
-  let year = ['y2021', 'y2022', 'y2023']
-  let location = ['bogor', 'depok', 'cilegon', 'madiun', 'serang']
+  let year = ['y2020', 'y2021', 'y2022', 'y2023']
+  let location = ['jakarta', 'bogor', 'depok', 'cilegon', 'madiun', 'serang']
   let status = ['idea', 'completed']
   let projectType = ['residential', 'commercial', 'educational', 'public_space', 'others']
 
@@ -56,6 +56,7 @@ function Projects() {
   let dasarDict2
   let dasarDict3
   let dasarDict4
+  let dasarDict5
 
   for (let i = 0; i < location.length; i++) {
     let content = {
@@ -97,6 +98,7 @@ function Projects() {
         <Section dasar={dasar} dasarDict={dasarDict2} code={'c'}></Section>
         <Section dasar={dasar} dasarDict={dasarDict3} code={'d'}></Section>
         <Section dasar={dasar} dasarDict={dasarDict4} code={'e'}></Section>
+        <Section dasar={dasar} dasarDict={dasarDict5} code={'f'}></Section>
       </div>
       <Outlet />
     </div>

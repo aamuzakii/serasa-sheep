@@ -61,12 +61,14 @@ function Section({dasar, dasarDict, code}) {
 
   const classToReadableTitleDict = {
     bogor: 'Bogor',
+    jakarta: 'Jakarta',
     depok: 'Depok',
     serang: 'Serang',
     madiun: 'Madiun',
     serang: 'Serang',
     cilegon: 'Cilegon',
     serang: 'Serang',
+    y2020: '2020',
     y2021: '2021',
     y2022: '2022',
     y2023: '2023',

@@ -50,7 +50,7 @@ function HallVideo() {
           txtDOM.style.display = 'none'
           txtDOM.innerHTML = ''
           i = 0
-        }, 14500)
+        }, 14000)
       }
       txtDOM.style.transform = 'scale(0.7)'
     }
