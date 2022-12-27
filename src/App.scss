@@ -101,6 +101,9 @@ button.learn-more {
   left: 0;
   overflow: hidden;
   z-index: -100;
+  @media only screen and (max-width: 500px) {
+    top: 0;
+  }
 }
 
 video {
@@ -215,6 +218,7 @@ video {
     top: 20px;
     right: 0px;
     font-size: 50px;
+    color: black;
   }
 }
 
@@ -224,5 +228,22 @@ video {
   display: none;
   @media only screen and (max-width: 500px) {
     transform: scale(2.5) translateY(117px) translateX(-8px);
+  }
+}
+
+.mobile_image_hall {
+  height: 100vh;
+  animation: zoom-in-zoom-out 15s ease-in infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1.2, 1.2);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.2, 1.2);
   }
 }

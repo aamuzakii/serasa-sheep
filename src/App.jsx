@@ -2,6 +2,7 @@ import * as React from 'react'
 import {Routes, Route, Link} from 'react-router-dom'
 import './App.scss'
 import Hall from './views/HallVideo'
+import HallMobile from './views/HallMobile'
 import Contact from './views/Contact'
 import Journals from './views/Journals'
 import Journal from './views/Journal'
@@ -15,11 +16,12 @@ import NavList from './components/NavList'
 import MiddlewareAbout from './components/MiddlewareAbout'
 
 export default function App() {
+  const docWidth = document.documentElement.clientWidth
   return (
     <>
       <NavList />
       <Routes>
-        <Route index element={<Hall />} />
+        {docWidth > 425 ? <Route index element={<Hall />} /> : <Route index element={<HallMobile />} />}
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<MiddlewareAbout />} />
         <Route path="journals" element={<Journals />} />
