@@ -203,15 +203,36 @@ function HallVideo() {
     }
 
     runImg1()
-  }, [])
 
-  useEffect(() => {
-    function reload() {
+    const onblur = () => {
+      // hideText()
+    }
+
+    const onfocus = () => {
+      hideText()
       window.location.reload()
+      // showText()
     }
 
     middleware('hall-video')
-    // window.onfocus = reload
+    window.onblur = onblur
+    window.onfocus = onfocus
+
+    const hideText = () => {
+      txtDOM1.style.display = 'none'
+      txtDOM2.style.display = 'none'
+      txtDOM3.style.display = 'none'
+      txtDOM4.style.display = 'none'
+      txtDOM5.style.display = 'none'
+    }
+
+    const showText = () => {
+      txtDOM1.style.display = 'block'
+      txtDOM2.style.display = 'block'
+      txtDOM3.style.display = 'block'
+      txtDOM4.style.display = 'block'
+      txtDOM5.style.display = 'block'
+    }
   }, [])
 
   return (
