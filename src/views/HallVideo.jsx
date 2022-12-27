@@ -33,12 +33,15 @@ function HallVideo() {
     var k = 0
     var m = 0
     var n = 0
+    var imgCount = 0
     var innerString1 = 'Bring The Nature Get Closer in Your Home'
     var innerString2 = 'We Convince The Building Performance through Thermal Simulation'
     var innerString3 = 'To Create a Convert Space and Less Energy Consumption'
     var innerString4 = 'The Serenity through Biophilic and Artistic Spaces'
     var innerString7 = 'Micro Bioclimatic House for Your Limitation'
     var speed = 65
+
+    const txtDOM7 = document.getElementById('txt7')
 
     function typeWriter1() {
       const txtDOM = document.getElementById('txt1')
@@ -107,20 +110,19 @@ function HallVideo() {
     }
 
     function typeWriter7() {
-      const txtDOM = document.getElementById('txt7')
-      txtDOM.style.display = 'block'
-      if (n < innerString7.length) {
-        txtDOM.innerHTML += innerString7.charAt(n)
-        n++
+      txtDOM7.style.display = 'block'
+      if (imgCount < innerString7.length) {
+        txtDOM7.innerHTML += innerString7.charAt(imgCount)
+        imgCount++
         setTimeout(typeWriter7, speed)
       } else {
         setTimeout(() => {
-          txtDOM.style.display = 'none'
-          txtDOM.innerHTML = ''
-          n = 0
+          txtDOM7.style.display = 'none'
+          txtDOM7.innerHTML = ''
+          imgCount = 0
         }, 5000)
       }
-      txtDOM.style.transform = 'scale(0.7)'
+      txtDOM7.style.transform = 'scale(0.7)'
     }
 
     let video = document.getElementById('root_video')
@@ -186,6 +188,7 @@ function HallVideo() {
       getVerticalAlignment('-100px', '0')
       typeWriter7()
       setTimeout(() => {
+        txtDOM7.style.display = 'none'
         img.style.display = 'none'
         video.style.display = 'block'
         video.removeEventListener('ended', playImg)
