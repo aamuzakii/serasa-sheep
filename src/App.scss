@@ -213,6 +213,7 @@ video {
   transition-delay: 5s; // ini sama aja kyk ngasih timeout
   @media only screen and (max-width: 500px) {
     top: 20px;
+    right: 0px;
     font-size: 50px;
   }
 }
