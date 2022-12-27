@@ -34,6 +34,7 @@ function HallVideo() {
     var m = 0
     var n = 0
     var imgCount = 0
+
     var innerString1 = 'Bring The Nature Get Closer in Your Home'
     var innerString2 = 'We Convince The Building Performance through Thermal Simulation'
     var innerString3 = 'To Create a Convert Space and Less Energy Consumption'
@@ -41,23 +42,23 @@ function HallVideo() {
     var innerString7 = 'Micro Bioclimatic House for Your Limitation'
     var speed = 65
 
+    const txtDOMFirst = document.getElementById('txt1')
     const txtDOM7 = document.getElementById('txt7')
 
     function typeWriter1() {
-      const txtDOM = document.getElementById('txt1')
-      txtDOM.style.display = 'block'
+      txtDOMFirst.style.display = 'block'
       if (i < innerString1.length) {
-        txtDOM.innerHTML += innerString1.charAt(i)
+        txtDOMFirst.innerHTML += innerString1.charAt(i)
         i++
         setTimeout(typeWriter1, speed)
       } else {
         setTimeout(() => {
-          txtDOM.style.display = 'none'
-          txtDOM.innerHTML = ''
+          txtDOMFirst.style.display = 'none'
+          txtDOMFirst.innerHTML = ''
           i = 0
         }, 13000)
       }
-      txtDOM.style.transform = 'scale(0.7)'
+      txtDOMFirst.style.transform = 'scale(0.7)'
     }
     function typeWriter2() {
       const txtDOM = document.getElementById('txt2')
@@ -183,6 +184,9 @@ function HallVideo() {
     }
 
     const playImg = () => {
+      if (isTabletOrMobile) {
+        txtDOM7.style.top = '350px'
+      }
       video.style.display = 'none'
       img.style.display = 'block'
       getVerticalAlignment('-100px', '0')
@@ -210,11 +214,11 @@ function HallVideo() {
 
   return (
     <div className="fullscreen-bg" ref={backgroundRef}>
-      <p className="ooo" id="txt1"></p>
-      <p className="ooo" id="txt2" style={{color: 'black'}}></p>
-      <p className="ooo" id="txt3"></p>
-      <p className="ooo" id="txt4"></p>
-      <p className="ooo" id="txt7" style={{color: 'black'}}></p>
+      <p className="running_text" id="txt1"></p>
+      <p className="running_text" id="txt2" style={{color: 'black'}}></p>
+      <p className="running_text" id="txt3"></p>
+      <p className="running_text" id="txt4"></p>
+      <p className="running_text" id="txt7" style={{color: 'black'}}></p>
       <video muted autoPlay id="root_video" ref={videoRef}>
         <source type="video/mp4" />
       </video>
