@@ -4,7 +4,7 @@ import middleware from '../helper/middleware'
 
 import one from '../assets/halloffame/1.png'
 import two from '../assets/halloffame/2.png'
-import three from '../assets/halloffame/3.png'
+import three from '../assets/halloffame/3.webp'
 import four from '../assets/halloffame/4.jpg'
 import five from '../assets/halloffame/5.png'
 
