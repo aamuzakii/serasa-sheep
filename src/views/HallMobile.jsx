@@ -128,6 +128,7 @@ function HallVideo() {
       node.setAttribute('src', one)
       node.setAttribute('class', 'mobile_image_hall')
       node.setAttribute('id', 'image')
+      node.style.filter = 'brightness(75%)'
 
       let bg = document.getElementById('bg')
       bg.appendChild(node)
@@ -143,6 +144,7 @@ function HallVideo() {
       node.setAttribute('src', two)
       node.setAttribute('class', 'mobile_image_hall')
       node.setAttribute('id', 'image')
+      node.style.opacity = '0.7'
 
       let bg = document.getElementById('bg')
       bg.appendChild(node)
@@ -191,6 +193,7 @@ function HallVideo() {
       node.setAttribute('src', five)
       node.setAttribute('class', 'mobile_image_hall')
       node.setAttribute('id', 'image')
+      node.style.filter = 'brightness(75%)'
 
       let bg = document.getElementById('bg')
       bg.appendChild(node)
@@ -237,11 +240,11 @@ function HallVideo() {
 
   return (
     <div className="fullscreen-bg" ref={backgroundRef} id="bg">
-      <p className="running_text" id="txt1"></p>
+      <p className="running_text" id="txt1" style={{color: 'white'}}></p>
       <p className="running_text" id="txt2"></p>
       <p className="running_text" id="txt3"></p>
       <p className="running_text" id="txt4"></p>
-      <p className="running_text" id="txt5"></p>
+      <p className="running_text" id="txt5" style={{color: 'white'}}></p>
     </div>
   )
 }
