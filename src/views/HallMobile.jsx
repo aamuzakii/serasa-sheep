@@ -8,7 +8,13 @@ import three from '../assets/halloffame/3.png'
 import five from '../assets/halloffame/5.png'
 
 function HallVideo() {
-  const four = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1672181027/serasa/mobile%20image/4_psxfqy.webp'
+  const cloudinary = [
+    'https://res.cloudinary.com/dyfzfakux/image/upload/v1672183310/serasa/halloffame/mobile/1_ygycpy.webp',
+    'https://res.cloudinary.com/dyfzfakux/image/upload/v1672183307/serasa/halloffame/mobile/2_rrusu5.webp',
+    'https://res.cloudinary.com/dyfzfakux/image/upload/v1672183308/serasa/halloffame/mobile/3_dzfpjp.webp',
+    'https://res.cloudinary.com/dyfzfakux/image/upload/v1672183308/serasa/halloffame/mobile/4_nnxycp.webp',
+    'https://res.cloudinary.com/dyfzfakux/image/upload/v1672183311/serasa/halloffame/mobile/5_bpuqq7.webp',
+  ]
 
   // Note: Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.
   const videoRef = useRef('')
@@ -126,7 +132,7 @@ function HallVideo() {
 
     const runImg1 = () => {
       let node = document.createElement('img')
-      node.setAttribute('src', one)
+      node.setAttribute('src', cloudinary[0])
       node.setAttribute('class', 'mobile_image_hall')
       node.setAttribute('id', 'image')
       node.style.filter = 'brightness(75%)'
@@ -142,7 +148,7 @@ function HallVideo() {
     }
     const runImg2 = () => {
       let node = document.createElement('img')
-      node.setAttribute('src', two)
+      node.setAttribute('src', cloudinary[1])
       node.setAttribute('class', 'mobile_image_hall')
       node.setAttribute('id', 'image')
       node.style.opacity = '0.7'
@@ -159,7 +165,7 @@ function HallVideo() {
 
     const runImg3 = () => {
       let node = document.createElement('img')
-      node.setAttribute('src', three)
+      node.setAttribute('src', cloudinary[2])
       node.setAttribute('class', 'mobile_image_hall')
       node.setAttribute('id', 'image')
 
@@ -175,7 +181,7 @@ function HallVideo() {
 
     const runImg4 = () => {
       let node = document.createElement('img')
-      node.setAttribute('src', four)
+      node.setAttribute('src', cloudinary[3])
       node.setAttribute('class', 'mobile_image_hall')
       node.setAttribute('id', 'image')
 
@@ -191,7 +197,7 @@ function HallVideo() {
 
     const runImg5 = () => {
       let node = document.createElement('img')
-      node.setAttribute('src', five)
+      node.setAttribute('src', cloudinary[4])
       node.setAttribute('class', 'mobile_image_hall')
       node.setAttribute('id', 'image')
       node.style.filter = 'brightness(75%)'
