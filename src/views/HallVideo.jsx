@@ -5,7 +5,7 @@ import middleware from '../helper/middleware'
 let v1 = 'https://res.cloudinary.com/dyfzfakux/video/upload/v1672182388/serasa/halloffame/desktop/1_cuo9y5.mp4'
 let v2 = 'https://res.cloudinary.com/dyfzfakux/video/upload/v1672182357/serasa/halloffame/desktop/2_trgtps.mp4'
 let v3 = 'https://res.cloudinary.com/dyfzfakux/video/upload/v1672182387/serasa/halloffame/desktop/3_tckeff.mp4'
-let v4 = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1671956580/serasa/videos/4_vblhg4.jpg'
+let v4 = ''
 let v5 = 'https://res.cloudinary.com/dyfzfakux/video/upload/v1672182368/serasa/halloffame/desktop/5_fmksav.mp4'
 let imgURL = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1672066381/serasa/4_qnyiwm.jpg'
 
