@@ -144,6 +144,7 @@ function HallVideo() {
       source.setAttribute('src', v3)
       video.load()
       video.play()
+      video.style.opacity = 'unset'
 
       video.addEventListener('ended', playImg)
       video.removeEventListener('ended', playV3)
@@ -160,6 +161,7 @@ function HallVideo() {
       source.setAttribute('src', v2)
       video.load()
       video.play()
+      video.style.opacity = '0.6'
 
       video.addEventListener('ended', playV3)
       video.removeEventListener('ended', playV2)
