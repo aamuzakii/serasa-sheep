@@ -5,10 +5,11 @@ import middleware from '../helper/middleware'
 import one from '../assets/halloffame/1.png'
 import two from '../assets/halloffame/2.png'
 import three from '../assets/halloffame/3.png'
-import four from '../assets/halloffame/4.jpg'
 import five from '../assets/halloffame/5.png'
 
 function HallVideo() {
+  const four = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1672181027/serasa/mobile%20image/4_psxfqy.webp'
+
   // Note: Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.
   const videoRef = useRef('')
   const backgroundRef = useRef('')
