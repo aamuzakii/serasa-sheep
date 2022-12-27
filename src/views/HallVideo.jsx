@@ -7,7 +7,7 @@ let v2 = 'https://res.cloudinary.com/dyfzfakux/video/upload/v1672182357/serasa/h
 let v3 = 'https://res.cloudinary.com/dyfzfakux/video/upload/v1672182387/serasa/halloffame/desktop/3_tckeff.mp4'
 let v4 = ''
 let v5 = 'https://res.cloudinary.com/dyfzfakux/video/upload/v1672182368/serasa/halloffame/desktop/5_fmksav.mp4'
-let imgURL = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1672066381/serasa/4_qnyiwm.jpg'
+let imgURL = 'https://res.cloudinary.com/dyfzfakux/image/upload/v1672182359/serasa/halloffame/desktop/4_axxznd.jpg'
 
 v4 = v5
 
