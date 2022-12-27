@@ -144,6 +144,11 @@ function HallVideo() {
 
       video.addEventListener('ended', playImg)
       video.removeEventListener('ended', playV3)
+
+      if (isTabletOrMobile) {
+        video.style.transform = 'scale(1.3) translateY(40px)'
+      }
+
       getVerticalAlignment('-280px', '0')
       typeWriter3()
     }
@@ -166,6 +171,11 @@ function HallVideo() {
 
       video.addEventListener('ended', playV2)
       video.removeEventListener('ended', playV1)
+
+      if (isTabletOrMobile) {
+        video.style.transform = 'scale(1.3) translateY(-70px)'
+      }
+
       getVerticalAlignment('-200px', '0')
       typeWriter1()
     }
