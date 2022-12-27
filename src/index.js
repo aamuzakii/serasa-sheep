@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 // import store from './store'
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
+// import { Provider } from "react-redux";
 import { ApolloProvider } from "@apollo/client";
 
 import { client } from "./graphql/config";
