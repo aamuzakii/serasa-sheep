@@ -4,6 +4,7 @@ metadata:
   name: serasa-sheep
   annotations:
     github.com/project-slug: aamuzakii/serasa-sheep
+    backstage.io/kubernetes-id: serasa-sheep
 spec:
   type: service
   lifecycle: production
