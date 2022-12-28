@@ -145,6 +145,9 @@ function HallVideo() {
     }
 
     const playV3 = () => {
+      video.style.left = 'unset' // ini buat netralin ini (balikin styling)
+      video.style.width = '100%' // ini buat netralin ini (balikin styling)
+
       source.setAttribute('src', v3)
       video.load()
       video.play()
@@ -165,7 +168,8 @@ function HallVideo() {
       source.setAttribute('src', v2)
       video.load()
       video.play()
-      video.style.opacity = '0.6'
+      video.style.left = '30vw' // ini buat netralin ini (balikin styling)
+      video.style.width = 'unset' // ini buat netralin ini (balikin styling)
 
       video.addEventListener('ended', playV3)
       video.removeEventListener('ended', playV2)
