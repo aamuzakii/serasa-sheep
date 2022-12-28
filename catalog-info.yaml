@@ -2,6 +2,9 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: serasa-sheep
+  tags:
+    - react
+    - CRA
   description: ini adalah deskripsi
   annotations:
     github.com/project-slug: aamuzakii/serasa-sheep
@@ -10,3 +13,4 @@ spec:
   type: service
   lifecycle: production
   owner: guests
+
