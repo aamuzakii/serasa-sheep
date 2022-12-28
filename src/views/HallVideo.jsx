@@ -44,6 +44,10 @@ function HallVideo() {
 
     const txtDOMFirst = document.getElementById('txt1')
     const txtDOM7 = document.getElementById('txt7')
+    const txtDOM1 = document.getElementById('txt1')
+    const txtDOM2 = document.getElementById('txt2')
+    const txtDOM3 = document.getElementById('txt3')
+    const txtDOM4 = document.getElementById('txt4')
 
     function typeWriter1() {
       txtDOMFirst.style.display = 'block'
@@ -203,15 +207,27 @@ function HallVideo() {
     }
 
     playV1()
-  }, [])
 
-  useEffect(() => {
-    function reload() {
+    const onblur = () => {
+      hideText()
+    }
+
+    const onfocus = () => {
+      hideText()
       window.location.reload()
     }
 
     middleware('hall-video')
-    window.onfocus = reload
+    window.onblur = onblur
+    window.onfocus = onfocus
+
+    const hideText = () => {
+      txtDOM1.style.opacity = '0'
+      txtDOM2.style.opacity = '0'
+      txtDOM3.style.opacity = '0'
+      txtDOM4.style.opacity = '0'
+      txtDOM7.style.opacity = '0'
+    }
   }, [])
 
   return (
