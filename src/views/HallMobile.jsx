@@ -215,13 +215,12 @@ function HallVideo() {
     runImg1()
 
     const onblur = () => {
-      // hideText()
+      hideText()
     }
 
     const onfocus = () => {
       hideText()
       window.location.reload()
-      // showText()
     }
 
     middleware('hall-video')
@@ -229,11 +228,11 @@ function HallVideo() {
     window.onfocus = onfocus
 
     const hideText = () => {
-      txtDOM1.style.display = 'none'
-      txtDOM2.style.display = 'none'
-      txtDOM3.style.display = 'none'
-      txtDOM4.style.display = 'none'
-      txtDOM5.style.display = 'none'
+      txtDOM1.style.opacity = '0'
+      txtDOM2.style.opacity = '0'
+      txtDOM3.style.opacity = '0'
+      txtDOM4.style.opacity = '0'
+      txtDOM5.style.opacity = '0'
     }
 
     const showText = () => {
