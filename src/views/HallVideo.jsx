@@ -233,10 +233,10 @@ function HallVideo() {
   return (
     <div className="fullscreen-bg" ref={backgroundRef}>
       <p className="running_text" id="txt1"></p>
-      <p className="running_text" id="txt2" style={{color: 'black'}}></p>
+      <p className="running_text" id="txt2" style={{color: 'black', right: '50vw'}}></p>
       <p className="running_text" id="txt3"></p>
       <p className="running_text" id="txt4"></p>
-      <p className="running_text" id="txt7" style={{color: 'black'}}></p>
+      <p className="running_text" id="txt7" style={{color: 'black', top: '20vh', right: '50vw'}}></p>
       <video muted autoPlay id="root_video" ref={videoRef}>
         <source type="video/mp4" />
       </video>
