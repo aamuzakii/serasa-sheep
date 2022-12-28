@@ -42,7 +42,6 @@ function HallVideo() {
     var innerString7 = 'Micro Bioclimatic House for Your Limitation'
     var speed = 65
 
-    const txtDOMFirst = document.getElementById('txt1')
     const txtDOM7 = document.getElementById('txt7')
     const txtDOM1 = document.getElementById('txt1')
     const txtDOM2 = document.getElementById('txt2')
@@ -50,68 +49,65 @@ function HallVideo() {
     const txtDOM4 = document.getElementById('txt4')
 
     function typeWriter1() {
-      txtDOMFirst.style.display = 'block'
+      txtDOM1.style.display = 'block'
       if (i < innerString1.length) {
-        txtDOMFirst.innerHTML += innerString1.charAt(i)
+        txtDOM1.innerHTML += innerString1.charAt(i)
         i++
         setTimeout(typeWriter1, speed)
       } else {
         setTimeout(() => {
-          txtDOMFirst.style.display = 'none'
-          txtDOMFirst.innerHTML = ''
+          txtDOM1.style.display = 'none'
+          txtDOM1.innerHTML = ''
           i = 0
         }, 13000)
       }
-      txtDOMFirst.style.transform = 'scale(0.7)'
+      txtDOM1.style.transform = 'scale(0.7)'
     }
     function typeWriter2() {
-      const txtDOM = document.getElementById('txt2')
-      txtDOM.style.display = 'block'
+      txtDOM2.style.display = 'block'
       if (k < innerString2.length) {
-        txtDOM.innerHTML += innerString2.charAt(k)
+        txtDOM2.innerHTML += innerString2.charAt(k)
         k++
         setTimeout(typeWriter2, speed)
       } else {
         setTimeout(() => {
-          txtDOM.style.display = 'none'
-          txtDOM.innerHTML = ''
+          txtDOM2.style.display = 'none'
+          txtDOM2.innerHTML = ''
           k = 0
         }, 3000)
       }
-      txtDOM.style.transform = 'scale(0.7)'
+      txtDOM2.style.transform = 'scale(0.7)'
     }
     function typeWriter3() {
-      const txtDOM = document.getElementById('txt3')
-      txtDOM.style.display = 'block'
+      txtDOM3.style.display = 'block'
       if (m < innerString3.length) {
-        txtDOM.innerHTML += innerString3.charAt(m)
+        txtDOM3.innerHTML += innerString3.charAt(m)
         m++
         setTimeout(typeWriter3, speed)
       } else {
         setTimeout(() => {
-          txtDOM.style.display = 'none'
-          txtDOM.innerHTML = ''
+          txtDOM3.style.display = 'none'
+          txtDOM3.innerHTML = ''
           m = 0
         }, 7000)
       }
-      txtDOM.style.transform = 'scale(0.7)'
+      txtDOM3.style.transform = 'scale(0.7)'
     }
 
     function typeWriter4() {
-      const txtDOM = document.getElementById('txt4')
-      txtDOM.style.display = 'block'
+      txtDOM4.style.display = 'block'
       if (n < innerString4.length) {
-        txtDOM.innerHTML += innerString4.charAt(n)
+        txtDOM4.innerHTML += innerString4.charAt(n)
         n++
         setTimeout(typeWriter4, speed)
       } else {
         setTimeout(() => {
-          txtDOM.style.display = 'none'
-          txtDOM.innerHTML = ''
+          txtDOM4.style.display = 'none'
+          txtDOM4.innerHTML = ''
           n = 0
         }, 7000)
       }
-      txtDOM.style.transform = 'scale(0.7)'
+      txtDOM4.style.transform = 'scale(0.7)'
     }
 
     function typeWriter7() {
