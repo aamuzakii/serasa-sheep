@@ -38,15 +38,15 @@ function HallVideo() {
     var innerString1 = 'Bring The Nature Get Closer in Your Home'
     var innerString2 = 'We Convince The Building Performance through Thermal Simulation'
     var innerString3 = 'To Create a Convert Space and Less Energy Consumption'
-    var innerString4 = 'The Serenity through Biophilic and Artistic Spaces'
-    var innerString7 = 'Micro Bioclimatic House for Your Limitation'
+    var innerStringLast = 'The Serenity through Biophilic and Artistic Spaces'
+    var innerStringImg = 'Micro Bioclimatic House for Your Limitation'
     var speed = 65
 
     const txtDOM7 = document.getElementById('txt7')
     const txtDOM1 = document.getElementById('txt1')
     const txtDOM2 = document.getElementById('txt2')
     const txtDOM3 = document.getElementById('txt3')
-    const txtDOM4 = document.getElementById('txt4')
+    const txtDOMLast = document.getElementById('txt4')
 
     function typeWriter1() {
       txtDOM1.style.display = 'block'
@@ -94,26 +94,26 @@ function HallVideo() {
       txtDOM3.style.transform = 'scale(0.7)'
     }
 
-    function typeWriter4() {
-      txtDOM4.style.display = 'block'
-      if (n < innerString4.length) {
-        txtDOM4.innerHTML += innerString4.charAt(n)
+    function typeWriterLast() {
+      txtDOMLast.style.display = 'block'
+      if (n < innerStringLast.length) {
+        txtDOMLast.innerHTML += innerStringLast.charAt(n)
         n++
-        setTimeout(typeWriter4, speed)
+        setTimeout(typeWriterLast, speed)
       } else {
         setTimeout(() => {
-          txtDOM4.style.display = 'none'
-          txtDOM4.innerHTML = ''
+          txtDOMLast.style.display = 'none'
+          txtDOMLast.innerHTML = ''
           n = 0
         }, 7000)
       }
-      txtDOM4.style.transform = 'scale(0.7)'
+      txtDOMLast.style.transform = 'scale(0.7)'
     }
 
     function typeWriter7() {
       txtDOM7.style.display = 'block'
-      if (imgCount < innerString7.length) {
-        txtDOM7.innerHTML += innerString7.charAt(imgCount)
+      if (imgCount < innerStringImg.length) {
+        txtDOM7.innerHTML += innerStringImg.charAt(imgCount)
         imgCount++
         setTimeout(typeWriter7, speed)
       } else {
@@ -130,14 +130,14 @@ function HallVideo() {
     let source = video.children[0]
     const img = document.getElementById('image')
 
-    const playV4 = () => {
+    const playLast = () => {
       source.setAttribute('src', v4)
       video.load()
       video.play()
       video.addEventListener('ended', playV1)
-      video.removeEventListener('ended', playV4)
+      video.removeEventListener('ended', playLast)
       getVerticalAlignment('-100px', '0')
-      typeWriter4()
+      typeWriterLast()
     }
 
     const playV3 = () => {
@@ -202,7 +202,7 @@ function HallVideo() {
         img.style.display = 'none'
         video.style.display = 'block'
         video.removeEventListener('ended', playImg)
-        playV4()
+        playLast()
       }, 10000)
     }
 
@@ -225,7 +225,7 @@ function HallVideo() {
       txtDOM1.style.opacity = '0'
       txtDOM2.style.opacity = '0'
       txtDOM3.style.opacity = '0'
-      txtDOM4.style.opacity = '0'
+      txtDOMLast.style.opacity = '0'
       txtDOM7.style.opacity = '0'
     }
   }, [])
