@@ -15,7 +15,7 @@ const Award = () => {
   }, [])
 
   useEffect(() => {
-    middleware('foo')
+    middleware('fooz')
   }, [])
 
   const {id} = useParams()
