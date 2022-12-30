@@ -14,6 +14,10 @@ import Projects from './views/Projects'
 import Project from './views/Project'
 import NavList from './components/NavList'
 import MiddlewareAbout from './components/MiddlewareAbout'
+import {logEvent} from 'firebase/analytics'
+import {analytics} from './firebase'
+
+logEvent(analytics, 'user_engagement')
 
 export default function App() {
   const docWidth = document.documentElement.clientWidth
