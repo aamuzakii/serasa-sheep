@@ -12,6 +12,7 @@ import Team from './views/Team'
 import Company from './views/Company'
 import Projects from './views/Projects'
 import Project from './views/Project'
+import Chat from './views/Chat'
 import NavList from './components/NavList'
 import MiddlewareAbout from './components/MiddlewareAbout'
 import {logEvent} from 'firebase/analytics'
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="projects/:id" element={<Project />} />
         <Route path="team" element={<Team />} />
         <Route path="company" element={<Company />} />
+        <Route path="chat" element={<Chat />} />
       </Routes>
     </>
   )
