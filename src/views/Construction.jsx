@@ -4,7 +4,7 @@ import {GET_SINGLE_JOURNAL, GET_IMG_BY_ID} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
 import Back from '../components/Back'
 import style from './Construction.module.scss'
-import {useParams} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import middleware from '../helper/middleware'
 import {GET_BUILT_PROJECTS} from '../graphql/queries'
 
@@ -129,8 +129,10 @@ function Journal() {
       <div className={style.portofolio_container}>
         {res.data?.projectCollection.items.map((item, index) => (
           <div key={index} className={style.three_row}>
-            <img src={item.picturesCollection.items[0].url} alt={item.altText} height={200} />
-            <p>{item.name + ' ' + item.year}</p>
+            <Link to={'/projects/' + item.sys.id}>
+              <img src={item.picturesCollection.items[0].url} alt={item.altText} height={200} />
+              <p>{item.name + ' ' + item.year}</p>
+            </Link>
           </div>
         ))}
       </div>
