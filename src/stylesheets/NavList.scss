@@ -17,7 +17,12 @@ ul {
   position: fixed;
   top: 0;
   @media only screen and (max-width: 425px) {
+    font-size: 13px;
     background: rgb(255, 255, 255);
+
+    ul {
+      padding: 0 0 2px 0;
+    }
   }
   background: linear-gradient(90deg, rgba(255, 255, 255, 1) 6%, rgba(255, 255, 255, 0.3897934173669467) 54%, rgba(255, 255, 255, 1) 94%);
   a {
@@ -40,11 +45,5 @@ ul {
         padding: 0px 6px;
       }
     }
-  }
-}
-
-.nav-container2 {
-  .inner-nav-container {
-    padding: 0;
   }
 }
