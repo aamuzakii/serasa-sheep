@@ -48,7 +48,7 @@ function Projects() {
 
   let year = ['y2020', 'y2021', 'y2022', 'y2023']
   let location = ['jakarta', 'bogor', 'depok', 'cilegon', 'madiun', 'serang']
-  let status = ['idea', 'completed']
+  let status = [ 'built', 'on_progress']
   let projectType = ['residential', 'commercial', 'educational', 'public_space', 'others']
 
   let dasarDict0
@@ -59,11 +59,13 @@ function Projects() {
   let dasarDict5
 
   for (let i = 0; i < location.length; i++) {
+    // why location.length, because currently the longest array is location
     let content = {
       year: year[i],
       location: location[i],
       status: status[i],
       projectType: projectType[i],
+      status: status[i],
     }
     eval('dasarDict' + i + ' = ' + JSON.stringify(content))
   }
@@ -76,7 +78,7 @@ function Projects() {
 
       <div className="flex-row sorting-btn-container">
         <div className=" flex-row inner-container-button">
-          {/* <div className='sorting-btn' onClick={changeDasar('status')} >Status</div> */}
+          <div className='sorting-btn' onClick={changeDasar('status')} >Status</div>
           <div className="sorting-btn" onClick={changeDasar('all')}>
             All
           </div>

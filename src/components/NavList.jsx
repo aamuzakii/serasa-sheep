@@ -8,6 +8,10 @@ function NavList() {
       name: 'Projects',
     },
     {
+      name: 'Construction',
+      featureDeliveredDate: 'December 2023',
+    },
+    {
       name: 'Journals',
     },
     {

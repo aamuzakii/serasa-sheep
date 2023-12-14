@@ -14,7 +14,7 @@ function Section({dasar, dasarDict, code}) {
     if (data) {
       data.projectCollection.items = data.projectCollection.items.map((element) => {
         element.color = 'white'
-        element.status = 'completed'
+        element.status = element.status ?? 'on_progress'; // nullish coalescing operator
         element.program = 'program-name' // di nama class gaboleh ada yg undefined, nanti jadi banyak
         if (!element.main_picture) element.main_picture = 'https://res.cloudinary.com/dm9ufmxnq/image/upload/v1661264894/sdsd_i0f3hi.webp'
         return element
@@ -68,6 +68,8 @@ function Section({dasar, dasarDict, code}) {
     serang: 'Serang',
     cilegon: 'Cilegon',
     serang: 'Serang',
+    on_progress: 'On Progress',
+    built: 'Built',
     y2020: '2020',
     y2021: '2021',
     y2022: '2022',

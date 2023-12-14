@@ -75,6 +75,7 @@ export const GET_ALL_PROJECT = gql`
         location
         projectType
         year
+        status
         picturesCollection {
           items {
             url
