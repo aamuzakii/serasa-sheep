@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client'
+import {gql} from '@apollo/client'
 
 export const GET_MOVIES_FROM_CACHE = gql`
   query GetMovies {
@@ -67,6 +67,28 @@ export const GET_SINGLE_AWARD = gql`
 export const GET_ALL_PROJECT = gql`
   query projectCollectionQuery {
     projectCollection {
+      items {
+        sys {
+          id
+        }
+        name
+        location
+        projectType
+        year
+        status
+        picturesCollection {
+          items {
+            url
+          }
+        }
+      }
+    }
+  }
+`
+
+export const GET_BUILT_PROJECTS = gql`
+  query builtProjectsQuery {
+    projectCollection(where: {status: "built"}) {
       items {
         sys {
           id

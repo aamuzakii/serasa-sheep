@@ -11,6 +11,7 @@ import Award from './views/Award'
 import Team from './views/Team'
 import Company from './views/Company'
 import Projects from './views/Projects'
+import Construction from './views/Construction.jsx'
 import Project from './views/Project'
 import Chat from './views/Chat'
 import NavList from './components/NavList'
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="awards/:id" element={<Award />} />
         <Route path="projects" element={<Projects />} />
         <Route path="projects/:id" element={<Project />} />
+        <Route path="construction" element={<Construction />} />
         <Route path="team" element={<Team />} />
         <Route path="company" element={<Company />} />
         <Route path="chat" element={<Chat />} />
