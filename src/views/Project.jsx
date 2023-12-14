@@ -44,14 +44,11 @@ const Project = () => {
 
       <section className={style.asset_list}>
         {assets.items.map(({url}, i) => {
-          if (true) {
-            return (
-              <div className={style.single_person}>
-                <img src={url} alt="" className={style.imgo} />
-              </div>
-            )
-          } else {
-          }
+          return (
+            <div className={style.single_person}>
+              <img src={url} alt="" className={style.imgo} />
+            </div>
+          )
         })}
       </section>
     </div>
