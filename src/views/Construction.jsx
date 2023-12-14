@@ -125,12 +125,12 @@ function Journal() {
           </div>
         ))}
       </div>
-      <h3>SKEMA COST & FEE</h3>
-      <div className={style.dark_container}>
+      <h3>Portofolio</h3>
+      <div className={style.portofolio_container}>
         {res.data?.projectCollection.items.map((item, index) => (
-          <div key={index}>
-            <img src={item.picturesCollection.items[0].url} alt={item.altText} height={100} width={100} />
-            <p>{item.description}</p>
+          <div key={index} className={style.three_row}>
+            <img src={item.picturesCollection.items[0].url} alt={item.altText} height={200} />
+            <p>{item.name + ' ' + item.year}</p>
           </div>
         ))}
       </div>

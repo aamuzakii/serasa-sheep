@@ -1,6 +1,9 @@
 .container {
   display: flex;
   flex-direction: column;
+  h3 {
+    text-align: center;
+  }
 
   .image_wrapper {
     .img {
@@ -35,7 +38,8 @@
   }
 }
 
-.dark_container {
+.dark_container,
+.portofolio_container {
   background: #000;
   width: 100%;
   display: grid;
@@ -60,5 +64,13 @@
     text-align: center;
 
     grid-column: span 2;
+  }
+}
+
+.portofolio_container {
+  grid-template-columns: repeat(6, 1fr);
+  div {
+    height: 250px;
+    padding: 0;
   }
 }
