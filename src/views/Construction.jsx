@@ -107,7 +107,7 @@ function Journal() {
         <p dangerouslySetInnerHTML={{__html: documentToHtmlString(richText)}} className={style.injected_rich_text}></p>
         <Back destination="journals"></Back>
       </div>
-      <h3>Masalah yang HAMPIR SELALU TERJADI saat membangun rumah</h3>
+      <h1>Masalah yang HAMPIR SELALU TERJADI saat membangun rumah</h1>
       <div className={style.dark_container}>
         {txtdata.map((item, index) => (
           <div key={index}>
@@ -116,7 +116,7 @@ function Journal() {
           </div>
         ))}
       </div>
-      <h3>SKEMA COST & FEE</h3>
+      <h1>SKEMA COST & FEE</h1>
       <div className={style.dark_container}>
         {constAndFee.map((item, index) => (
           <div key={index}>
@@ -124,8 +124,9 @@ function Journal() {
             <p>{item.description}</p>
           </div>
         ))}
+        <button className={style.learn_more}>HUBUNGI KAMI</button>
       </div>
-      <h3>Portofolio</h3>
+      <h1>Portofolio</h1>
       <div className={style.portofolio_container}>
         {res.data?.projectCollection.items.map((item, index) => (
           <div key={index} className={style.three_row}>
