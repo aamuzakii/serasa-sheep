@@ -48,7 +48,7 @@ function Projects() {
 
   let year = ['y2020', 'y2021', 'y2022', 'y2023']
   let location = ['jakarta', 'bogor', 'depok', 'cilegon', 'madiun', 'serang']
-  let status = [ 'built', 'on_progress']
+  let status = ['built', 'on_progress']
   let projectType = ['residential', 'commercial', 'educational', 'public_space', 'others']
 
   let dasarDict0
@@ -70,6 +70,14 @@ function Projects() {
     eval('dasarDict' + i + ' = ' + JSON.stringify(content))
   }
 
+  const sortingButtons = [
+    {dasarPengelompokan: 'all', label: 'All'},
+    {dasarPengelompokan: 'status', label: 'Status'},
+    {dasarPengelompokan: 'projectType', label: 'Project Type'},
+    {dasarPengelompokan: 'location', label: 'Location'},
+    {dasarPengelompokan: 'year', label: 'Year'},
+  ]
+
   return (
     <div className="container projects">
       <h1 className="font-gede-banget" style={{textAlign: 'center'}}>
@@ -77,20 +85,12 @@ function Projects() {
       </h1>
 
       <div className="flex-row sorting-btn-container">
-        <div className=" flex-row inner-container-button">
-          <div className='sorting-btn' onClick={changeDasar('status')} >Status</div>
-          <div className="sorting-btn" onClick={changeDasar('all')}>
-            All
-          </div>
-          <div className="sorting-btn" onClick={changeDasar('projectType')}>
-            Project Type
-          </div>
-          <div className="sorting-btn" onClick={changeDasar('location')}>
-            Location
-          </div>
-          <div className="sorting-btn" onClick={changeDasar('year')}>
-            Year
-          </div>
+        <div className="flex-row inner-container-button">
+          {sortingButtons.map((button) => (
+            <div key={button.dasarPengelompokan} className="sorting-btn" onClick={changeDasar(button.dasarPengelompokan)}>
+              {button.label}
+            </div>
+          ))}
         </div>
       </div>
 
