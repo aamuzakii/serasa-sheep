@@ -12,6 +12,7 @@ import {GET_BUILT_PROJECTS} from '../graphql/queries'
 const firstId = '6aI6XUHSSfJE0w3lb1VWYF'
 
 function Journal() {
+  const navigate = useNavigate()
   const [projects, setProjects] = useState([])
   let res = useQuery(GET_BUILT_PROJECTS, {
     fetchPolicy: 'network-only',
@@ -145,10 +146,10 @@ function Journal() {
       <div className={style.portofolio_container}>
         {res.data?.projectCollection.items.map((item, index) => (
           <div key={index} className={style.three_row}>
-            <Link to={'/projects/' + item.sys.id}>
-              <img src={item.picturesCollection.items[0].url} alt={item.altText} height={200} />
-              <p>{item.name + ' ' + item.year}</p>
-            </Link>
+            <div className={style.image_container} onClick={() => navigate(`/projects/${item.sys.id}`)}>
+              <img src={item.picturesCollection.items[0].url} alt={item.altText} className={style.img} />
+            </div>
+            <p>{item.name + ' ' + item.year}</p>
           </div>
         ))}
       </div>
