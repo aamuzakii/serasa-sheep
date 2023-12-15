@@ -97,11 +97,13 @@ function Journal() {
     },
   ]
 
+  const firstSectionImage = 'https://images.ctfassets.net/0wvobgztd3t0/4WmB85OMNMPPK5FvyeaMih/571afb67a5119edb060ffeae98394c3d/CGN90_01.jpg'
+
   return (
     <div className={style.container}>
       <section className={style.first}>
         <div className={style.image_wrapper}>
-          <img src={image} alt="Journal poster" className={style.img} />
+          <img src={firstSectionImage} alt="Journal poster" className={style.img} />
         </div>
         <div className={style.markup_wrapper}>
           <h1>Hindari Kerugian</h1>
