@@ -99,14 +99,16 @@ function Journal() {
 
   return (
     <div className={style.container}>
-      <div className={style.image_wrapper}>
-        <img src={image} alt="Journal poster" className={style.img} />
-      </div>
-      <div className={style.markup_wrapper}>
-        <h1>{data.journal.title}</h1>
-        <p dangerouslySetInnerHTML={{__html: documentToHtmlString(richText)}} className={style.injected_rich_text}></p>
-        <Back destination="journals"></Back>
-      </div>
+      <section className={style.first}>
+        <div className={style.image_wrapper}>
+          <img src={image} alt="Journal poster" className={style.img} />
+        </div>
+        <div className={style.markup_wrapper}>
+          <h1>{data.journal.title}</h1>
+          <p dangerouslySetInnerHTML={{__html: documentToHtmlString(richText)}} className={style.injected_rich_text}></p>
+          <Back destination="journals"></Back>
+        </div>
+      </section>
       <h1>Masalah yang HAMPIR SELALU TERJADI saat membangun rumah</h1>
       <div className={style.dark_container}>
         {txtdata.map((item, index) => (

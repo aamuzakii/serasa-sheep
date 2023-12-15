@@ -23,6 +23,10 @@ logEvent(analytics, 'user_engagement')
 
 export default function App() {
   const docWidth = document.documentElement.clientWidth
+
+  const blinkOnConstruction = localStorage.getItem('blinkOnConstruction')
+  if (!blinkOnConstruction) localStorage.setItem('blinkOnConstruction', 'on')
+
   return (
     <>
       <NavList />

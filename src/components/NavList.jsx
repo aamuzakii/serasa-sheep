@@ -1,8 +1,10 @@
 import * as React from 'react'
 import {NavLink} from 'react-router-dom'
 import logo from '../assets/impossible_logo.png'
+import style from './NavList.module.scss'
 
 function NavList() {
+  const blinkOnConstruction = localStorage.getItem('blinkOnConstruction')
   let arr = [
     {
       name: 'Projects',
@@ -30,8 +32,9 @@ function NavList() {
         </NavLink>
         <ul className="right">
           {arr.map(({name}) => (
-            <li key={name}>
+            <li key={name} onClick={() => localStorage.setItem('blinkOnConstruction', 'off')}>
               <NavLink to={name.toLowerCase()}>{name}</NavLink>
+              {name === 'Construction' && localStorage.getItem('blinkOnConstruction') === 'on' && <span className={style.new}>NEW</span>}
             </li>
           ))}
         </ul>
