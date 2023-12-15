@@ -104,9 +104,9 @@ function Journal() {
           <img src={image} alt="Journal poster" className={style.img} />
         </div>
         <div className={style.markup_wrapper}>
-          <h1>{data.journal.title}</h1>
-          <p dangerouslySetInnerHTML={{__html: documentToHtmlString(richText)}} className={style.injected_rich_text}></p>
-          <Back destination="journals"></Back>
+          <h1>Hindari Kerugian</h1>
+          <h1>Akibat Salah Bangun</h1>
+          <p>Tim kontraktor kami siap membantu anda membangun hunian idaman secara transparan tanpa markup harga atau downgrade kualitas material.</p>
         </div>
       </section>
       <h1>Masalah yang HAMPIR SELALU TERJADI saat membangun rumah</h1>
