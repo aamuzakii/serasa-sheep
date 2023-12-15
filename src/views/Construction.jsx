@@ -109,10 +109,10 @@ function Journal() {
           <h1>Hindari Kerugian</h1>
           <h1>Akibat Salah Bangun</h1>
           <p>Tim kontraktor kami siap membantu anda membangun hunian idaman secara transparan tanpa markup harga atau downgrade kualitas material.</p>
-          <button className={style.learn_more}>PELAJARI LEBIH LANJUT</button>
+          <button className={style.learn_more}>Pelajari</button>
         </div>
       </section>
-      <h1>Masalah yang HAMPIR SELALU TERJADI saat membangun rumah</h1>
+      <h1>Masalah yang Sering Terjadi Saat Membangun Rumah</h1>
       <div className={style.dark_container}>
         {txtdata.map((item, index) => (
           <div key={index}>

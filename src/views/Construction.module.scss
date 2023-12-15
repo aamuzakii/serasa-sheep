@@ -13,8 +13,13 @@
     display: flex;
     align-items: center;
     h1 {
-      font-size: 48px;
-      margin: 10px;
+      text-align: left;
+      font-size: 60px;
+      margin: 0px;
+    }
+    p {
+      line-height: 20px;
+      font-size: 20px;
     }
   }
 
