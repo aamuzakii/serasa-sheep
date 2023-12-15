@@ -105,10 +105,11 @@ function Journal() {
         <div className={style.image_wrapper}>
           <img src={firstSectionImage} alt="Journal poster" className={style.img} />
         </div>
-        <div className={style.markup_wrapper}>
+        <div className={style.right}>
           <h1>Hindari Kerugian</h1>
           <h1>Akibat Salah Bangun</h1>
           <p>Tim kontraktor kami siap membantu anda membangun hunian idaman secara transparan tanpa markup harga atau downgrade kualitas material.</p>
+          <button className={style.learn_more}>PELAJARI LEBIH LANJUT</button>
         </div>
       </section>
       <h1>Masalah yang HAMPIR SELALU TERJADI saat membangun rumah</h1>
