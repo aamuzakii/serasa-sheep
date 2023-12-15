@@ -5,6 +5,7 @@ import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
 import Back from '../components/Back'
 import style from './Construction.module.scss'
 import {Link, useParams} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 import middleware from '../helper/middleware'
 import {GET_BUILT_PROJECTS} from '../graphql/queries'
 
@@ -102,17 +103,26 @@ function Journal() {
   return (
     <div className={style.container}>
       <section className={style.first}>
-        <div className={style.image_wrapper}>
-          <img src={firstSectionImage} alt="Journal poster" className={style.img} />
+        <div className={style.left}>
+          <img src={firstSectionImage} alt="banner image" className={style.img} />
         </div>
         <div className={style.right}>
           <h1>Hindari Kerugian</h1>
           <h1>Akibat Salah Bangun</h1>
           <p>Tim kontraktor kami siap membantu anda membangun hunian idaman secara transparan tanpa markup harga atau downgrade kualitas material.</p>
-          <button className={style.learn_more}>Pelajari</button>
+          <button
+            className={style.learn_more}
+            onClick={() =>
+              document.getElementById('problem').scrollIntoView({
+                behavior: 'smooth',
+              })
+            }
+          >
+            Pelajari
+          </button>
         </div>
       </section>
-      <h1>Masalah yang Sering Terjadi Saat Membangun Rumah</h1>
+      <h1 id="problem">Masalah yang Sering Terjadi Saat Membangun Rumah</h1>
       <div className={style.dark_container}>
         {txtdata.map((item, index) => (
           <div key={index}>
