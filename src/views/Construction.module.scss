@@ -6,7 +6,8 @@
   h2,
   h3 {
     text-align: center;
-    margin: 60px;
+    margin: 60px auto;
+    border-bottom: 5.5px solid #4acca5;
   }
 
   section.first {
@@ -17,6 +18,7 @@
       text-align: left;
       font-size: 60px;
       margin: 0px;
+      border-bottom: none;
     }
     p {
       line-height: 20px;
