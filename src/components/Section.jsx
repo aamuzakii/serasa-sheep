@@ -68,7 +68,7 @@ function Section({dasar, dasarDict, code}) {
     serang: 'Serang',
     cilegon: 'Cilegon',
     serang: 'Serang',
-    on_progress: 'On Progress',
+    on_progress: 'On Going',
     built: 'Built',
     y2020: '2020',
     y2021: '2021',
