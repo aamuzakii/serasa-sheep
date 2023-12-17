@@ -143,7 +143,7 @@ function Journal() {
         <button className={style.learn_more}>HUBUNGI KAMI</button>
       </div>
       <h1>Alur Skema</h1>
-      <img src="../../images/workflow.svg" alt="sdsd" />
+      <img src="../../images/workflow.webp" alt="sdsd" />
       <h1>Portofolio</h1>
       <div className={style.portofolio_container}>
         {res.data?.projectCollection.items.map((item, index) => (
