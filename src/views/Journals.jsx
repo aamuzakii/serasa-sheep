@@ -3,6 +3,7 @@ import {useQuery} from '@apollo/client'
 import {GET_ALL_JOURNALS} from '../graphql/queries'
 import styles from './Journals.module.scss'
 import middleware from '../helper/middleware'
+import Image from '../components/Image'
 
 const Journals = () => {
   const [journalList, setJournalList] = useState('')
@@ -33,7 +34,7 @@ const Journals = () => {
               <a href={'/journals/' + sys.id} key={i}>
                 <div className={styles.card}>
                   <div className={styles.thumbnail_webinar}>
-                    <img src={pictureCollection.items[0].url} alt={title} />
+                    <Image src={pictureCollection.items[0].url} alt={title} />
                   </div>
                   <div className={styles.foo}>
                     <h3>{title}</h3>

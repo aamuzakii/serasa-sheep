@@ -4,6 +4,7 @@ import {GET_ALL_TEAMS, GET_IMG_BY_ID} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
 import style from './Team.module.scss'
 import middleware from '../helper/middleware'
+import Image from '../components/Image'
 
 function About() {
   let {data} = useQuery(GET_ALL_TEAMS, {})
@@ -44,7 +45,7 @@ function About() {
         {boardMembers.map(({name, bio, photo, position}) => {
           return (
             <div className={style.single_person}>
-              <img src={photo.url} alt="" width={300} />
+              <Image src={photo.url} alt="" width={300} />
               <p className={style.name}>{name}</p>
               <i className={style.position}>{position}</i>
               <p dangerouslySetInnerHTML={{__html: documentToHtmlString(bio.json)}} className={style.injected_rich_text}></p>
@@ -57,7 +58,7 @@ function About() {
         {staffs.map(({name, bio, photo, position}) => {
           return (
             <div className={style.single_person}>
-              <img src={photo.url} alt="" width={220} />
+              <Image src={photo.url} alt="" width={220} />
               <p className={style.name}>{name}</p>
               <i className={style.position}>{position}</i>
               <p dangerouslySetInnerHTML={{__html: documentToHtmlString(bio.json)}} className={style.injected_rich_text}></p>

@@ -6,6 +6,7 @@ import {GET_SINGLE_PROJECT} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
 import middleware from '../helper/middleware'
 import Back from '../components/Back'
+import Image from '../components/Image'
 
 const Project = () => {
   useEffect(() => {
@@ -46,7 +47,7 @@ const Project = () => {
         {assets.items.map(({url}, i) => {
           return (
             <div className={style.single_person}>
-              <img src={url} alt="" className={style.imgo} />
+              <Image src={url} alt="" className={style.imgo} />
             </div>
           )
         })}

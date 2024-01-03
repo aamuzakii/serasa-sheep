@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 
-const Image = ({link}) => {
+const Image = ({link, className}) => {
   const [resizedImage, setResizedImage] = useState(null)
   useEffect(() => {
     const width = 300 // Replace with the desired width
@@ -35,7 +35,7 @@ const Image = ({link}) => {
     resizeImage() // Call the async function immediately
   }, [])
 
-  return <img className="inner-img" src={resizedImage} alt="" />
+  return <img className={className} src={resizedImage} alt="image" />
 }
 
 export default Image

@@ -6,6 +6,7 @@ import {GET_SINGLE_AWARD} from '../graphql/queries'
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer'
 import middleware from '../helper/middleware'
 import Back from '../components/Back'
+import Image from '../components/Image'
 
 const Award = () => {
   useEffect(() => {
@@ -45,7 +46,7 @@ const Award = () => {
         {assets.items.map(({url}, i) => {
           return (
             <div className={style.single_person} key={i}>
-              <img src={url} alt="" className={style.imgo} />
+              <Image src={url} alt="" className={style.imgo} />
             </div>
           )
         })}

@@ -105,7 +105,7 @@ function Journal() {
     <div className={style.container}>
       <section className={style.first}>
         <div className={style.left}>
-          <img src={firstSectionImage} alt="banner image" className={style.img} />
+          <Image src={firstSectionImage} alt="banner image" className={style.img} />
         </div>
         <div className={style.right}>
           <h1>Hindari Kerugian</h1>
@@ -127,7 +127,7 @@ function Journal() {
       <div className={style.dark_container}>
         {txtdata.map((item, index) => (
           <div key={index}>
-            <img src={item.imageSrc || ''} alt={item.altText} height={100} width={100} />
+            <Image src={item.imageSrc || ''} alt={item.altText} height={100} width={100} />
             <p>{item.description}</p>
           </div>
         ))}
@@ -136,7 +136,7 @@ function Journal() {
       <div className={style.dark_container}>
         {constAndFee.map((item, index) => (
           <div key={index}>
-            <img src={item.imageSrc || ''} alt={item.altText} height={100} width={100} />
+            <Image src={item.imageSrc || ''} alt={item.altText} height={100} width={100} />
             <p>{item.description}</p>
           </div>
         ))}
@@ -149,7 +149,7 @@ function Journal() {
         {res.data?.projectCollection.items.map((item, index) => (
           <div key={index} className={style.three_row}>
             <div className={style.image_container} onClick={() => navigate(`/projects/${item.sys.id}`)}>
-              <img src={item.picturesCollection.items[0].url} alt={item.altText} className={style.img} />
+              <Image src={item.picturesCollection.items[0].url} alt={item.altText} className={style.img} />
             </div>
             <p>{item.name + ' ' + item.year}</p>
           </div>

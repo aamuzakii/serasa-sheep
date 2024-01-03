@@ -3,6 +3,7 @@ import {useQuery} from '@apollo/client'
 import {GET_ALL_AWARDS} from '../graphql/queries'
 import styles from './Awards.module.scss'
 import middleware from '../helper/middleware'
+import Image from '../components/Image'
 
 const Awards = () => {
   const [journalList, setJournalList] = useState('')
@@ -33,7 +34,7 @@ const Awards = () => {
               <a href={'/awards/' + sys.id} key={i}>
                 <div className={styles.card}>
                   <div className={styles.thumbnail_webinar}>
-                    <img src={pictureCollection.items[0].url} alt={title} />
+                    <Image src={pictureCollection.items[0].url} alt={title} />
                   </div>
                   <div className={styles.foo}>
                     <h3>{title}</h3>
