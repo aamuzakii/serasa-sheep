@@ -3,6 +3,7 @@ import Isotope from 'isotope-layout'
 import {Link} from 'react-router-dom'
 import {useQuery} from '@apollo/client'
 import {GET_ALL_PROJECT} from '../graphql/queries'
+import Image from './Image'
 
 function Section({dasar, dasarDict, code}) {
   const [projects, setProjects] = useState([])
@@ -112,12 +113,13 @@ function Section({dasar, dasarDict, code}) {
       <div className={c}>
         {projects.map(({color, year, program, status, location, name, picturesCollection, projectType, sys}, i) => {
           let kelas = `${item} ${program} ${status} y${year} ${location} ${projectType}`
+          if (i) return <></>
           return (
             <div key={i} className={kelas}>
               <Link to={sys.id} className="box image" style={{background: color, color: colorDict[color]}}>
                 <p className="small-text">{name}</p>
                 <div className="box-gradient-layer"></div>
-                <img className="inner-img" src={picturesCollection.items[0].url} alt="" />
+                <Image className="inner-img" link={picturesCollection.items[0].url} alt="" />
               </Link>
             </div>
           )
