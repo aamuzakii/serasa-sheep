@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react'
 const Image = ({link}) => {
   const [resizedImage, setResizedImage] = useState(null)
   useEffect(() => {
-    const imageUrl = 'URL_TO_YOUR_IMAGE' // Replace with the actual image URL
     const width = 300 // Replace with the desired width
     const height = 200 // Replace with the desired height
 
@@ -18,7 +17,7 @@ const Image = ({link}) => {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            // 'Cache-Control': `max-age=${cacheDurationDay}*24*60*60`, // 3 hari
+            'Cache-Control': `max-age=${cacheDurationDay}*24*60*60`, // 3 hari
           },
         })
 
