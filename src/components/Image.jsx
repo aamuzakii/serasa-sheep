@@ -9,8 +9,8 @@ const Image = ({link}) => {
 
     const cacheDurationDay = 30
 
-    // const server = 'https://sharp-server.vercel.app'
-    const server = 'http://localhost:3000'
+    const server = 'https://sharp-server.vercel.app'
+    // const server = 'http://localhost:3000'
 
     const resizeImage = async () => {
       try {
