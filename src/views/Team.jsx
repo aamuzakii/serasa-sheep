@@ -45,7 +45,7 @@ function About() {
         {boardMembers.map(({name, bio, photo, position}) => {
           return (
             <div className={style.single_person}>
-              <Image src={photo.url} alt="" width={300} />
+              <img src={photo.url} alt="" width={300} />
               <p className={style.name}>{name}</p>
               <i className={style.position}>{position}</i>
               <p dangerouslySetInnerHTML={{__html: documentToHtmlString(bio.json)}} className={style.injected_rich_text}></p>
@@ -58,7 +58,7 @@ function About() {
         {staffs.map(({name, bio, photo, position}) => {
           return (
             <div className={style.single_person}>
-              <Image src={photo.url} alt="" width={220} />
+              <img src={photo.url} alt="" width={220} />
               <p className={style.name}>{name}</p>
               <i className={style.position}>{position}</i>
               <p dangerouslySetInnerHTML={{__html: documentToHtmlString(bio.json)}} className={style.injected_rich_text}></p>

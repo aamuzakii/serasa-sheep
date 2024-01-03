@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 
-const Image = ({link, className}) => {
+const Image = ({link, className, src}) => {
   const [resizedImage, setResizedImage] = useState(null)
   useEffect(() => {
     const width = 300 // Replace with the desired width
@@ -13,7 +13,7 @@ const Image = ({link, className}) => {
 
     const resizeImage = async () => {
       try {
-        const response = await fetch(`${server}/api/resize?link=${link}`, {
+        const response = await fetch(`${server}/api/resize?link=${link || src}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

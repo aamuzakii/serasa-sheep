@@ -8,6 +8,7 @@ import {Link, useParams} from 'react-router-dom'
 import {useNavigate} from 'react-router-dom'
 import middleware from '../helper/middleware'
 import {GET_BUILT_PROJECTS} from '../graphql/queries'
+import Image from '../components/Image'
 
 const firstId = '6aI6XUHSSfJE0w3lb1VWYF'
 
@@ -127,7 +128,7 @@ function Journal() {
       <div className={style.dark_container}>
         {txtdata.map((item, index) => (
           <div key={index}>
-            <Image src={item.imageSrc || ''} alt={item.altText} height={100} width={100} />
+            <img src={item.imageSrc || ''} alt={item.altText} height={100} width={100} />
             <p>{item.description}</p>
           </div>
         ))}
@@ -136,7 +137,7 @@ function Journal() {
       <div className={style.dark_container}>
         {constAndFee.map((item, index) => (
           <div key={index}>
-            <Image src={item.imageSrc || ''} alt={item.altText} height={100} width={100} />
+            <img src={item.imageSrc || ''} alt={item.altText} height={100} width={100} />
             <p>{item.description}</p>
           </div>
         ))}
