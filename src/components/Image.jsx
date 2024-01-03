@@ -7,16 +7,19 @@ const Image = ({link}) => {
     const width = 300 // Replace with the desired width
     const height = 200 // Replace with the desired height
 
-    const cacheDurationDay = 7
+    const cacheDurationDay = 30
+
+    // const server = 'https://sharp-server.vercel.app'
+    const server = 'http://localhost:3000'
 
     const resizeImage = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/api/foo`, {
-          method: 'POST',
+        const response = await fetch(`${server}/api/resize?link=${link}`, {
+          method: 'GET',
           headers: {
             'Content-Type': 'application/json',
+            // 'Cache-Control': `max-age=${cacheDurationDay}*24*60*60`, // 3 hari
           },
-          body: JSON.stringify({link, width, height, foo: 'bar'}),
         })
 
         if (response.ok) {

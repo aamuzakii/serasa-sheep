@@ -113,7 +113,6 @@ function Section({dasar, dasarDict, code}) {
       <div className={c}>
         {projects.map(({color, year, program, status, location, name, picturesCollection, projectType, sys}, i) => {
           let kelas = `${item} ${program} ${status} y${year} ${location} ${projectType}`
-          if (i) return <></>
           return (
             <div key={i} className={kelas}>
               <Link to={sys.id} className="box image" style={{background: color, color: colorDict[color]}}>
