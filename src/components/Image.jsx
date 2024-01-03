@@ -7,6 +7,8 @@ const Image = ({link}) => {
     const width = 300 // Replace with the desired width
     const height = 200 // Replace with the desired height
 
+    const cacheDurationDay = 7
+
     const resizeImage = async () => {
       try {
         const response = await fetch(`http://localhost:3000/api/foo`, {
