@@ -118,7 +118,7 @@ function Section({dasar, dasarDict, code}) {
               <Link to={sys.id} className="box image" style={{background: color, color: colorDict[color]}}>
                 <p className="small-text">{name}</p>
                 <div className="box-gradient-layer"></div>
-                <Image className="inner-img" link={picturesCollection.items[0].url} alt="" />
+                <Image className="inner-img" link={picturesCollection.items[0].url} alt="" size={450} />
               </Link>
             </div>
           )
