@@ -3,9 +3,6 @@ import React, {useEffect, useState} from 'react'
 const Image = ({link, className, src, size}) => {
   const [resizedImage, setResizedImage] = useState(null)
   useEffect(() => {
-    const width = 300 // Replace with the desired width
-    const height = 200 // Replace with the desired height
-
     const cacheDurationDay = 30
 
     const server = 'https://sharp-server.vercel.app'
