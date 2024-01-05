@@ -45,11 +45,23 @@ const Project = () => {
 
       <section className={style.asset_list}>
         {assets.items.map(({url}, i) => {
-          return (
-            <div className={style.single_person}>
-              <Image src={url} alt="" className={style.imgo} />
-            </div>
-          )
+          const isVideo = /\.(mp4|webm)$/i.test(url)
+          if (isVideo) {
+            return (
+              <div className={style.single_person} key={i}>
+                <video controls playsinline autoplay muted loop autoPlay className={[style.imgo, style.video].join(' ')}>
+                  <source src={url} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            )
+          } else {
+            return (
+              <div className={style.single_person}>
+                <Image src={url} alt="" className={style.imgo} />
+              </div>
+            )
+          }
         })}
       </section>
     </div>
