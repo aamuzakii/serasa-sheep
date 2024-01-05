@@ -106,7 +106,7 @@ function Journal() {
     <div className={style.container}>
       <section className={style.first}>
         <div className={style.left}>
-          <Image src={firstSectionImage} alt="banner image" className={style.img} />
+          <img src={'../../images/seracon.webp'} alt="banner image" className={style.img} />
         </div>
         <div className={style.right}>
           <h1>Hindari Kerugian</h1>
