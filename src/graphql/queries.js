@@ -131,7 +131,7 @@ export const GET_ALL_TEAMS = gql`
 `
 
 export const GET_ALL_JOURNALS = gql`
-  query foo {
+  query allJournalQuery {
     journalCollection {
       items {
         sys {
