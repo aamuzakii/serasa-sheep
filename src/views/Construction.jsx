@@ -124,7 +124,9 @@ function Journal() {
           </button>
         </div>
       </section>
-      <h1 id="problem">Masalah yang Sering Terjadi Saat Membangun Rumah</h1>
+      <h1 id="problem" className={style.full_title}>
+        Masalah yang Sering Terjadi Saat Membangun Rumah
+      </h1>
       <div className={style.dark_container}>
         {txtdata.map((item, index) => (
           <div key={index}>
