@@ -143,7 +143,9 @@ function Journal() {
             <p>{item.description}</p>
           </div>
         ))}
-        <button className={style.learn_more}>HUBUNGI KAMI</button>
+        <a href="/chat">
+          <button className={style.learn_more}>HUBUNGI KAMI</button>
+        </a>
       </div>
       <h1>Alur Skema</h1>
       <img src="../../images/workflow.webp" alt="sdsd" />
