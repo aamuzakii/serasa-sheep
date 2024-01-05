@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 
 const Image = ({link, className, src, size}) => {
-  const [resizedImage, setResizedImage] = useState(null)
+  const [resizedImage, setResizedImage] = useState('../../images/blank.png')
   useEffect(() => {
     const cacheDurationDay = 30
 
