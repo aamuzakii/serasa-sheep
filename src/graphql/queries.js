@@ -150,7 +150,7 @@ export const GET_ALL_JOURNALS = gql`
 `
 
 export const GET_ALL_AWARDS = gql`
-  query foo {
+  query allAwardCollection {
     awardCollection {
       items {
         sys {
@@ -199,7 +199,7 @@ export const GET_CONTACT_ADDRESS = gql`
 `
 
 export const GET_IMG_BY_ID = gql`
-  query foo($projectSysId: String!) {
+  query imgById($projectSysId: String!) {
     asset(id: $projectSysId) {
       url
     }
