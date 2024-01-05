@@ -36,7 +36,7 @@ const Journals = () => {
                   <div className={styles.thumbnail_webinar}>
                     <Image src={pictureCollection.items[0].url} alt={title} />
                   </div>
-                  <div className={styles.foo}>
+                  <div className={styles.description}>
                     <h3>{title}</h3>
                     <p>{cleanDate}</p>
                   </div>
