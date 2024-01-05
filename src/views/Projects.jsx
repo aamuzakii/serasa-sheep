@@ -32,7 +32,6 @@ function Projects() {
     }
   }, [dasar])
 
-  const isotope = React.useRef()
   // store the filter keyword in a state
 
   // handling filter key change
