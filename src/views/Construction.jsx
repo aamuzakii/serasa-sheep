@@ -9,6 +9,7 @@ import {useNavigate} from 'react-router-dom'
 import middleware from '../helper/middleware'
 import {GET_BUILT_PROJECTS} from '../graphql/queries'
 import Image from '../components/Image'
+import Manual from '../components/Manual'
 
 const firstId = '6aI6XUHSSfJE0w3lb1VWYF'
 
@@ -148,7 +149,7 @@ function Journal() {
         </a>
       </div>
       <h1>Alur Skema</h1>
-      <img src="../../images/workflow.webp" alt="sdsd" />
+      <Manual />
       <h1>Portofolio</h1>
       <div className={style.portofolio_container}>
         {res.data?.projectCollection.items.map((item, index) => (
