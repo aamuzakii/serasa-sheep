@@ -1,13 +1,21 @@
 .container {
+  a {
+    margin: auto;
+  }
   display: flex;
   flex-direction: column;
   padding-top: 70px;
+  background: #000;
   h1,
   h2,
   h3 {
+    color: white;
     text-align: center;
     margin: 60px auto;
     border-bottom: 5.5px solid #4acca5;
+  }
+  p {
+    color: white;
   }
 
   section.first {
@@ -61,7 +69,6 @@
   }
 }
 
-.dark_container,
 .portofolio_container {
   background: #000;
   width: 100%;
@@ -129,7 +136,7 @@ button.learn_more {
   text-align: center;
   max-width: 300px;
   transition: 500ms;
-  padding: 0 30px;
+  padding: 0 auto;
 
   &:hover {
     color: #4acca5;
@@ -140,5 +147,80 @@ button.learn_more {
 .full_title {
   @media only screen and (max-width: 425px) {
     margin: 60px 5% !important;
+  }
+}
+
+.dark_container {
+  background: white;
+  width: 100%;
+  display: grid;
+  /*Using the full width/height of the designated box elements, use fr as in example below */
+  grid-template-columns: 1fr 1fr;
+  // grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  background: black;
+  // background: rgb(34, 61, 97);
+  // background: linear-gradient(145deg, rgba(34, 61, 97, 1) 0%, rgba(18, 84, 115, 1) 100%);
+  // background: rgb(3, 31, 68);
+  // background: linear-gradient(145deg, rgba(3, 31, 68, 1) 0%, rgba(0, 35, 51, 1) 100%);
+  display: flex;
+  @media only screen and (max-width: 425px) {
+    flex-direction: column;
+  }
+  p {
+    color: white;
+  }
+
+  div {
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+
+    grid-column: span 2;
+  }
+}
+.cost_fee {
+  background: white;
+  width: 100%;
+  display: grid;
+  /*Using the full width/height of the designated box elements, use fr as in example below */
+  grid-template-columns: 1fr 1fr;
+  // grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  background: black;
+  display: flex;
+  @media only screen and (max-width: 425px) {
+    flex-direction: column;
+  }
+  p {
+    color: white;
+  }
+
+  div {
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+
+    grid-column: span 2;
   }
 }

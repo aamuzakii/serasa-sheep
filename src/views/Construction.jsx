@@ -74,7 +74,7 @@ function Journal() {
         </div>
       </section>
       <h1 id="problem" className={style.full_title}>
-        Masalah yang Sering Terjadi Saat Membangun Rumah
+        Masalah Umum Saat Bangun Rumah
       </h1>
       <div className={style.dark_container}>
         {txtdata.map((item, index) => (
@@ -85,17 +85,17 @@ function Journal() {
         ))}
       </div>
       <h1>SKEMA COST & FEE</h1>
-      <div className={style.dark_container}>
+      <div className={style.cost_fee}>
         {constAndFee.map((item, index) => (
           <div key={index}>
             <img src={item.imageSrc || ''} alt={item.altText} height={100} width={100} />
             <p>{item.description}</p>
           </div>
         ))}
-        <a href="/chat">
-          <button className={style.learn_more}>HUBUNGI KAMI</button>
-        </a>
       </div>
+      <a href="/chat">
+        <button className={style.learn_more}>HUBUNGI KAMI</button>
+      </a>
       <h1>Alur Skema</h1>
       <Manual />
       <h1>Portofolio</h1>

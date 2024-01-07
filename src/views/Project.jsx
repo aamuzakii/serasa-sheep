@@ -49,7 +49,7 @@ const Project = () => {
           if (isVideo) {
             return (
               <div className={style.single_person} key={i}>
-                <video controls playsinline autoplay muted loop autoPlay className={[style.imgo, style.video].join(' ')}>
+                <video controls playsinline muted loop autoPlay className={[style.imgo, style.video].join(' ')}>
                   <source src={url} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
