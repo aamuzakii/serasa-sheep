@@ -12,12 +12,12 @@ export const txtdata = [
   {
     altText: 'image',
     description: 'Manipulasi spek bangunan oleh mandoor / kontraktor, kualitas tidak sesuai dengan yang dibayarkan',
-    imageSrc: '../../icon/broken.png',
+    imageSrc: '../../icon/eye.svg',
   },
   {
     altText: 'image',
     description: 'Ditinggal KABUR oleh tukang dan tidak ada GARANSI',
-    imageSrc: '../../icon/thief.svg',
+    imageSrc: '../../icon/run.svg',
   },
 ]
 export const constAndFee = [
