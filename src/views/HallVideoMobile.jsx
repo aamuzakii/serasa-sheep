@@ -2,11 +2,6 @@ import React, {useEffect, useRef} from 'react'
 import {useMediaQuery} from 'react-responsive'
 import middleware from '../helper/middleware'
 
-import one from '../assets/halloffame/1.png'
-import two from '../assets/halloffame/2.png'
-import three from '../assets/halloffame/3.png'
-import five from '../assets/halloffame/5.png'
-
 function HallVideo() {
   const cloudinary = [
     'https://res.cloudinary.com/dyfzfakux/image/upload/v1672183310/serasa/halloffame/mobile/1_ygycpy.webp',
@@ -256,6 +251,3 @@ function HallVideo() {
 }
 
 export default HallVideo
-
-// 412, 915
-//
