@@ -1,12 +1,12 @@
 export const txtdata = [
   {
     altText: 'image',
-    description: 'Keluar UANG TERLALU BANYAK saat bangun rumah alias BONCOS',
+    description: 'Keluar uang terlalu banyak saat bangun rumah alias Boncos',
     imageSrc: '../../icon/pig.svg',
   },
   {
     altText: 'image',
-    description: 'Pengerjaan oleh tukang yang ASAL dan kurang rapi',
+    description: 'Pengerjaan oleh tukang yang asal dan kurang rapi',
     imageSrc: '../../icon/broken.svg',
   },
   {
@@ -16,7 +16,7 @@ export const txtdata = [
   },
   {
     altText: 'image',
-    description: 'Ditinggal KABUR oleh tukang dan tidak ada GARANSI',
+    description: 'Ditinggal Kabur oleh tukang dan tidak ada garansi',
     imageSrc: '../../icon/run.svg',
   },
 ]
@@ -29,7 +29,7 @@ export const constAndFee = [
   },
   {
     altText: 'image',
-    description: 'Supplier material yang kami pakai adalah supplier TERMURAH, KW 1 dan TERJAMIN KUALITASNYA',
+    description: 'Supplier material yang kami pakai adalah supplier Termurah, KW 1 dan Terjamin Kualitasnya',
     imageSrc: '../../icon/metal.png',
   },
   {
@@ -44,7 +44,7 @@ export const constAndFee = [
   },
   {
     altText: 'image',
-    description: 'Hasil pekerjaan seluruhnya ter GARANSI oleh kami, masa pemeliharaan selama 60 hari setelah pekerjaan selesai',
+    description: 'Hasil pekerjaan seluruhnya ter Garansi oleh kami, masa pemeliharaan selama 60 hari setelah pekerjaan selesai',
     imageSrc: '../../icon/shield.png',
   },
 ]

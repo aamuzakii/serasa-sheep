@@ -11,11 +11,21 @@
   h3 {
     color: white;
     text-align: center;
-    margin: 60px auto;
-    border-bottom: 5.5px solid #4acca5;
+    margin: 60px auto 20px;
+    font-family: 'Oswald' !important;
+  }
+  .bigger {
+    font-size: 70px !important;
   }
   p {
     color: white;
+  }
+
+  hr {
+    height: 5px;
+    width: 70px;
+    background: #4acca5;
+    border: none;
   }
 
   section.first {
@@ -137,6 +147,7 @@ button.learn_more {
   max-width: 300px;
   transition: 500ms;
   padding: 0 auto;
+  font-family: Oswald !important;
 
   &:hover {
     color: #4acca5;
@@ -161,8 +172,6 @@ button.learn_more {
 
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
-  align-items: center;
-  justify-content: center;
   padding: 60px;
   background: black;
   // background: rgb(34, 61, 97);
@@ -171,6 +180,7 @@ button.learn_more {
   // background: linear-gradient(145deg, rgba(3, 31, 68, 1) 0%, rgba(0, 35, 51, 1) 100%);
   display: flex;
   @media only screen and (max-width: 425px) {
+    align-items: center;
     flex-direction: column;
   }
   p {
@@ -179,6 +189,7 @@ button.learn_more {
 
   div {
     padding: 20px;
+    width: 180px;
     margin: 20px;
     display: flex;
     flex-direction: column;

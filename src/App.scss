@@ -3,6 +3,23 @@
   src: url(assets/fonts/Hubballi-Regular.ttf);
 }
 
+@font-face {
+  font-family: Oswald;
+  src: url(assets/fonts/Oswald-Regular.ttf);
+}
+@font-face {
+  font-family: Oswald-Bold;
+  src: url(assets/fonts/Oswald-Bold.ttf);
+}
+@font-face {
+  font-family: Oswald-ExtraLight;
+  src: url(assets/fonts/Oswald-ExtraLight.ttf);
+}
+@font-face {
+  font-family: Oswald-Light;
+  src: url(assets/fonts/Oswald-Light.ttf);
+}
+
 @import 'stylesheets/Projects.scss';
 @import 'stylesheets/ProjectsPhone.scss';
 
@@ -40,6 +57,10 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(141, 141, 141);
+}
+
+* {
+  font-family: Oswald;
 }
 
 .container {
@@ -246,4 +267,18 @@ video {
   100% {
     transform: scale(1.2, 1.2);
   }
+}
+
+#problem1 {
+  margin: 90px 0 0 0;
+  font-weight: 900;
+  font-size: 35px;
+  font-family: 'Oswald-Bold' !important;
+}
+#problem2 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: 'Oswald-Light' !important;
 }

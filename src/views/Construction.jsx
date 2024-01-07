@@ -58,8 +58,8 @@ function Journal() {
           <img src={'../../images/seracon.webp'} alt="banner image" className={style.img} />
         </div>
         <div className={style.right}>
-          <h1>Hindari Kerugian</h1>
-          <h1>Akibat Salah Bangun</h1>
+          <h1 className={style.bigger}>Hindari Kerugian</h1>
+          <h1 className={style.bigger}>Akibat Salah Bangun</h1>
           <p>Tim kontraktor kami siap membantu anda membangun hunian idaman secara transparan tanpa markup harga atau downgrade kualitas material.</p>
           <button
             className={style.learn_more}
@@ -69,13 +69,17 @@ function Journal() {
               })
             }
           >
-            Pelajari
+            PELAJARI
           </button>
         </div>
       </section>
-      <h1 id="problem" className={style.full_title}>
-        Masalah Umum Saat Bangun Rumah
+      <h1 id="problem1" className={style.full_title}>
+        MASALAH
       </h1>
+      <h1 id="problem2" className={style.full_title}>
+        SAAT BANGUN RUMAH
+      </h1>
+      <hr />
       <div className={style.dark_container}>
         {txtdata.map((item, index) => (
           <div key={index}>
@@ -84,7 +88,8 @@ function Journal() {
           </div>
         ))}
       </div>
-      <h1>SKEMA COST & FEE</h1>
+      <h1>KEUNGGULAN COST & FEE</h1>
+      <hr />
       <div className={style.cost_fee}>
         {constAndFee.map((item, index) => (
           <div key={index}>
@@ -96,9 +101,9 @@ function Journal() {
       <a href="/chat">
         <button className={style.learn_more}>HUBUNGI KAMI</button>
       </a>
-      <h1>Alur Skema</h1>
+      <h1>ALUR SKEMA</h1>
       <Manual />
-      <h1>Portofolio</h1>
+      <h1>PORTOFOLIO</h1>
       <div className={style.portofolio_container}>
         {res.data?.projectCollection.items.map((item, index) => (
           <div key={index} className={style.three_row}>
