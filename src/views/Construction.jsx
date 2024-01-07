@@ -69,7 +69,7 @@ function Journal() {
               })
             }
           >
-            PELAJARI
+            <span className={style.bt}>PELAJARI</span>
           </button>
         </div>
       </section>
@@ -99,11 +99,14 @@ function Journal() {
         ))}
       </div>
       <a href="/chat">
-        <button className={style.learn_more}>HUBUNGI KAMI</button>
+        <button className={style.learn_more}>
+          <span>HUBUNGI KAMI</span>
+        </button>
       </a>
       <h1>ALUR SKEMA</h1>
       <Manual />
       <h1>PORTOFOLIO</h1>
+      <hr />
       <div className={style.portofolio_container}>
         {res.data?.projectCollection.items.map((item, index) => (
           <div key={index} className={style.three_row}>
