@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+}
+
+.dots {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.section {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  margin: 0 1%;
+}
+
+.real {
+  width: 30px;
+  height: 30px;
+  background-color: #ffb080;
+  border: 2px solid #ff6200;
+  border-radius: 50%;
+  transition: 0.3;
+  z-index: 1;
+  margin-bottom: 15px;
+  cursor: pointer;
+  position: relative;
+  left: -73%;
+  top: 40px;
+}
+
+.line {
+  height: 1000px;
+  width: 5px;
+  background-color: #4acca5;
+  position: relative;
+  top: 17px;
+  margin: 0 13%;
+}
+
+.caption {
+  margin: 0 0 20px 0;
+  text-align: center;
+  text-align: justify;
+  color: white;
+}

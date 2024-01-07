@@ -9,12 +9,15 @@ import {useNavigate} from 'react-router-dom'
 import middleware from '../helper/middleware'
 import {GET_BUILT_PROJECTS} from '../graphql/queries'
 import Image from '../components/Image'
+import ProcessMobile from '../components/ProcessMobile'
 import Manual from '../components/Manual'
 import {txtdata, constAndFee} from './construction'
 
 const firstId = '6aI6XUHSSfJE0w3lb1VWYF'
 
 function Journal() {
+  const docWidth = document.documentElement.clientWidth
+
   const navigate = useNavigate()
   const [projects, setProjects] = useState([])
   let res = useQuery(GET_BUILT_PROJECTS, {
@@ -103,8 +106,13 @@ function Journal() {
           <span>HUBUNGI KAMI</span>
         </button>
       </a>
+      <div className={style.bumper_1}></div>
       <h1>ALUR SKEMA</h1>
-      <Manual />
+      <hr />
+      <div className={style.bumper_2}></div>
+
+      {docWidth > 425 ? <Manual /> : <ProcessMobile />}
+
       <h1>PORTOFOLIO</h1>
       <hr />
       <div className={style.portofolio_container}>
