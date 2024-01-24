@@ -191,39 +191,6 @@ video {
   }
 }
 
-.mid-container {
-  display: flex;
-  height: 85vh;
-
-  div {
-    width: 30%;
-    margin: auto;
-
-    img {
-      width: 100%;
-      position: relative;
-      cursor: pointer;
-    }
-
-    p {
-      cursor: pointer;
-      text-align: center;
-    }
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .mid-container {
-    flex-direction: column;
-    height: 70vh;
-    margin-top: 8vh;
-
-    div {
-      width: 90%;
-    }
-  }
-}
-
 .running_text {
   font-family: Helvetica !important;
   position: absolute;

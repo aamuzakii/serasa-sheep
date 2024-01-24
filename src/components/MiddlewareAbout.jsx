@@ -1,5 +1,7 @@
 import React from 'react'
 import {useNavigate} from 'react-router-dom'
+import style from './About.module.scss'
+import Image from './Image'
 
 const MiddlewareAbout = () => {
   let navigate = useNavigate()
@@ -11,18 +13,21 @@ const MiddlewareAbout = () => {
     navigate('/awards')
   }
   return (
-    <div className="mid-container">
-      <div>
-        {/* <img src={a} alt="" onClick={goToTeam} /> */}
-        <p className="centered" onClick={goToTeam} style={{fontSize: 30}}>
-          TEAM
-        </p>
-      </div>
-      <div>
-        {/* <img src={c} alt="" onClick={goToCompany} /> */}
-        <p className="centered" onClick={goToCompany} style={{fontSize: 30}}>
-          AWARDS
-        </p>
+    <div className={style.mid_container_raja}>
+      <h1 className={style.title}>About</h1>
+      <div className={style.mid_container}>
+        <div className={style.parent}>
+          <p className={style.small_text} onClick={goToTeam}>
+            TEAM
+          </p>
+          <img className={style.inner_img} height={500} width={500} src={'../../images/team.png'} alt="" size={500} />
+        </div>
+        <div className={style.parent}>
+          <p className={style.small_text} onClick={goToTeam}>
+            AWARD
+          </p>
+          <img className={style.inner_img} height={500} width={500} src={'../../images/award.png'} alt="" size={500} />
+        </div>
       </div>
     </div>
   )
