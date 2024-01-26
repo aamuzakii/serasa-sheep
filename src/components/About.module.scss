@@ -5,7 +5,6 @@
 }
 
 .small_text {
-  cursor: pointer;
   position: absolute;
   bottom: 50%;
   left: 50%;
@@ -18,7 +17,7 @@
   text-align: center;
   opacity: 0.9;
   line-height: 20px;
-  z-index: 5;
+  z-index: 1;
   color: white;
   text-shadow: -1px 2px 14px rgba(0, 0, 0, 0.9);
   // box-shadow: 0px 0px 18px 7px rgba(0, 0, 0, 0.87);
@@ -30,6 +29,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  cursor: pointer;
 }
 
 .mid_container_raja {
@@ -49,4 +49,14 @@
   font-size: 60px;
   text-align: center;
   margin: 20px 0 50px 0;
+}
+
+.box_gradient_layer {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2945553221288515) 67%, rgba(0, 0, 0, 0.7231267507002801) 100%);
+  position: absolute;
+  transition: 0.5s;
+}
+
+.box_gradient_layer:hover {
+  background: none;
 }
