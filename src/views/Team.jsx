@@ -45,7 +45,7 @@ function About() {
         {boardMembers.map(({name, bio, photo, position}) => {
           return (
             <div className={style.single_person}>
-              <img src={photo.url} alt="" width={300} />
+              <Image src={photo.url} alt="" size={300} />
               <p className={style.name}>{name}</p>
               <i className={style.position}>{position}</i>
               <p dangerouslySetInnerHTML={{__html: documentToHtmlString(bio.json)}} className={style.injected_rich_text}></p>
@@ -58,7 +58,7 @@ function About() {
         {staffs.map(({name, bio, photo, position}) => {
           return (
             <div className={style.single_person}>
-              <img src={photo.url} alt="" width={220} />
+              <Image src={photo.url} alt="" size={220} />
               <p className={style.name}>{name}</p>
               <i className={style.position}>{position}</i>
               <p dangerouslySetInnerHTML={{__html: documentToHtmlString(bio.json)}} className={style.injected_rich_text}></p>
@@ -82,4 +82,4 @@ function About() {
 }
 
 export default About
-// staff cuma beda width nya jadi 220
+// staff cuma beda size nya jadi 220
