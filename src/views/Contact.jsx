@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import emailjs from '@emailjs/browser'
-import sideImg from '../assets/contact.png'
+import sideImg from '../assets/eagle.jpeg'
 import wa from '../assets/social/whatsapp.png'
 import instagram from '../assets/social/instagram.png'
 
